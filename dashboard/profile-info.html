@@ -1,0 +1,1310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
+<title>Fairway Credit Union Bank</title>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+<script src="js/font-awesome.js"></script>
+
+
+<link href="css/c3.min.css" rel="stylesheet">
+<link href="css/jquery-jvectormap.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet">
+
+
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+       
+        <![endif]-->
+</head>
+<body>
+<div class="main-wrapper" id="main-wrapper">
+
+
+
+<div class="preloader">
+<div class="loader">
+<div class="loader__figure"></div>
+<p class="loader__label">Fairway Credit Union Online Banking</p>
+</div>
+</div>
+
+
+
+<header class="topbar">
+ <div id="justMyPopUpAlert" style="text-align:center">
+<div style="background:#FFF; min-width:400px; padding:0px 0px 5px 0px;">
+<table width="100%" border="0">
+<tr style="background:#FC3; height:20px;">
+<td style="padding:10px; text-align:left; color:#069; font-weight:bold;">
+<img src="images/s_attention.png" width="16" height="16" style="float:left; margin-right:5px;" />Message Alert!
+<span style="display:inline-block; clear:both;"></span>
+</td>
+</tr>
+<tr>
+<td id="displayMsg2" style="padding:5px;font-style:italic; font-size:12px; font-weight:bold;">&nbsp;</td>
+</tr>
+</table>
+<input type="button" value="ok" name="ok_button2" id="ok_button2" class="b-close btn btn-primary" style="cursor:pointer; width:70px; padding:2px 7px;" />
+</div>
+</div> 
+ <div id="justMyPopUp" style="text-align:center">
+<div style="background:#FFF; min-width:400px; padding:0px 0px 5px 0px;">
+<table width="100%" border="0">
+<tr style="background:#FC3; height:20px;">
+<td style="padding:10px; text-align:left; color:#069; font-weight:bold;">
+<img src="images/s_attention.png" width="16" height="16" style="float:left; margin-right:5px;" />Message Alert!
+<span style="display:inline-block; clear:both;"></span>
+</td>
+</tr>
+<tr>
+<td id="displayMsg" style="padding:5px 10px; font-size:12px; font-style:italic; font-weight:bold;">&nbsp;</td>
+</tr>
+</table>
+<input type="button" value="ok" name="ok_button" id="ok_button" class="b-close btn btn-primary" style="cursor:pointer;" onClick="reloadPage()" />
+</div>
+</div> 
+<div id="loadingPop">
+<input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="CloseMeNowLog" />
+<i class="fa fa-spin fa-refresh" style="font-size:45px;"></i>
+</div>
+<div id="popUpLoader">
+<input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="ClosePopLoader">
+<div id="processing"><i class="fa fa-spin fa-refresh" style="font-size:45px;"></i></div>
+</div>
+
+
+
+<nav>
+<div class="nav-wrapper">
+
+
+
+<a href="javascript:void(0)" class="brand-logo" data-logobg="skin1">
+<span class="icon">
+<img class="light-logo" src="../images/logo-light-icon.png" alt="logos">
+<img class="dark-logo" src="../images/logo-icon.png" alt="logos">
+</span>
+<span class="text">
+<img class="light-logo" src="../images/logo-light-text.png" alt="logos">
+<img class="dark-logo" src="../images/logo-text.png" alt="logos">
+</span>
+</a>
+
+
+
+
+
+
+<ul class="left">
+<li class="hide-on-med-and-down">
+<a href="javascript: void(0);" class="nav-toggle">
+<span class="bars bar1"></span>
+<span class="bars bar2"></span>
+<span class="bars bar3"></span>
+</a>
+</li>
+<li class="hide-on-large-only">
+<a href="javascript: void(0);" class="sidebar-toggle">
+<span class="bars bar1"></span>
+<span class="bars bar2"></span>
+<span class="bars bar3"></span>
+</a>
+</li>
+</ul>
+
+
+
+ 
+
+
+<ul class="right">
+
+
+
+<li><a class="dropdown-trigger" href="javascript: void(0);" data-target="user_dropdown"><img id="userHeaderPic" src="../images/2.jpg" alt="user" class="circle profile-pic"></a>
+<ul id="user_dropdown" class="mailbox dropdown-content dropdown-user">
+<li>
+<div class="dw-user-box">
+<div class="u-img"><img id="secondHeadPix" src="../images/2.jpg" alt="user"></div>
+<div class="u-text">
+<h4 style="font-size:12px; font-weight:bold;" id="userRpName">Steve Harvey</h4>
+<p><span id="userRpLoginId">1003</span></p>
+<a href="profile-info.html" class="waves-effect waves-light btn-small red white-text">View Profile</a>
+</div>
+</div>
+</li>
+<li role="separator" class="divider"></li>
+<li><a href="profile-info.html"><i class="fa fa-user-circle"></i> My Profile</a></li>
+<li><a href="my-accounts.html"><i class="fa fa-briefcase fa-1x" style="margin-right:10px;"></i> My Accounts</a></li>
+<li><a href="inbox-compose.html"><i class="fa fa-envelope fa-1x" style="margin-right:10px;"></i> Contact Support</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="password-reset.html"><i class="fa fa-cog fa-1x" style="margin-right:10px;"></i>Reset Password</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="javascript:void(0);" onclick="logOutFunc();"><i class="fa fa-power-off"></i> Logout</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+</div>
+</nav>
+
+
+
+</header>
+
+
+
+<aside class="left-sidebar">
+<ul id="slide-out" class="sidenav">
+<li>
+<div class="user-profile" style="background-image: url(../images/user-bg.jpg);">
+<div class="user-name dropdown-trigger" data-target='dropdownuser'>
+<h6 class="white-text name"> <img style="max-width:30px;" id="leftHdPix" class="profile-user-img img-responsive img-circle" src="../images/2.jpg" alt="user"> <span id="hdNameSpan" style="font-size:12px; margin-left:10px;">Steve Harvey</span> <i class="fa fa-angle-down ml-auto"></i></h6>
+</div>
+<ul id='dropdownuser' class='dropdown-content'>
+<li><a href="profile-info.html"><i class="fa fa-user-circle fa-1x"></i> My Profile</a></li>
+<li><a href="my-accounts.html"><i class="fa fa-briefcase fa-1x"></i> My Account (s) </a></li>
+<li><a href="inbox-compose.html"><i class="fa fa-envelope fa-1x"></i> Contact Support</a></li>
+ <li role="separator" class="divider m-t-0"></li>
+<li><a href="password-reset.html"><i class="fa fa-cog fa-1x"></i> Reset Password</a></li>
+<li role="separator" class="divider m-t-0"></li>
+<li><a onclick="logOutFunc();" href="javascript:void(0)"><i class="fa fa-power-off fa-1x"></i> Logout</a></li>
+</ul>
+</div>
+</li>
+<li>
+<ul class="collapsible">
+<li class="small-cap"><span class="hide-menu">PERSONAL</span></li>
+<li>
+<a href="home.html" class="collapsible-header"><i class="fa fa-home" style="margin-right:10px;"></i><span class="hide-menu"> Home </span></a>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-briefcase" style="margin-right:10px;"></i><span class="hide-menu"> Account </span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="my-accounts.html"><i class="fa fa-briefcase" style="margin-right:10px;"></i><span class="hide-menu">My Account (s) </span></a></li>
+<li><a href="transaction-history.html"><i class="fa fa-book" style="margin-right:10px;"></i><span class="hide-menu">Transaction History</span></a></li>
+<li><a href="register-new-account.html"><i class="fa fa-user-plus" style="margin-right:10px;"></i><span class="hide-menu">Register New Account</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-list-alt" style="margin-right:10px;"></i><span class="hide-menu">Withdrawal / Transfer</span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="fund-transfer.html"><i class="fa fa-arrow-circle-right" style="margin-right:10px;"></i><span class="hide-menu">Transfer Fund</span></a></li>
+<li><a href="send-echeque.html"><i class="fa fa-bank" style="margin-right:10px;"></i><span class="hide-menu">Send eCheque</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-envelope-open" style="margin-right:10px;"></i><span class="hide-menu"> Message</span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="inbox-email.html"><i class="fa fa-envelope" style="margin-right:10px;"></i><span class="hide-menu" id="myInoxMsg">Inbox</span></a></li>
+<li><a href="sent-mails.html"><i class="fa fa-support" style="margin-right:10px;"></i><span class="hide-menu">My Support Tickets</span></a></li>
+<li><a href="inbox-compose.html"><i class="fa fa-edit" style="margin-right:10px;"></i><span class="hide-menu">Contact Support</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="cheque-deposit.html" class="collapsible-header"><i class="fa fa-bank" style="margin-right:10px;"></i><span class="hide-menu">Cheque Deposit </span></a>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-credit-card" style="margin-right:10px;"></i><span class="hide-menu"> Cards </span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="mycards.html"><i class="fa fa-credit-card" style="margin-right:10px;"></i><span class="hide-menu">My Cards</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-user" style="margin-right:10px;"></i><span class="hide-menu"> Profile </span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="password-reset.html"><i class="fa fa-key" style="margin-right:10px;"></i><span class="hide-menu">Password Reset</span></a></li>
+<li><a href="profile-info.html"><i class="fa fa-user-circle" style="margin-right:10px;"></i><span class="hide-menu">Profile Info</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript:void(0);" class="collapsible-header" onclick="logOutFunc();"><i class="fa fa-power-off" style="margin-right:10px;"></i><span class="hide-menu"> Log Out </span></a>
+</li>
+<li>
+</li>
+</ul>
+</li>
+</ul>
+</aside>
+
+
+
+
+
+
+<div class="page-wrapper">
+
+
+
+<div class="page-titles">
+<div class="d-flex align-items-center">
+    <span id="userNameHead">
+        <h5 class="font-medium m-b-0" id="userLoggedName">Atlas Zeus</h5>
+        <div class="row">
+        <h6 style="font-size:12px;">Login ID: <span id="userLoggedID">37600609187</span></h6>
+        <input type="hidden" value="160299892.jpeg" id="userHeaderPixV" name="userHeaderPixV">
+        </div>
+    </span>
+    <div class=" col-lg-6 col-md-12">
+        <span id="date_time" style="display:block; color:#f00; font-size:12px; font-weight:bold; text-align:center"></span>
+    </div>
+<div class="custom-breadcrumb ml-auto">
+<a href="home.html" class="breadcrumb">Home</a>
+<a href="javascript:void(0)" class="breadcrumb">My Profile</a>
+<div style="padding-top:10px;">
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-md-12 col-lg-12">
+    <div class="panel panel-default">
+    <div class="panel-body">
+    <div class="tab-wrapper tab-primary">
+    <ul class="nav nav-tabs" style="border-bottom:none;">
+    <li class="active" style="margin-bottom:10px;"><a href="#home1" data-toggle="tab" aria-expanded="true">PROFILE SUMMARY</a></li>
+    <li style="margin-bottom:10px;" class=""><a href="#myInvestPort" data-toggle="tab" aria-expanded="false">UPDATE PROFILE</a></li>
+    <li style="margin-bottom:10px;" class=""><a href="#newInvestPort" data-toggle="tab" aria-expanded="false">PROFILE PHOTO</a></li>
+    </ul>
+    <div class="tab-content" style="padding:10px 0px;">
+    <div class="tab-pane active" id="home1">
+    <div class="table-responsive">
+    <div class="panel panel-warning">
+    <div class="table-responsive" id="profileInfoDiv">
+    <input type="hidden" name="oldPixGet" id="oldPixGet" value="160299892.jpeg">
+    <table class="table table-hover table-striped">
+    <tbody>
+    <tr>
+    <td style="padding-left:10px;">
+    <span style="font-weight:bold; color:#000;">
+    First Name:
+    </span>
+    </td>
+    <td>Atlas</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <span style="font-weight:bold; color:#000;">
+    Last Name:
+    </span>
+    </td>
+    <td> Zeus</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;"><span style="font-weight:bold; color:#000;"> Phone Number: </span> </td>
+    <td> (615)863-1147</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;"><span style="font-weight:bold; color:#000;"> Email Address: </span> </td>
+    <td> zuesatlas_0001@gmail.com</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;"><span style="font-weight:bold; color:#000;"> Social Security Number: </span> </td>
+    <td> 027-532-4087</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;"><span style="font-weight:bold; color:#000;">Address: </span> </td>
+    <td> Annalise, Anatole, Atlanta, GA</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;"><span style="font-weight:bold; color:#000;"> City: </span> </td>
+    <td> Atlanta</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;"><span style="font-weight:bold; color:#000;"> State / Province: </span> </td>
+    <td> GA</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;"><span style="font-weight:bold; color:#000;"> Zip / Postal Code: </span> </td>
+    <td> 30331</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;"><span style="font-weight:bold; color:#000;">Country: </span> </td>
+    <td> United States</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;"><span style="font-weight:bold; color:#000;"> Gender: </span> </td>
+    <td> Male</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;"><span style="font-weight:bold; color:#000;">Date Of Birth: </span> </td>
+    <td> 07/31/1980</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;"><span style="font-weight:bold; color:#000;">Annual Income: </span> </td>
+    <td> USD 500,000.00</td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;"><span style="font-weight:bold; color:#000;">Occupation: </span> </td>
+    <td> Engineer</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+     
+    </div>
+    </div>
+    <div class="tab-pane" id="myInvestPort">
+    <div class="panel panel-warning">
+    <div class="table-responsive" id="updateMyProfile" style="padding:10px;">
+    <p>
+    <strong>Note:</strong> To modify any aspect of your account information, kindly send an email to account@primascityintl.com
+    </p>
+    <form style="margin-bottom:20px;" onsubmit="return false" method="post" id="profileUpdateForm" name="profileUpdateForm">
+    <input type="hidden" name="editUser_login_id" id="editUser_login_id" value="37600609187">
+    <input type="hidden" name="cntCur1" id="cntCur1" value="AFN">
+    <input type="hidden" name="cntCur2" id="cntCur2" value="EUR">
+    <input type="hidden" name="cntCur3" id="cntCur3" value="LEK">
+    <input type="hidden" name="cntCur4" id="cntCur4" value="DZD">
+    <input type="hidden" name="cntCur5" id="cntCur5" value="USD">
+    <input type="hidden" name="cntCur6" id="cntCur6" value="EUR">
+    <input type="hidden" name="cntCur7" id="cntCur7" value="AOA">
+    <input type="hidden" name="cntCur8" id="cntCur8" value="XCD">
+    <input type="hidden" name="cntCur9" id="cntCur9" value="USD">
+    <input type="hidden" name="cntCur10" id="cntCur10" value="XCD">
+    <input type="hidden" name="cntCur11" id="cntCur11" value="ARS">
+    <input type="hidden" name="cntCur12" id="cntCur12" value="AMD">
+    <input type="hidden" name="cntCur13" id="cntCur13" value="AWG">
+    <input type="hidden" name="cntCur14" id="cntCur14" value="SHP">
+    <input type="hidden" name="cntCur15" id="cntCur15" value="AUD">
+    <input type="hidden" name="cntCur16" id="cntCur16" value="EUR">
+    <input type="hidden" name="cntCur17" id="cntCur17" value="AZN">
+    <input type="hidden" name="cntCur18" id="cntCur18" value="BSD">
+    <input type="hidden" name="cntCur19" id="cntCur19" value="BHD">
+    <input type="hidden" name="cntCur20" id="cntCur20" value="BDT">
+    <input type="hidden" name="cntCur21" id="cntCur21" value="BBD">
+    <input type="hidden" name="cntCur22" id="cntCur22" value="BYR">
+    <input type="hidden" name="cntCur23" id="cntCur23" value="BZD">
+    <input type="hidden" name="cntCur24" id="cntCur24" value="XOF">
+    <input type="hidden" name="cntCur25" id="cntCur25" value="BMD">
+    <input type="hidden" name="cntCur26" id="cntCur26" value="BTN">
+    <input type="hidden" name="cntCur27" id="cntCur27" value="BOB">
+    <input type="hidden" name="cntCur28" id="cntCur28" value="BAM">
+    <input type="hidden" name="cntCur29" id="cntCur29" value="BWP">
+    <input type="hidden" name="cntCur30" id="cntCur30" value="BRL">
+    <input type="hidden" name="cntCur31" id="cntCur31" value="USD">
+    <input type="hidden" name="cntCur32" id="cntCur32" value="USD">
+    <input type="hidden" name="cntCur33" id="cntCur33" value="BND">
+    <input type="hidden" name="cntCur34" id="cntCur34" value="BGN">
+    <input type="hidden" name="cntCur35" id="cntCur35" value="XOF">
+    <input type="hidden" name="cntCur36" id="cntCur36" value="BIF">
+    <input type="hidden" name="cntCur37" id="cntCur37" value="KHR">
+    <input type="hidden" name="cntCur38" id="cntCur38" value="XAF">
+    <input type="hidden" name="cntCur39" id="cntCur39" value="CAD">
+    <input type="hidden" name="cntCur40" id="cntCur40" value="EUR">
+    <input type="hidden" name="cntCur41" id="cntCur41" value="CVE">
+    <input type="hidden" name="cntCur42" id="cntCur42" value="USD">
+    <input type="hidden" name="cntCur43" id="cntCur43" value="KYD">
+    <input type="hidden" name="cntCur44" id="cntCur44" value="XAF">
+    <input type="hidden" name="cntCur45" id="cntCur45" value="EUR">
+    <input type="hidden" name="cntCur46" id="cntCur46" value="XAF">
+    <input type="hidden" name="cntCur47" id="cntCur47" value="CLP">
+    <input type="hidden" name="cntCur48" id="cntCur48" value="CNY">
+    <input type="hidden" name="cntCur49" id="cntCur49" value="AUD">
+    <input type="hidden" name="cntCur50" id="cntCur50" value="AUD">
+    <input type="hidden" name="cntCur51" id="cntCur51" value="COP">
+    <input type="hidden" name="cntCur52" id="cntCur52" value="KMF">
+    <input type="hidden" name="cntCur53" id="cntCur53" value="XAF">
+    <input type="hidden" name="cntCur54" id="cntCur54" value="CDF">
+    <input type="hidden" name="cntCur55" id="cntCur55" value="NZD">
+    <input type="hidden" name="cntCur56" id="cntCur56" value="CRC">
+    <input type="hidden" name="cntCur57" id="cntCur57" value="XOF">
+    <input type="hidden" name="cntCur58" id="cntCur58" value="HRK">
+    <input type="hidden" name="cntCur59" id="cntCur59" value="CUP">
+    <input type="hidden" name="cntCur60" id="cntCur60" value="ANG">
+    <input type="hidden" name="cntCur61" id="cntCur61" value="EUR">
+    <input type="hidden" name="cntCur62" id="cntCur62" value="CZK">
+    <input type="hidden" name="cntCur63" id="cntCur63" value="DKK">
+    <input type="hidden" name="cntCur64" id="cntCur64" value="USD">
+    <input type="hidden" name="cntCur65" id="cntCur65" value="DJF">
+    <input type="hidden" name="cntCur66" id="cntCur66" value="XCD">
+    <input type="hidden" name="cntCur67" id="cntCur67" value="DOP">
+    <input type="hidden" name="cntCur224" id="cntCur224" value="USD">
+    <input type="hidden" name="cntCur68" id="cntCur68" value="USD">
+    <input type="hidden" name="cntCur69" id="cntCur69" value="EGP">
+    <input type="hidden" name="cntCur70" id="cntCur70" value="USD">
+    <input type="hidden" name="cntCur71" id="cntCur71" value="XAF">
+    <input type="hidden" name="cntCur72" id="cntCur72" value="ERN">
+    <input type="hidden" name="cntCur73" id="cntCur73" value="EUR">
+    <input type="hidden" name="cntCur74" id="cntCur74" value="ETB">
+    <input type="hidden" name="cntCur75" id="cntCur75" value="FKP">
+    <input type="hidden" name="cntCur76" id="cntCur76" value="DKK">
+    <input type="hidden" name="cntCur77" id="cntCur77" value="FJD">
+    <input type="hidden" name="cntCur78" id="cntCur78" value="EUR">
+    <input type="hidden" name="cntCur79" id="cntCur79" value="EUR">
+    <input type="hidden" name="cntCur80" id="cntCur80" value="EUR">
+    <input type="hidden" name="cntCur81" id="cntCur81" value="XPF">
+    <input type="hidden" name="cntCur82" id="cntCur82" value="EUR">
+    <input type="hidden" name="cntCur83" id="cntCur83" value="XAF">
+    <input type="hidden" name="cntCur84" id="cntCur84" value="GMD">
+    <input type="hidden" name="cntCur85" id="cntCur85" value="GEL">
+    <input type="hidden" name="cntCur86" id="cntCur86" value="EUR">
+    <input type="hidden" name="cntCur87" id="cntCur87" value="GHS">
+    <input type="hidden" name="cntCur88" id="cntCur88" value="GIP">
+    <input type="hidden" name="cntCur89" id="cntCur89" value="EUR">
+    <input type="hidden" name="cntCur90" id="cntCur90" value="DKK">
+    <input type="hidden" name="cntCur91" id="cntCur91" value="XCD">
+    <input type="hidden" name="cntCur92" id="cntCur92" value="EUR">
+    <input type="hidden" name="cntCur93" id="cntCur93" value="USD">
+    <input type="hidden" name="cntCur94" id="cntCur94" value="GTQ">
+    <input type="hidden" name="cntCur95" id="cntCur95" value="GBP">
+    <input type="hidden" name="cntCur96" id="cntCur96" value="GNF">
+    <input type="hidden" name="cntCur97" id="cntCur97" value="XOF">
+    <input type="hidden" name="cntCur98" id="cntCur98" value="GYD">
+    <input type="hidden" name="cntCur99" id="cntCur99" value="HTG">
+    <input type="hidden" name="cntCur100" id="cntCur100" value="HNL">
+    <input type="hidden" name="cntCur101" id="cntCur101" value="HKD">
+    <input type="hidden" name="cntCur102" id="cntCur102" value="HUF">
+    <input type="hidden" name="cntCur103" id="cntCur103" value="ISK">
+    <input type="hidden" name="cntCur104" id="cntCur104" value="INR">
+    <input type="hidden" name="cntCur105" id="cntCur105" value="IDR">
+    <input type="hidden" name="cntCur106" id="cntCur106" value="IRR">
+    <input type="hidden" name="cntCur107" id="cntCur107" value="IQD">
+    <input type="hidden" name="cntCur108" id="cntCur108" value="EUR">
+    <input type="hidden" name="cntCur109" id="cntCur109" value="GBP">
+    <input type="hidden" name="cntCur110" id="cntCur110" value="ILS">
+    <input type="hidden" name="cntCur111" id="cntCur111" value="EUR">
+    <input type="hidden" name="cntCur112" id="cntCur112" value="JMD">
+    <input type="hidden" name="cntCur113" id="cntCur113" value="JPY">
+    <input type="hidden" name="cntCur114" id="cntCur114" value="GBP">
+    <input type="hidden" name="cntCur115" id="cntCur115" value="JOD">
+    <input type="hidden" name="cntCur116" id="cntCur116" value="KZT">
+    <input type="hidden" name="cntCur117" id="cntCur117" value="KES">
+    <input type="hidden" name="cntCur118" id="cntCur118" value="AUD">
+    <input type="hidden" name="cntCur119" id="cntCur119" value="EUR">
+    <input type="hidden" name="cntCur120" id="cntCur120" value="KWD">
+    <input type="hidden" name="cntCur121" id="cntCur121" value="KGS">
+    <input type="hidden" name="cntCur122" id="cntCur122" value="LAK">
+    <input type="hidden" name="cntCur123" id="cntCur123" value="EUR">
+    <input type="hidden" name="cntCur124" id="cntCur124" value="LBP">
+    <input type="hidden" name="cntCur125" id="cntCur125" value="LSL">
+    <input type="hidden" name="cntCur126" id="cntCur126" value="LRD">
+    <input type="hidden" name="cntCur127" id="cntCur127" value="LYD">
+    <input type="hidden" name="cntCur128" id="cntCur128" value="CHF">
+    <input type="hidden" name="cntCur129" id="cntCur129" value="EUR">
+    <input type="hidden" name="cntCur130" id="cntCur130" value="EUR">
+    <input type="hidden" name="cntCur131" id="cntCur131" value="MOP">
+    <input type="hidden" name="cntCur132" id="cntCur132" value="MKD">
+    <input type="hidden" name="cntCur133" id="cntCur133" value="MGA">
+    <input type="hidden" name="cntCur134" id="cntCur134" value="MWK">
+    <input type="hidden" name="cntCur135" id="cntCur135" value="MYR">
+    <input type="hidden" name="cntCur136" id="cntCur136" value="MVR">
+    <input type="hidden" name="cntCur137" id="cntCur137" value="XOF">
+    <input type="hidden" name="cntCur138" id="cntCur138" value="EUR">
+    <input type="hidden" name="cntCur139" id="cntCur139" value="USD">
+    <input type="hidden" name="cntCur140" id="cntCur140" value="EUR">
+    <input type="hidden" name="cntCur141" id="cntCur141" value="MRU">
+    <input type="hidden" name="cntCur142" id="cntCur142" value="MUR">
+    <input type="hidden" name="cntCur143" id="cntCur143" value="EUR">
+    <input type="hidden" name="cntCur144" id="cntCur144" value="MXN">
+    <input type="hidden" name="cntCur145" id="cntCur145" value="USD">
+    <input type="hidden" name="cntCur146" id="cntCur146" value="MDL">
+    <input type="hidden" name="cntCur147" id="cntCur147" value="EUR">
+    <input type="hidden" name="cntCur148" id="cntCur148" value="MNT">
+    <input type="hidden" name="cntCur149" id="cntCur149" value="EUR">
+    <input type="hidden" name="cntCur150" id="cntCur150" value="XCD">
+    <input type="hidden" name="cntCur151" id="cntCur151" value="MAD">
+    <input type="hidden" name="cntCur152" id="cntCur152" value="MZN">
+    <input type="hidden" name="cntCur153" id="cntCur153" value="MMK">
+    <input type="hidden" name="cntCur154" id="cntCur154" value="NAD">
+    <input type="hidden" name="cntCur155" id="cntCur155" value="AUD">
+    <input type="hidden" name="cntCur156" id="cntCur156" value="NPR">
+    <input type="hidden" name="cntCur157" id="cntCur157" value="EUR">
+    <input type="hidden" name="cntCur158" id="cntCur158" value="XPF">
+    <input type="hidden" name="cntCur159" id="cntCur159" value="NZD">
+    <input type="hidden" name="cntCur160" id="cntCur160" value="NIO">
+    <input type="hidden" name="cntCur161" id="cntCur161" value="XOF">
+    <input type="hidden" name="cntCur162" id="cntCur162" value="NGN">
+    <input type="hidden" name="cntCur163" id="cntCur163" value="NZD">
+    <input type="hidden" name="cntCur164" id="cntCur164" value="AUD">
+    <input type="hidden" name="cntCur165" id="cntCur165" value="KPW">
+    <input type="hidden" name="cntCur166" id="cntCur166" value="USD">
+    <input type="hidden" name="cntCur167" id="cntCur167" value="NOK">
+    <input type="hidden" name="cntCur168" id="cntCur168" value="OMR">
+    <input type="hidden" name="cntCur169" id="cntCur169" value="PKR">
+    <input type="hidden" name="cntCur170" id="cntCur170" value="USD">
+    <input type="hidden" name="cntCur171" id="cntCur171" value="ILS">
+    <input type="hidden" name="cntCur172" id="cntCur172" value="PAB">
+    <input type="hidden" name="cntCur173" id="cntCur173" value="PGK">
+    <input type="hidden" name="cntCur174" id="cntCur174" value="PYG">
+    <input type="hidden" name="cntCur175" id="cntCur175" value="PEN">
+    <input type="hidden" name="cntCur176" id="cntCur176" value="PHP">
+    <input type="hidden" name="cntCur177" id="cntCur177" value="NZD">
+    <input type="hidden" name="cntCur178" id="cntCur178" value="PLN">
+    <input type="hidden" name="cntCur179" id="cntCur179" value="EUR">
+    <input type="hidden" name="cntCur180" id="cntCur180" value="USD">
+    <input type="hidden" name="cntCur181" id="cntCur181" value="QAR">
+    <input type="hidden" name="cntCur182" id="cntCur182" value="EUR">
+    <input type="hidden" name="cntCur183" id="cntCur183" value="RON">
+    <input type="hidden" name="cntCur184" id="cntCur184" value="RUB">
+    <input type="hidden" name="cntCur185" id="cntCur185" value="RWF">
+    <input type="hidden" name="cntCur186" id="cntCur186" value="WST">
+    <input type="hidden" name="cntCur187" id="cntCur187" value="EUR">
+    <input type="hidden" name="cntCur188" id="cntCur188" value="STD">
+    <input type="hidden" name="cntCur189" id="cntCur189" value="SAR">
+    <input type="hidden" name="cntCur190" id="cntCur190" value="XOF">
+    <input type="hidden" name="cntCur191" id="cntCur191" value="RSD">
+    <input type="hidden" name="cntCur192" id="cntCur192" value="SCR">
+    <input type="hidden" name="cntCur193" id="cntCur193" value="SLL">
+    <input type="hidden" name="cntCur194" id="cntCur194" value="SGD">
+    <input type="hidden" name="cntCur195" id="cntCur195" value="ANG">
+    <input type="hidden" name="cntCur196" id="cntCur196" value="EUR">
+    <input type="hidden" name="cntCur197" id="cntCur197" value="EUR">
+    <input type="hidden" name="cntCur198" id="cntCur198" value="SBD">
+    <input type="hidden" name="cntCur199" id="cntCur199" value="SOS">
+    <input type="hidden" name="cntCur200" id="cntCur200" value="ZAR">
+    <input type="hidden" name="cntCur201" id="cntCur201" value="GBP">
+    <input type="hidden" name="cntCur202" id="cntCur202" value="KRW">
+    <input type="hidden" name="cntCur203" id="cntCur203" value="SSP">
+    <input type="hidden" name="cntCur204" id="cntCur204" value="EUR">
+    <input type="hidden" name="cntCur205" id="cntCur205" value="LKR">
+    <input type="hidden" name="cntCur206" id="cntCur206" value="EUR">
+    <input type="hidden" name="cntCur207" id="cntCur207" value="SHP">
+    <input type="hidden" name="cntCur208" id="cntCur208" value="XCD">
+    <input type="hidden" name="cntCur209" id="cntCur209" value="XCD">
+    <input type="hidden" name="cntCur210" id="cntCur210" value="EUR">
+    <input type="hidden" name="cntCur211" id="cntCur211" value="EUR">
+    <input type="hidden" name="cntCur212" id="cntCur212" value="XCD">
+    <input type="hidden" name="cntCur213" id="cntCur213" value="SDG">
+    <input type="hidden" name="cntCur214" id="cntCur214" value="SRD">
+    <input type="hidden" name="cntCur215" id="cntCur215" value="NOK">
+    <input type="hidden" name="cntCur216" id="cntCur216" value="SZL">
+    <input type="hidden" name="cntCur217" id="cntCur217" value="SEK">
+    <input type="hidden" name="cntCur218" id="cntCur218" value="CHF">
+    <input type="hidden" name="cntCur219" id="cntCur219" value="SYP">
+    <input type="hidden" name="cntCur220" id="cntCur220" value="TWD">
+    <input type="hidden" name="cntCur221" id="cntCur221" value="TJS">
+    <input type="hidden" name="cntCur222" id="cntCur222" value="TZS">
+    <input type="hidden" name="cntCur223" id="cntCur223" value="THB">
+    <input type="hidden" name="cntCur225" id="cntCur225" value="XOF">
+    <input type="hidden" name="cntCur226" id="cntCur226" value="NZD">
+    <input type="hidden" name="cntCur227" id="cntCur227" value="TOP">
+    <input type="hidden" name="cntCur228" id="cntCur228" value="TTD">
+    <input type="hidden" name="cntCur229" id="cntCur229" value="GBP">
+    <input type="hidden" name="cntCur230" id="cntCur230" value="TND">
+    <input type="hidden" name="cntCur231" id="cntCur231" value="TRY">
+    <input type="hidden" name="cntCur232" id="cntCur232" value="TMT">
+    <input type="hidden" name="cntCur233" id="cntCur233" value="USD">
+    <input type="hidden" name="cntCur234" id="cntCur234" value="AUD">
+    <input type="hidden" name="cntCur235" id="cntCur235" value="USD">
+    <input type="hidden" name="cntCur236" id="cntCur236" value="UGX">
+    <input type="hidden" name="cntCur237" id="cntCur237" value="UAH">
+    <input type="hidden" name="cntCur238" id="cntCur238" value="AED">
+    <input type="hidden" name="cntCur239" id="cntCur239" value="GBP">
+    <input type="hidden" name="cntCur251" id="cntCur251" value="USD">
+    <input type="hidden" name="cntCur240" id="cntCur240" value="UYU">
+    <input type="hidden" name="cntCur241" id="cntCur241" value="UZS">
+    <input type="hidden" name="cntCur242" id="cntCur242" value="VUV">
+    <input type="hidden" name="cntCur243" id="cntCur243" value="EUR">
+    <input type="hidden" name="cntCur244" id="cntCur244" value="VEF">
+    <input type="hidden" name="cntCur245" id="cntCur245" value="VND">
+    <input type="hidden" name="cntCur246" id="cntCur246" value="XPF">
+    <input type="hidden" name="cntCur247" id="cntCur247" value="MAD">
+    <input type="hidden" name="cntCur248" id="cntCur248" value="YER">
+    <input type="hidden" name="cntCur249" id="cntCur249" value="ZMW">
+    <input type="hidden" name="cntCur250" id="cntCur250" value="ZWD">
+    <div class="row">
+    <div class="col-lg-6 col-md-12">
+    <label for="user_firstname">First Name *</label>
+    <input readonly="" value="Atlas" id="user_firstname" name="user_firstname" type="text" placeholder="First Name" onfocus="if (this.placeholder == 'First Name') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'First Name';}" style="background:#f6f5e4; padding-left:5px;">
+    </div>
+    <div class="col-lg-6 col-md-12">
+    <label for="user_lastname">Last Name *</label>
+    <input readonly="" value="Zeus" id="user_lastname" name="user_lastname" type="text" placeholder="Last Name" onfocus="if (this.placeholder == 'Last Name') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Last Name';}" style="background:#f6f5e4; padding-left:5px;">
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6 col-md-12">
+    <label for="user_phone">Phone Number *</label>
+    <input readonly="" value="(615)863-1147" id="user_phone" name="user_phone" type="text" placeholder="Phone Number" onfocus="if (this.placeholder == 'Phone Number') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Phone Number';}" style="background:#f6f5e4; padding-left:5px;">
+    </div>
+    <div class="col-lg-6 col-md-12">
+    <label for="user_email_address">Email Address *</label>
+    <input readonly="" value="zuesatlas_0001@gmail.com" id="user_email_address" name="user_email_address" type="email" placeholder="Email Address" onfocus="if (this.placeholder == 'Email Address') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Email Address';}" style="background:#f6f5e4; padding-left:5px;">
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6 col-md-12">
+    <label for="user_address">Contact Address *</label>
+    <input readonly="" value="Annalise, Anatole, Atlanta, GA" id="user_address" name="user_address" type="text" placeholder="Contact Address" onfocus="if (this.placeholder == 'Contact Address') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Contact Address';}" style="background:#f6f5e4; padding-left:5px;">
+    </div>
+    <div class="col-lg-6 col-md-12">
+    <label for="user_city">City *</label>
+    <input readonly="" value="Atlanta" id="user_city" name="user_city" type="text" placeholder="City" onfocus="if (this.placeholder == 'City') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'City';}" style="background:#f6f5e4; padding-left:5px;">
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6 col-md-12">
+    <label for="user_state">State / Province *</label>
+    <input readonly="" value="GA" id="user_state" name="user_state" type="text" placeholder="State / Province" onfocus="if (this.placeholder == 'State / Province') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'State / Province';}" style="background:#f6f5e4; padding-left:5px;">
+    </div>
+    <div class="col-lg-6 col-md-12">
+    <label for="user_zip_code">Zip / Postal Code *</label>
+    <input readonly="" value="30331" id="user_zip_code" name="user_zip_code" type="text" placeholder="Zip / Postal Code" onfocus="if (this.placeholder == 'Zip / Postal Code') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Zip / Postal Code';}" style="background:#f6f5e4; padding-left:5px;">
+    </div>
+    </div>
+    <div class="row" style="padding-top:30px;">
+    <div class="col-lg-6 col-md-12">
+    <label for="user_country_id">Country *</label>
+    <select disabled="" id="user_country_id" name="user_country_id" class="browser-default" onchange="getAnnualCurFunc(this.value);">
+    <option value="1">Afghanistan</option>
+    <option value="2">Aland Islands</option>
+    <option value="3">Albania</option>
+    <option value="4">Algeria</option>
+    <option value="5">American Samoa</option>
+    <option value="6">Andorra</option>
+    <option value="7">Angola</option>
+    <option value="8">Anguilla</option>
+    <option value="9">Antarctica</option>
+    <option value="10">Antigua &amp; Barbuda</option>
+    <option value="11">Argentina</option>
+    <option value="12">Armenia</option>
+    <option value="13">Aruba</option>
+    <option value="14">Ascension Island</option>
+    <option value="15">Australia</option>
+    <option value="16">Austria</option>
+    <option value="17">Azerbaijan</option>
+    <option value="18">Bahamas</option>
+    <option value="19">Bahrain</option>
+    <option value="20">Bangladesh</option>
+    <option value="21">Barbados</option>
+    <option value="22">Belarus</option>
+    <option value="23">Belize</option>
+    <option value="24">Benin</option>
+    <option value="25">Bermuda</option>
+    <option value="26">Bhutan</option>
+    <option value="27">Bolivia</option>
+    <option value="28">Bosnia &amp; Herzegovina</option>
+    <option value="29">Botswana</option>
+    <option value="30">Brazil</option>
+    <option value="31">British Indian Ocean Territory</option>
+    <option value="32">British Virgin Islands</option>
+    <option value="33">Brunei</option>
+    <option value="34">Bulgaria</option>
+    <option value="35">Burkina Faso</option>
+    <option value="36">Burundi</option>
+    <option value="37">Cambodia</option>
+    <option value="38">Cameroon</option>
+    <option value="39">Canada</option>
+    <option value="40">Canary Islands</option>
+    <option value="41">Cape Verde</option>
+    <option value="42">Caribbean Netherlands</option>
+    <option value="43">Cayman Islands</option>
+    <option value="44">Central African Republic</option>
+    <option value="45">Ceuta &amp; Melilla</option>
+    <option value="46">Chad</option>
+    <option value="47">Chile</option>
+    <option value="48">China</option>
+    <option value="49">Christmas Island</option>
+    <option value="50">Cocos (Keeling) Islands</option>
+    <option value="51">Colombia</option>
+    <option value="52">Comoros</option>
+    <option value="53">Congo - Brazzaville</option>
+    <option value="54">Congo - Kinshasa</option>
+    <option value="55">Cook Islands</option>
+    <option value="56">Costa Rica</option>
+    <option value="57">Cote d'Ivoire</option>
+    <option value="58">Croatia</option>
+    <option value="59">Cuba</option>
+    <option value="60">Curacao</option>
+    <option value="61">Cyprus</option>
+    <option value="62">Czech Republic</option>
+    <option value="63">Denmark</option>
+    <option value="64">Diego Garcia</option>
+    <option value="65">Djibouti</option>
+    <option value="66">Dominica</option>
+    <option value="67">Dominican Republic</option>
+    <option value="224">East Timor</option>
+    <option value="68">Ecuador</option>
+    <option value="69">Egypt</option>
+    <option value="70">El Salvador</option>
+    <option value="71">Equatorial Guinea</option>
+    <option value="72">Eritrea</option>
+    <option value="73">Estonia</option>
+    <option value="74">Ethiopia</option>
+    <option value="75">Falkland Islands</option>
+    <option value="76">Faroe Islands</option>
+    <option value="77">Fiji</option>
+    <option value="78">Finland</option>
+    <option value="79">France</option>
+    <option value="80">French Guiana</option>
+    <option value="81">French Polynesia</option>
+    <option value="82">French Southern Territories</option>
+    <option value="83">Gabon</option>
+    <option value="84">Gambia</option>
+    <option value="85">Georgia</option>
+    <option value="86">Germany</option>
+    <option value="87">Ghana</option>
+    <option value="88">Gibraltar</option>
+    <option value="89">Greece</option>
+    <option value="90">Greenland</option>
+    <option value="91">Grenada</option>
+    <option value="92">Guadeloupe</option>
+    <option value="93">Guam</option>
+    <option value="94">Guatemala</option>
+    <option value="95">Guernsey</option>
+    <option value="96">Guinea</option>
+    <option value="97">Guinea-Bissau</option>
+    <option value="98">Guyana</option>
+    <option value="99">Haiti</option>
+    <option value="100">Honduras</option>
+    <option value="101">Hong Kong</option>
+    <option value="102">Hungary</option>
+    <option value="103">Iceland</option>
+    <option value="104">India</option>
+    <option value="105">Indonesia</option>
+    <option value="106">Iran</option>
+    <option value="107">Iraq</option>
+    <option value="108">Ireland</option>
+    <option value="109">Isle of Man</option>
+    <option value="110">Israel</option>
+    <option value="111">Italy</option>
+    <option value="112">Jamaica</option>
+    <option value="113">Japan</option>
+    <option value="114">Jersey</option>
+    <option value="115">Jordan</option>
+    <option value="116">Kazakhstan</option>
+    <option value="117">Kenya</option>
+    <option value="118">Kiribati</option>
+    <option value="119">Kosovo</option>
+    <option value="120">Kuwait</option>
+    <option value="121">Kyrgyzstan</option>
+    <option value="122">Laos</option>
+    <option value="123">Latvia</option>
+    <option value="124">Lebanon</option>
+    <option value="125">Lesotho</option>
+    <option value="126">Liberia</option>
+    <option value="127">Libya</option>
+    <option value="128">Liechtenstein</option>
+    <option value="129">Lithuania</option>
+    <option value="130">Luxembourg</option>
+    <option value="131">Macau SAR China</option>
+    <option value="132">Macedonia</option>
+    <option value="133">Madagascar</option>
+    <option value="134">Malawi</option>
+    <option value="135">Malaysia</option>
+    <option value="136">Maldives</option>
+    <option value="137">Mali</option>
+    <option value="138">Malta</option>
+    <option value="139">Marshall Islands</option>
+    <option value="140">Martinique</option>
+    <option value="141">Mauritania</option>
+    <option value="142">Mauritius</option>
+    <option value="143">Mayotte</option>
+    <option value="144">Mexico</option>
+    <option value="145">Micronesia</option>
+    <option value="146">Moldova</option>
+    <option value="147">Monaco</option>
+    <option value="148">Mongolia</option>
+    <option value="149">Montenegro</option>
+    <option value="150">Montserrat</option>
+    <option value="151">Morocco</option>
+    <option value="152">Mozambique</option>
+    <option value="153">Myanmar</option>
+    <option value="154">Namibia</option>
+    <option value="155">Nauru</option>
+    <option value="156">Nepal</option>
+    <option value="157">Netherlands</option>
+    <option value="158">New Caledonia</option>
+    <option value="159">New Zealand</option>
+    <option value="160">Nicaragua</option>
+    <option value="161">Niger</option>
+    <option value="162">Nigeria</option>
+    <option value="163">Niue</option>
+    <option value="164">Norfolk Island</option>
+    <option value="165">North Korea</option>
+    <option value="166">Northern Mariana Islands</option>
+    <option value="167">Norway</option>
+    <option value="168">Oman</option>
+    <option value="169">Pakistan</option>
+    <option value="170">Palau</option>
+    <option value="171">Palestine</option>
+    <option value="172">Panama</option>
+    <option value="173">Papua New Guinea</option>
+    <option value="174">Paraguay</option>
+    <option value="175">Peru</option>
+    <option value="176">Philippines</option>
+    <option value="177">Pitcairn Islands</option>
+    <option value="178">Poland</option>
+    <option value="179">Portugal</option>
+    <option value="180">Puerto Rico</option>
+    <option value="181">Qatar</option>
+    <option value="182">Reunion</option>
+    <option value="183">Romania</option>
+    <option value="184">Russia</option>
+    <option value="185">Rwanda</option>
+    <option value="186">Samoa</option>
+    <option value="187">San Marino</option>
+    <option value="188">Sao Tome &amp; Principe</option>
+    <option value="189">Saudi Arabia</option>
+    <option value="190">Senegal</option>
+    <option value="191">Serbia</option>
+    <option value="192">Seychelles</option>
+    <option value="193">Sierra Leone</option>
+    <option value="194">Singapore</option>
+    <option value="195">Sint Maarten</option>
+    <option value="196">Slovakia</option>
+    <option value="197">Slovenia</option>
+    <option value="198">Solomon Islands</option>
+    <option value="199">Somalia</option>
+    <option value="200">South Africa</option>
+    <option value="201">South Georgia &amp; South Sandwich Islands</option>
+    <option value="202">South Korea</option>
+    <option value="203">South Sudan</option>
+    <option value="204">Spain</option>
+    <option value="205">Sri Lanka</option>
+    <option value="206">St. Barthelemy</option>
+    <option value="207">St. Helena</option>
+    <option value="208">St. Kitts &amp; Nevis</option>
+    <option value="209">St. Lucia</option>
+    <option value="210">St. Martin</option>
+    <option value="211">St. Pierre &amp; Miquelon</option>
+    <option value="212">St. Vincent &amp; Grenadines</option>
+    <option value="213">Sudan</option>
+    <option value="214">Suriname</option>
+    <option value="215">Svalbard &amp; Jan Mayen</option>
+    <option value="216">Swaziland</option>
+    <option value="217">Sweden</option>
+    <option value="218">Switzerland</option>
+    <option value="219">Syria</option>
+    <option value="220">Taiwan</option>
+    <option value="221">Tajikistan</option>
+    <option value="222">Tanzania</option>
+    <option value="223">Thailand</option>
+    <option value="225">Togo</option>
+    <option value="226">Tokelau</option>
+    <option value="227">Tonga</option>
+    <option value="228">Trinidad &amp; Tobago</option>
+    <option value="229">Tristan da Cunha</option>
+    <option value="230">Tunisia</option>
+    <option value="231">Turkey</option>
+    <option value="232">Turkmenistan</option>
+    <option value="233">Turks &amp; Caicos Islands</option>
+    <option value="234">Tuvalu</option>
+    <option value="235">U.S. Virgin Islands</option>
+    <option value="236">Uganda</option>
+    <option value="237">Ukraine</option>
+    <option value="238">United Arab Emirates</option>
+    <option value="239">United Kingdom</option>
+    <option value="251" selected="">United States</option>
+    <option value="240">Uruguay</option>
+    <option value="241">Uzbekistan</option>
+    <option value="242">Vanuatu</option>
+    <option value="243">Vatican City</option>
+    <option value="244">Venezuela</option>
+    <option value="245">Vietnam</option>
+    <option value="246">Wallis &amp; Futuna</option>
+    <option value="247">Western Sahara</option>
+    <option value="248">Yemen</option>
+    <option value="249">Zambia</option>
+    <option value="250">Zimbabwe</option>
+    </select>
+    </div>
+    <div class="col-lg-6 col-md-12">
+    <label for="user_gender">Gender *</label>
+    <select id="user_gender" name="user_gender" class="browser-default" disabled="">
+    <option value="Male" selected="">Male</option>
+    <option value="Female">Female</option>
+    </select>
+    </div>
+    </div>
+    <div class="row" style="padding-top:30px;">
+    <div class="col-lg-6 col-md-12">
+    <label for="user_dob">Date of birth (mm-dd-yyyy)*</label>
+    <input readonly="" type="text" class="form-control datepicker" name="user_dob" id="user_dob" placeholder="Date of birth *" value="07/31/1980" style="background:#f6f5e4; padding-left:5px;">
+    </div>
+    <div class="col-lg-6 col-md-12">
+    <label for="user_occupation">Occupation </label>
+    <input readonly="" type="text" name="user_occupation" id="user_occupation" placeholder="Occupation" value="Engineer" onfocus="if (this.placeholder == 'Occupation') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Occupation';}" style="background:#f6f5e4; padding-left:5px;">
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-12 col-md-12">
+    <label for="user_state"> ANNUAL INCOME </label>
+    </div>
+    <div class="col-lg-6 col-md-12">
+    <label for="user_annual_cur">Annual Income Currency</label>
+    <select id="user_annual_cur" name="user_annual_cur" class="browser-default" disabled="">
+    <option value="AFN">AFN</option>
+    <option value="EUR">EUR</option>
+    <option value="LEK">LEK</option>
+    <option value="DZD">DZD</option>
+    <option value="USD" selected="">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="AOA">AOA</option>
+    <option value="XCD">XCD</option>
+    <option value="USD" selected="">USD</option>
+    <option value="XCD">XCD</option>
+    <option value="ARS">ARS</option>
+    <option value="AMD">AMD</option>
+    <option value="AWG">AWG</option>
+    <option value="SHP">SHP</option>
+    <option value="AUD">AUD</option>
+    <option value="EUR">EUR</option>
+    <option value="AZN">AZN</option>
+    <option value="BSD">BSD</option>
+    <option value="BHD">BHD</option>
+    <option value="BDT">BDT</option>
+    <option value="BBD">BBD</option>
+    <option value="BYR">BYR</option>
+    <option value="BZD">BZD</option>
+    <option value="XOF">XOF</option>
+    <option value="BMD">BMD</option>
+    <option value="BTN">BTN</option>
+    <option value="BOB">BOB</option>
+    <option value="BAM">BAM</option>
+    <option value="BWP">BWP</option>
+    <option value="BRL">BRL</option>
+    <option value="USD" selected="">USD</option>
+    <option value="USD" selected="">USD</option>
+    <option value="BND">BND</option>
+    <option value="BGN">BGN</option>
+    <option value="XOF">XOF</option>
+    <option value="BIF">BIF</option>
+    <option value="KHR">KHR</option>
+    <option value="XAF">XAF</option>
+    <option value="CAD">CAD</option>
+    <option value="EUR">EUR</option>
+    <option value="CVE">CVE</option>
+    <option value="USD" selected="">USD</option>
+    <option value="KYD">KYD</option>
+    <option value="XAF">XAF</option>
+    <option value="EUR">EUR</option>
+    <option value="XAF">XAF</option>
+    <option value="CLP">CLP</option>
+    <option value="CNY">CNY</option>
+    <option value="AUD">AUD</option>
+    <option value="AUD">AUD</option>
+    <option value="COP">COP</option>
+    <option value="KMF">KMF</option>
+    <option value="XAF">XAF</option>
+    <option value="CDF">CDF</option>
+    <option value="NZD">NZD</option>
+    <option value="CRC">CRC</option>
+    <option value="XOF">XOF</option>
+    <option value="HRK">HRK</option>
+    <option value="CUP">CUP</option>
+    <option value="ANG">ANG</option>
+    <option value="EUR">EUR</option>
+    <option value="CZK">CZK</option>
+    <option value="DKK">DKK</option>
+    <option value="USD" selected="">USD</option>
+    <option value="DJF">DJF</option>
+    <option value="XCD">XCD</option>
+    <option value="DOP">DOP</option>
+    <option value="USD" selected="">USD</option>
+    <option value="USD" selected="">USD</option>
+    <option value="EGP">EGP</option>
+    <option value="USD" selected="">USD</option>
+    <option value="XAF">XAF</option>
+    <option value="ERN">ERN</option>
+    <option value="EUR">EUR</option>
+    <option value="ETB">ETB</option>
+    <option value="FKP">FKP</option>
+    <option value="DKK">DKK</option>
+    <option value="FJD">FJD</option>
+    <option value="EUR">EUR</option>
+    <option value="EUR">EUR</option>
+    <option value="EUR">EUR</option>
+    <option value="XPF">XPF</option>
+    <option value="EUR">EUR</option>
+    <option value="XAF">XAF</option>
+    <option value="GMD">GMD</option>
+    <option value="GEL">GEL</option>
+    <option value="EUR">EUR</option>
+    <option value="GHS">GHS</option>
+    <option value="GIP">GIP</option>
+    <option value="EUR">EUR</option>
+    <option value="DKK">DKK</option>
+    <option value="XCD">XCD</option>
+    <option value="EUR">EUR</option>
+    <option value="USD" selected="">USD</option>
+    <option value="GTQ">GTQ</option>
+    <option value="GBP">GBP</option>
+    <option value="GNF">GNF</option>
+    <option value="XOF">XOF</option>
+    <option value="GYD">GYD</option>
+    <option value="HTG">HTG</option>
+    <option value="HNL">HNL</option>
+    <option value="HKD">HKD</option>
+    <option value="HUF">HUF</option>
+    <option value="ISK">ISK</option>
+    <option value="INR">INR</option>
+    <option value="IDR">IDR</option>
+    <option value="IRR">IRR</option>
+    <option value="IQD">IQD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="ILS">ILS</option>
+    <option value="EUR">EUR</option>
+    <option value="JMD">JMD</option>
+    <option value="JPY">JPY</option>
+    <option value="GBP">GBP</option>
+    <option value="JOD">JOD</option>
+    <option value="KZT">KZT</option>
+    <option value="KES">KES</option>
+    <option value="AUD">AUD</option>
+    <option value="EUR">EUR</option>
+    <option value="KWD">KWD</option>
+    <option value="KGS">KGS</option>
+    <option value="LAK">LAK</option>
+    <option value="EUR">EUR</option>
+    <option value="LBP">LBP</option>
+    <option value="LSL">LSL</option>
+    <option value="LRD">LRD</option>
+    <option value="LYD">LYD</option>
+    <option value="CHF">CHF</option>
+    <option value="EUR">EUR</option>
+    <option value="EUR">EUR</option>
+    <option value="MOP">MOP</option>
+    <option value="MKD">MKD</option>
+    <option value="MGA">MGA</option>
+    <option value="MWK">MWK</option>
+    <option value="MYR">MYR</option>
+    <option value="MVR">MVR</option>
+    <option value="XOF">XOF</option>
+    <option value="EUR">EUR</option>
+    <option value="USD" selected="">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="MRU">MRU</option>
+    <option value="MUR">MUR</option>
+    <option value="EUR">EUR</option>
+    <option value="MXN">MXN</option>
+    <option value="USD" selected="">USD</option>
+    <option value="MDL">MDL</option>
+    <option value="EUR">EUR</option>
+    <option value="MNT">MNT</option>
+    <option value="EUR">EUR</option>
+    <option value="XCD">XCD</option>
+    <option value="MAD">MAD</option>
+    <option value="MZN">MZN</option>
+    <option value="MMK">MMK</option>
+    <option value="NAD">NAD</option>
+    <option value="AUD">AUD</option>
+    <option value="NPR">NPR</option>
+    <option value="EUR">EUR</option>
+    <option value="XPF">XPF</option>
+    <option value="NZD">NZD</option>
+    <option value="NIO">NIO</option>
+    <option value="XOF">XOF</option>
+    <option value="NGN">NGN</option>
+    <option value="NZD">NZD</option>
+    <option value="AUD">AUD</option>
+    <option value="KPW">KPW</option>
+    <option value="USD" selected="">USD</option>
+    <option value="NOK">NOK</option>
+    <option value="OMR">OMR</option>
+    <option value="PKR">PKR</option>
+    <option value="USD" selected="">USD</option>
+    <option value="ILS">ILS</option>
+    <option value="PAB">PAB</option>
+    <option value="PGK">PGK</option>
+    <option value="PYG">PYG</option>
+    <option value="PEN">PEN</option>
+    <option value="PHP">PHP</option>
+    <option value="NZD">NZD</option>
+    <option value="PLN">PLN</option>
+    <option value="EUR">EUR</option>
+    <option value="USD" selected="">USD</option>
+    <option value="QAR">QAR</option>
+    <option value="EUR">EUR</option>
+    <option value="RON">RON</option>
+    <option value="RUB">RUB</option>
+    <option value="RWF">RWF</option>
+    <option value="WST">WST</option>
+    <option value="EUR">EUR</option>
+    <option value="STD">STD</option>
+    <option value="SAR">SAR</option>
+    <option value="XOF">XOF</option>
+    <option value="RSD">RSD</option>
+    <option value="SCR">SCR</option>
+    <option value="SLL">SLL</option>
+    <option value="SGD">SGD</option>
+    <option value="ANG">ANG</option>
+    <option value="EUR">EUR</option>
+    <option value="EUR">EUR</option>
+    <option value="SBD">SBD</option>
+    <option value="SOS">SOS</option>
+    <option value="ZAR">ZAR</option>
+    <option value="GBP">GBP</option>
+    <option value="KRW">KRW</option>
+    <option value="SSP">SSP</option>
+    <option value="EUR">EUR</option>
+    <option value="LKR">LKR</option>
+    <option value="EUR">EUR</option>
+    <option value="SHP">SHP</option>
+    <option value="XCD">XCD</option>
+    <option value="XCD">XCD</option>
+    <option value="EUR">EUR</option>
+    <option value="EUR">EUR</option>
+    <option value="XCD">XCD</option>
+    <option value="SDG">SDG</option>
+    <option value="SRD">SRD</option>
+    <option value="NOK">NOK</option>
+    <option value="SZL">SZL</option>
+    <option value="SEK">SEK</option>
+    <option value="CHF">CHF</option>
+    <option value="SYP">SYP</option>
+    <option value="TWD">TWD</option>
+    <option value="TJS">TJS</option>
+    <option value="TZS">TZS</option>
+    <option value="THB">THB</option>
+    <option value="XOF">XOF</option>
+    <option value="NZD">NZD</option>
+    <option value="TOP">TOP</option>
+    <option value="TTD">TTD</option>
+    <option value="GBP">GBP</option>
+    <option value="TND">TND</option>
+    <option value="TRY">TRY</option>
+    <option value="TMT">TMT</option>
+    <option value="USD" selected="">USD</option>
+    <option value="AUD">AUD</option>
+    <option value="USD" selected="">USD</option>
+    <option value="UGX">UGX</option>
+    <option value="UAH">UAH</option>
+    <option value="AED">AED</option>
+    <option value="GBP">GBP</option>
+    <option value="USD" selected="">USD</option>
+    <option value="UYU">UYU</option>
+    <option value="UZS">UZS</option>
+    <option value="VUV">VUV</option>
+    <option value="EUR">EUR</option>
+    <option value="VEF">VEF</option>
+    <option value="VND">VND</option>
+    <option value="XPF">XPF</option>
+    <option value="MAD">MAD</option>
+    <option value="YER">YER</option>
+    <option value="ZMW">ZMW</option>
+    <option value="ZWD">ZWD</option>
+    </select>
+    </div>
+    <div class="col-lg-6 col-md-12">
+    <label for="user_annual_income">Annual Income Figure</label>
+    <input readonly="" value="500,000.00" id="user_annual_income" name="user_annual_income" type="text" placeholder="10,000,000.00" onfocus="if (this.placeholder == '10,000,000.00') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = '10,000,000.00';}" style="background:#f6f5e4; padding-left:5px;">
+    </div>
+    </div>
+    <div class="row">
+    <div class="input-field col s12">
+    <button class="btn cyan waves-effect waves-light" type="submit" name="action" onclick="updateProfileFunc()" style="display:none">
+    Save Profile Update
+    </button>
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    <div class="tab-pane" id="newInvestPort">
+    <div class="panel panel-warning">
+    <div class="panel-heading">
+    <img class="profile-user-img img-responsive img-circle" id="userPhotoImage" src="../images/2.jpg" style="max-width:50px;">
+    </div>
+    <div class="panel-footer">
+    <form style="margin-bottom:20px;" action="severSrcipts/upload_profile_photo_process.php" onsubmit="return false" method="post" id="photoUploadForm" name="photoUploadForm" enctype="multipart/form-data">
+    <input type="hidden" name="pixUser_login_id" id="pixUser_login_id" value="37600609187">
+    <input type="hidden" name="oldPix" id="oldPix" value="160299892.jpeg">
+    <div class="row">
+    <div class="input-field col s12">
+    <input id="user_pix" name="user_pix" type="file" placeholder="Browse Photo" onfocus="if (this.placeholder == 'Browse Photo') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Browse Photo';}">
+    </div>
+    </div>
+    <div class="row">
+    <div class="input-field col s12">
+    <button class="btn cyan waves-effect waves-light" type="submit" name="uploadButton" id="uploadButton">
+    <i class="fa fa-upload fa-1x"></i> Upload Profile Photo
+    </button>
+    </div>
+    </div>
+    </form>
+    <div class="clearfix"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <footer class="center-align m-b-30 m-l-15 m-r-15">All Rights Reserved &reg; <script type="text/javascript"> var d = new Date(); document.write(d.getFullYear()); </script> <br> <a>Fairway Credit Union Bank</a>.</footer>
+</div>
+
+
+
+
+
+
+<div class="chat-windows "></div>
+
+
+
+</div>
+
+
+
+<script data-cfasync="false" src="js/email-decode.min.js">
+</script><script src="js/jquery.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/perfect-scrollbar.jquery.min.js"></script>
+
+
+
+<script src="js/app.js"></script>
+<script src="js/app.init.js"></script>
+<script src="js/app-style-switcher.js"></script>
+
+
+
+<script src="js/custom.min.js"></script>
+
+
+
+<script src="js/jquery-jvectormap.min.js"></script>
+<script src="js/jquery-jvectormap-world-mill-en.js"></script>
+
+<script src="js/d3.min.js"></script>
+<script src="js/c3.min.js"></script>
+<script src="js/dashboard2.js"></script>
+<script src="js/sparkline.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/jquery.bpopups2.min.js"></script>
+<script type="text/javascript" src="js/date_time.js"></script>
+</body>
+</html>

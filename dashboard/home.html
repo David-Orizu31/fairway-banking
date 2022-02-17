@@ -1,0 +1,1598 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
+<title>Fairway Credit Union Bank</title>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+<script src="js/font-awesome.js"></script>
+
+
+<link href="css/c3.min.css" rel="stylesheet">
+<link href="css/jquery-jvectormap.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet">
+
+
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+       
+        <![endif]-->
+</head>
+<body>
+<div class="main-wrapper" id="main-wrapper">
+
+
+
+<div class="preloader">
+<div class="loader">
+<div class="loader__figure"></div>
+<p class="loader__label">Fairway Credit Union Online Banking</p>
+</div>
+</div>
+
+
+
+<header class="topbar">
+ <div id="justMyPopUpAlert" style="text-align:center">
+<div style="background:#FFF; min-width:400px; padding:0px 0px 5px 0px;">
+<table width="100%" border="0">
+<tr style="background:#FC3; height:20px;">
+<td style="padding:10px; text-align:left; color:#069; font-weight:bold;">
+<img src="images/s_attention.png" width="16" height="16" style="float:left; margin-right:5px;" />Message Alert!
+<span style="display:inline-block; clear:both;"></span>
+</td>
+</tr>
+<tr>
+<td id="displayMsg2" style="padding:5px;font-style:italic; font-size:12px; font-weight:bold;">&nbsp;</td>
+</tr>
+</table>
+<input type="button" value="ok" name="ok_button2" id="ok_button2" class="b-close btn btn-primary" style="cursor:pointer; width:70px; padding:2px 7px;" />
+</div>
+</div> 
+ <div id="justMyPopUp" style="text-align:center">
+<div style="background:#FFF; min-width:400px; padding:0px 0px 5px 0px;">
+<table width="100%" border="0">
+<tr style="background:#FC3; height:20px;">
+<td style="padding:10px; text-align:left; color:#069; font-weight:bold;">
+<img src="images/s_attention.png" width="16" height="16" style="float:left; margin-right:5px;" />Message Alert!
+<span style="display:inline-block; clear:both;"></span>
+</td>
+</tr>
+<tr>
+<td id="displayMsg" style="padding:5px 10px; font-size:12px; font-style:italic; font-weight:bold;">&nbsp;</td>
+</tr>
+</table>
+<input type="button" value="ok" name="ok_button" id="ok_button" class="b-close btn btn-primary" style="cursor:pointer;" onClick="reloadPage()" />
+</div>
+</div> 
+<div id="loadingPop">
+<input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="CloseMeNowLog" />
+<i class="fa fa-spin fa-refresh" style="font-size:45px;"></i>
+</div>
+<div id="popUpLoader">
+<input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="ClosePopLoader">
+<div id="processing"><i class="fa fa-spin fa-refresh" style="font-size:45px;"></i></div>
+</div>
+
+
+
+<nav>
+<div class="nav-wrapper">
+
+
+
+<a href="javascript:void(0)" class="brand-logo" data-logobg="skin1">
+<span class="icon">
+<img class="light-logo" src="../images/logo-light-icon.png" alt="logos">
+<img class="dark-logo" src="../images/logo-icon.png" alt="logos">
+</span>
+<span class="text">
+<img class="light-logo" src="../images/logo-light-text.png" alt="logos">
+<img class="dark-logo" src="../images/logo-text.png" alt="logos">
+</span>
+</a>
+
+
+
+
+
+
+<ul class="left">
+<li class="hide-on-med-and-down">
+<a href="javascript: void(0);" class="nav-toggle">
+<span class="bars bar1"></span>
+<span class="bars bar2"></span>
+<span class="bars bar3"></span>
+</a>
+</li>
+<li class="hide-on-large-only">
+<a href="javascript: void(0);" class="sidebar-toggle">
+<span class="bars bar1"></span>
+<span class="bars bar2"></span>
+<span class="bars bar3"></span>
+</a>
+</li>
+</ul>
+
+
+
+ 
+
+
+<ul class="right">
+
+
+
+<li><a class="dropdown-trigger" href="javascript: void(0);" data-target="user_dropdown"><img id="userHeaderPic" src="../images/2.jpg" alt="user" class="circle profile-pic"></a>
+<ul id="user_dropdown" class="mailbox dropdown-content dropdown-user">
+<li>
+<div class="dw-user-box">
+<div class="u-img"><img id="secondHeadPix" src="../images/2.jpg" alt="user"></div>
+<div class="u-text">
+<h4 style="font-size:12px; font-weight:bold;" id="userRpName">Steve Harvey</h4>
+<p><span id="userRpLoginId">1003</span></p>
+<a href="profile-info.html" class="waves-effect waves-light btn-small red white-text">View Profile</a>
+</div>
+</div>
+</li>
+<li role="separator" class="divider"></li>
+<li><a href="profile-info.html"><i class="fa fa-user-circle"></i> My Profile</a></li>
+<li><a href="my-accounts.html"><i class="fa fa-briefcase fa-1x" style="margin-right:10px;"></i> My Accounts</a></li>
+<li><a href="inbox-compose.html"><i class="fa fa-envelope fa-1x" style="margin-right:10px;"></i> Contact Support</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="password-reset.html"><i class="fa fa-cog fa-1x" style="margin-right:10px;"></i>Reset Password</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="javascript:void(0);" onclick="logOutFunc();"><i class="fa fa-power-off"></i> Logout</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+</div>
+</nav>
+
+
+
+</header>
+
+
+
+<aside class="left-sidebar">
+<ul id="slide-out" class="sidenav">
+<li>
+<div class="user-profile" style="background-image: url(../images/user-bg.jpg);">
+<div class="user-name dropdown-trigger" data-target='dropdownuser'>
+<h6 class="white-text name"> <img style="max-width:30px;" id="leftHdPix" class="profile-user-img img-responsive img-circle" src="../images/2.jpg" alt="user"> <span id="hdNameSpan" style="font-size:12px; margin-left:10px;">Steve Harvey</span> <i class="fa fa-angle-down ml-auto"></i></h6>
+</div>
+<ul id='dropdownuser' class='dropdown-content'>
+<li><a href="profile-info.html"><i class="fa fa-user-circle fa-1x"></i> My Profile</a></li>
+<li><a href="my-accounts.html"><i class="fa fa-briefcase fa-1x"></i> My Account (s) </a></li>
+<li><a href="inbox-compose.html"><i class="fa fa-envelope fa-1x"></i> Contact Support</a></li>
+ <li role="separator" class="divider m-t-0"></li>
+<li><a href="password-reset.html"><i class="fa fa-cog fa-1x"></i> Reset Password</a></li>
+<li role="separator" class="divider m-t-0"></li>
+<li><a onclick="logOutFunc();" href="javascript:void(0)"><i class="fa fa-power-off fa-1x"></i> Logout</a></li>
+</ul>
+</div>
+</li>
+<li>
+<ul class="collapsible">
+<li class="small-cap"><span class="hide-menu">PERSONAL</span></li>
+<li>
+<a href="home.html" class="collapsible-header"><i class="fa fa-home" style="margin-right:10px;"></i><span class="hide-menu"> Home </span></a>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-briefcase" style="margin-right:10px;"></i><span class="hide-menu"> Account </span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="my-accounts.html"><i class="fa fa-briefcase" style="margin-right:10px;"></i><span class="hide-menu">My Account (s) </span></a></li>
+<li><a href="transaction-history.html"><i class="fa fa-book" style="margin-right:10px;"></i><span class="hide-menu">Transaction History</span></a></li>
+<li><a href="register-new-account.html"><i class="fa fa-user-plus" style="margin-right:10px;"></i><span class="hide-menu">Register New Account</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-list-alt" style="margin-right:10px;"></i><span class="hide-menu">Withdrawal / Transfer</span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="fund-transfer.html"><i class="fa fa-arrow-circle-right" style="margin-right:10px;"></i><span class="hide-menu">Transfer Fund</span></a></li>
+<li><a href="send-echeque.html"><i class="fa fa-bank" style="margin-right:10px;"></i><span class="hide-menu">Send eCheque</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-envelope-open" style="margin-right:10px;"></i><span class="hide-menu"> Message</span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="inbox-email.html"><i class="fa fa-envelope" style="margin-right:10px;"></i><span class="hide-menu" id="myInoxMsg">Inbox</span></a></li>
+<li><a href="sent-mails.html"><i class="fa fa-support" style="margin-right:10px;"></i><span class="hide-menu">My Support Tickets</span></a></li>
+<li><a href="inbox-compose.html"><i class="fa fa-edit" style="margin-right:10px;"></i><span class="hide-menu">Contact Support</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="cheque-deposit.html" class="collapsible-header"><i class="fa fa-bank" style="margin-right:10px;"></i><span class="hide-menu">Cheque Deposit </span></a>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-credit-card" style="margin-right:10px;"></i><span class="hide-menu"> Cards </span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="mycards.html"><i class="fa fa-credit-card" style="margin-right:10px;"></i><span class="hide-menu">My Cards</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-user" style="margin-right:10px;"></i><span class="hide-menu"> Profile </span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="password-reset.html"><i class="fa fa-key" style="margin-right:10px;"></i><span class="hide-menu">Password Reset</span></a></li>
+<li><a href="profile-info.html"><i class="fa fa-user-circle" style="margin-right:10px;"></i><span class="hide-menu">Profile Info</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript:void(0);" class="collapsible-header" onclick="logOutFunc();"><i class="fa fa-power-off" style="margin-right:10px;"></i><span class="hide-menu"> Log Out </span></a>
+</li>
+<li>
+</li>
+</ul>
+</li>
+</ul>
+</aside>
+
+
+
+
+
+
+<div class="page-wrapper">
+
+
+
+<div class="page-titles">
+<div class="d-flex align-items-center">
+    <span id="userNameHead">
+        <h5 class="font-medium m-b-0" id="userLoggedName">Atlas Zeus</h5>
+        <div class="row">
+        <h6 style="font-size:12px;">Login ID: <span id="userLoggedID">37600609187</span></h6>
+        <input type="hidden" value="160299892.jpeg" id="userHeaderPixV" name="userHeaderPixV">
+        </div>
+    </span>
+    <div class=" col-lg-6 col-md-12">
+        <span id="date_time" style="display:block; color:#f00; font-size:12px; font-weight:bold; text-align:center"></span>
+    </div>
+<div class="custom-breadcrumb ml-auto">
+<a href="home.html" class="breadcrumb">Home</a>
+<a href="javascript:void(0)" class="breadcrumb">Dashboard</a>
+<div style="padding-top:10px;">
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="container-fluid">
+
+
+
+    <div class="row" id="accountInfo">
+    <div style="padding-left:15px; padding-right:20px;">
+    <form style="margin-bottom:20px;" onsubmit="return false" method="post" id="acctForm" name="acctForm">
+    <input type="hidden" name="user_loginID" id="user_loginID" value="37600609187">
+    <label style="color:#ff8f00; font-weight:bold;">My Accounts</label>
+    <select id="account_number" name="account_number" class="browser-default" style="font-size:12px; font-weight:bold; color:#000;" onchange="getRecentTransFunc('37600609187',this.value)">
+    <option value="0464691347" selected="">0464691347 (Business Account) / USD 496,468.80</option>
+    <option value="3442712639">3442712639 (Savings Account) / GBP 2,380,602.65</option>
+    <option value="7665606978">7665606978 (Offshore Account) / EUR 23,028.00</option>
+    </select>
+    </form>
+    <h5 class="font-medium m-b-0" style="color:#5e35b1; font-weight:bold;">Selected Account:</h5>
+    <div class="row">
+    <h6 style="font-size:12px;"><span style="color:#000; font-weight:bold;">0464691347 (Business Account)</span></h6>
+    </div>
+    </div>
+    <div class="col l3 m6 s12">
+    <div class="card">
+    <div class="card-content">
+    <div class="row">
+    <div class="col s12">
+    <div class="d-flex no-block align-items-center">
+    <div>
+    <h4 style="font-size:14px;"> USD 496,468.80</h4>
+    <h6 class="card-subtitle">Balance</h6>
+    </div>
+    <div class="ml-auto">
+    <span class="blue-text display-6"><i class="ti-layout-slider-alt"></i></span>
+    </div>
+    </div>
+    </div>
+    <div class="col s12">
+    <div class="progress">
+    <div class="determinate indigo darken-1" style="width:70%;"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col l3 m6 s12">
+    <div class="card">
+    <div class="card-content">
+    <div class="row">
+    <div class="col s12">
+    <div class="d-flex no-block align-items-center">
+    <div>
+    <h4 style="font-size:14px;">USD 376,530.00</h4>
+    <h6 class="card-subtitle">Last Deposit</h6>
+    </div>
+    <div class="ml-auto">
+    <span class="green-text display-6"><i class="ti-layout-media-left-alt"></i></span>
+    </div>
+    </div>
+    </div>
+    <div class="col s12">
+    <div class="progress">
+    <div class="determinate teal darken-2" style="width:70%;"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col l3 m6 s12">
+    <div class="card">
+    <div class="card-content">
+    <div class="row">
+    <div class="col s12">
+    <div class="d-flex no-block align-items-center">
+    <div>
+    <h4 style="font-size:14px;">USD 154,527.18</h4>
+    <h6 class="card-subtitle">Last Withdrawal</h6>
+    </div>
+    <div class="ml-auto">
+    <span class="orange-text display-6"><i class="ti-notepad"></i></span>
+    </div>
+    </div>
+    </div>
+    <div class="col s12">
+    <div class="progress">
+    <div class="determinate amber darken-3" style="width:70%;"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col l3 m6 s12">
+    <div class="card">
+    <div class="card-content">
+    <div class="row">
+    <div class="col s12">
+    <div class="d-flex no-block align-items-center">
+    <div>
+    <a href="fund-transfer.html" class="btn btn-round">Transfer Fund</a>
+    </div>
+    <div class="ml-auto">
+    <span class="black-text display-6"><i class="ti-panel"></i></span>
+    </div>
+    </div>
+    </div>
+    <div class="col s12">
+    <div class="progress">
+    <div class="determinate grey darken-3" style="width:70%;"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    <div class="row">
+    <div class="col-md-12 col-lg-12">
+    <div class="panel panel-default">
+    <div class="table-responsive" id="recentTransactionDiv">
+    <div style="padding:10px">
+    <table class="table table-hover table-striped table-bordered" style="font-size:11px;">
+    <thead>
+    <tr>
+    <th>Batch #</th>
+    <th>Transaction</th>
+    <th>Desc.</th>
+    <th>Amount</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th colspan="2" class="text-center"><i class="fa fa-cog"></i></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="fund-transfer-details.html" onclick="viewTransDetailFunc('fund-transfer-details.html','1788072','transfer_refno')" title="Click to view more details">
+    1788072</a>
+    </td>
+    <td style="padding-left:10px;">Fund Withdrawal / Transfer</td>
+    <td style="padding-left:10px;">Withdrawal</td>
+    <td style="padding-left:10px;">USD 154,527.18</td>
+    <td style="padding-left:10px;">Feb 13, 2022</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="fund-transfer-details.html" onclick="viewTransDetailFunc('fund-transfer-details.html','1788072','transfer_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','4943062','transfer_refno')" title="Click to view more details">
+    4943062</a>
+    </td>
+    <td style="padding-left:10px;">Fund Withdrawal / Transfer</td>
+    <td style="padding-left:10px;">Withdrawal</td>
+    <td style="padding-left:10px;">USD 250,000.00</td>
+    <td style="padding-left:10px;">Feb 12, 2022</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','4943062','transfer_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="deposit-details.html" onclick="viewTransDetailFunc('deposit-details','4752997','deposit_refno')" title="Click to view more details">
+    4752997</a>
+    </td>
+    <td style="padding-left:10px;">Deposit via Cheque</td>
+    <td style="padding-left:10px;">Deposit</td>
+    <td style="padding-left:10px;">USD 376,530.00</td>
+    <td style="padding-left:10px;">Jan 29, 2022</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="deposit-details.html" onclick="viewTransDetailFunc('deposit-details','4752997','deposit_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','3179114','transfer_refno')" title="Click to view more details">
+    3179114</a>
+    </td>
+    <td style="padding-left:10px;">Fund Withdrawal / Transfer</td>
+    <td style="padding-left:10px;">Withdrawal</td>
+    <td style="padding-left:10px;">USD 22,500.00</td>
+    <td style="padding-left:10px;">Jan 23, 2022</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','3179114','transfer_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','4015988','transfer_refno')" title="Click to view more details">
+    4015988</a>
+    </td>
+    
+    <td style="padding-left:10px;">Fund Withdrawal / Transfer</td>
+    <td style="padding-left:10px;">Withdrawal</td>
+    <td style="padding-left:10px;">USD 10,000.00</td>
+    <td style="padding-left:10px;">Jan 19, 2022</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','4015988','transfer_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','9880024','deposit_refno')" title="Click to view more details">
+    9880024</a>
+    </td>
+    <td style="padding-left:10px;">Deposit via Inter Bank Transfer</td>
+    <td style="padding-left:10px;">Deposit</td>
+    <td style="padding-left:10px;">USD 48,900.00</td>
+    <td style="padding-left:10px;">Jan 14, 2022</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','9880024','deposit_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','3652429','deposit_refno')" title="Click to view more details">
+    3652429</a>
+    </td>
+    <td style="padding-left:10px;">Deposit via Inter Bank Transfer</td>
+    <td style="padding-left:10px;">Deposit</td>
+    <td style="padding-left:10px;">USD 37,100.00</td>
+    <td style="padding-left:10px;">Jan 10, 2022</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','3652429','deposit_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','3298282','deposit_refno')" title="Click to view more details">
+    3298282</a>
+    </td>
+    <td style="padding-left:10px;">Deposit via eCheque</td>
+    <td style="padding-left:10px;">Deposit</td>
+    <td style="padding-left:10px;">USD 54,500.00</td>
+    <td style="padding-left:10px;">Dec 27, 2021</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','3298282','deposit_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','3194543','transfer_refno')" title="Click to view more details">
+    3194543</a>
+    </td>
+    <td style="padding-left:10px;">Fund Withdrawal / Transfer</td>
+    <td style="padding-left:10px;">Withdrawal</td>
+    <td style="padding-left:10px;">USD 196,332.00</td>
+    <td style="padding-left:10px;">Nov 21, 2021</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','3194543','transfer_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','9960926','transfer_refno')" title="Click to view more details">
+    9960926</a>
+    </td>
+    <td style="padding-left:10px;">Fund Withdrawal / Transfer</td>
+    <td style="padding-left:10px;">Withdrawal</td>
+    <td style="padding-left:10px;">USD 200,000.00</td>
+    <td style="padding-left:10px;">Nov 12, 2021</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','9960926','transfer_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','9220255','transfer_refno')" title="Click to view more details">
+    9220255</a>
+    </td>
+    <td style="padding-left:10px;">Fund Withdrawal / Transfer</td>
+    <td style="padding-left:10px;">Withdrawal</td>
+    <td style="padding-left:10px;">USD 53.00</td>
+    <td style="padding-left:10px;">Nov 05, 2021</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','9220255','transfer_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','5591768','deposit_refno')" title="Click to view more details">
+    5591768</a>
+    </td>
+    <td style="padding-left:10px;">Deposit via Money Order</td>
+    <td style="padding-left:10px;">Deposit</td>
+    <td style="padding-left:10px;">USD 240,800.00</td>
+    <td style="padding-left:10px;">Jun 16, 2021</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','5591768','deposit_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','8665570','deposit_refno')" title="Click to view more details">
+    8665570</a>
+    </td>
+    <td style="padding-left:10px;">Deposit via Inter Bank Transfer</td>
+    <td style="padding-left:10px;">Deposit</td>
+    <td style="padding-left:10px;">USD 79,000.98</td>
+    <td style="padding-left:10px;">Apr 29, 2021</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','8665570','deposit_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','8662235','deposit_refno')" title="Click to view more details">
+    8662235</a>
+    </td>
+    <td style="padding-left:10px;">Deposit via Cheque</td>
+    <td style="padding-left:10px;">Deposit</td>
+    <td style="padding-left:10px;">USD 353,800.00</td>
+    <td style="padding-left:10px;">Apr 05, 2021</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','8662235','deposit_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','6312175','transfer_refno')" title="Click to view more details">
+    6312175</a>
+    </td>
+    <td style="padding-left:10px;">Fund Withdrawal / Transfer</td>
+    <td style="padding-left:10px;">Withdrawal</td>
+    <td style="padding-left:10px;">USD 10,900.00</td>
+    <td style="padding-left:10px;">Mar 20, 2021</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','6312175','transfer_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','5191047','transfer_refno')" title="Click to view more details">
+    5191047</a>
+    </td>
+    <td style="padding-left:10px;">Fund Withdrawal / Transfer</td>
+    <td style="padding-left:10px;">Withdrawal</td>
+    <td style="padding-left:10px;">USD 7,450.00</td>
+    <td style="padding-left:10px;">Sep 20, 2020</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','5191047','transfer_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','7672417','transfer_refno')" title="Click to view more details">
+    7672417</a>
+    </td>
+    <td style="padding-left:10px;">Fund Withdrawal / Transfer</td>
+    <td style="padding-left:10px;">Withdrawal</td>
+    <td style="padding-left:10px;">USD 1,300.00</td>
+    <td style="padding-left:10px;">Sep 19, 2020</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('fund-transfer-details.html','7672417','transfer_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','6417015','deposit_refno')" title="Click to view more details">
+    6417015</a>
+    </td>
+    <td style="padding-left:10px;">Deposit via Inter Bank Transfer</td>
+    <td style="padding-left:10px;">Deposit</td>
+    <td style="padding-left:10px;">USD 18,900.00</td>
+    <td style="padding-left:10px;">Aug 12, 2020</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','6417015','deposit_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    <tr>
+    <td style="padding-left:10px;">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','5697257','deposit_refno')" title="Click to view more details">
+    5697257</a>
+    </td>
+    <td style="padding-left:10px;">Deposit via Cheque</td>
+    <td style="padding-left:10px;">Deposit</td>
+    <td style="padding-left:10px;">USD 140,000.00</td>
+    <td style="padding-left:10px;">Jan 06, 2020</td>
+    <td style="padding-left:10px;">Completed</td>
+    <td style="padding-left:10px;" colspan="2">
+    <a href="javascript:void(0)" onclick="viewTransDetailFunc('deposit-details','5697257','deposit_refno')" title="Click to manage / view more details"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col s12">
+    <div class="card">
+    <div class="card-content" id="acctStatistics" style="padding:10px 15px; font-size:12px; font-weight:bold;">
+    <h5 class="card-title">Account Statistics</h5>
+    <div class="row m-t-30 m-b-20">
+    
+    <div class="col s4 b-r left-align">
+    <h5 class="m-b-0 font-medium">28%<small><i class="ti-arrow-up green-text"></i></small></h5>Deposits</div>
+    
+    <div class="col s4 b-r center-align">
+    <h5 class="m-b-0 font-medium">43%<small><i class="ti-arrow-down red-text"></i></small></h5>Withdrawals</div>
+    
+    <div class="col s4 right-align">
+    <h5 class="m-b-0 font-medium">28%<small><i class="ti-arrow-up green-text"></i></small></h5>Interests</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    </div>
+
+
+
+<footer class="center-align m-b-30 m-l-15 m-r-15">All Rights Reserved &reg; <script type="text/javascript"> var d = new Date(); document.write(d.getFullYear()); </script> <br> <a>Fairway Credit Union Bank</a>.</footer>
+</div>
+
+
+
+
+
+
+<div class="chat-windows "></div>
+
+
+
+</div>
+
+
+
+<script data-cfasync="false" src="js/email-decode.min.js">
+</script><script src="js/jquery.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/perfect-scrollbar.jquery.min.js"></script>
+
+
+
+<script src="js/app.js"></script>
+<script src="js/app.init.js"></script>
+<script src="js/app-style-switcher.js"></script>
+
+
+
+<script src="js/custom.min.js"></script>
+
+
+
+<script src="js/jquery-jvectormap.min.js"></script>
+<script src="js/jquery-jvectormap-world-mill-en.js"></script>
+
+<script src="js/d3.min.js"></script>
+<script src="js/c3.min.js"></script>
+<script src="js/dashboard2.js"></script>
+<script src="js/sparkline.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/jquery.bpopups2.min.js"></script>
+<!-- <script language="javascript" type="text/javascript">
+
+
+
+
+ function getXMLHTTP() { //fuction to return the xml http object
+		var xmlhttp=false;	
+		try{
+			xmlhttp=new XMLHttpRequest();
+		}
+		catch(e)	{		
+			try{			
+				xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch(e){
+				try{
+				xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+				}
+				catch(e1){
+					xmlhttp=false;
+				}
+			}
+		}
+		 	
+		return xmlhttp;
+    }
+	
+
+
+
+
+
+
+
+$( document ).ready(function() {
+//getMenuFunc();
+
+getUserNameFunc();
+date_time('date_time');
+
+});
+
+
+
+
+
+
+function getUserNameFunc(){	
+if (sessionStorage.length == 0 || sessionStorage.getItem("user_login_id")===null) {
+
+sessionStorage.clear();
+localStorage.clear();
+location='index.html';
+
+}
+
+
+var user_login_id =  sessionStorage.getItem("user_login_id");
+
+var strURL="severSrcipts/get_user_head_name.php?user_login_id="+user_login_id;
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+
+
+if(req.responseText==1){
+location='index.html'; 
+
+return false;
+}
+
+
+
+
+
+else{
+
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+document.getElementById('userNameHead').innerHTML=req.responseText;
+var userFullName = document.getElementById('userLoggedName').innerHTML;
+document.getElementById('hdNameSpan').innerHTML=userFullName;
+document.getElementById('userRpName').innerHTML=userFullName;
+document.getElementById('userRpLoginId').innerHTML=user_login_id;
+
+
+var userHeaderPixV = document.getElementById('userHeaderPixV').value;
+document.getElementById('userHeaderPic').src='severSrcipts/userPhotos/'+userHeaderPixV;
+document.getElementById('secondHeadPix').src='severSrcipts/userPhotos/'+userHeaderPixV;
+document.getElementById('leftHdPix').src='severSrcipts/userPhotos/'+userHeaderPixV;
+
+
+
+
+getAccountInfo(user_login_id);
+}
+	
+
+} else {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+}
+
+}
+
+
+
+function getAccountInfo(user_login_id){
+
+if (user_login_id == "0") {
+//alert("Please login to access your account!");
+location='index.html';
+return false;
+}
+
+
+else{
+var user_login_id =  sessionStorage.getItem("user_login_id");
+
+}
+var strURL="severSrcipts/get_user_account_info.php?user_login_id="+user_login_id;
+
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+if(req.responseText==1){
+
+//alert("Unable to load account information, please log in all over!"); 
+location='index.html';
+ 
+
+return false;
+}
+
+
+
+else{
+document.getElementById('accountInfo').innerHTML=req.responseText;
+
+
+var account_number =  document.getElementById('account_number').value;
+
+
+getRecentTransaction(user_login_id,account_number);
+}
+	
+
+} else {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+}
+}
+
+
+
+
+
+
+
+
+
+function getRecentTransaction(user_login_id,account_number){
+
+
+if (user_login_id == "0") {
+//alert("Please login to access your account!");
+location='index.html';
+return false;
+}
+
+
+else{
+var user_login_id =  sessionStorage.getItem("user_login_id");
+
+}
+var strURL="severSrcipts/get_recent_transaction.php?user_login_id="+user_login_id+"&account_number="+account_number;
+
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+if(req.responseText==1){
+
+alert("Unable to load transactions!"); 
+
+return false;
+}
+
+
+
+else{
+document.getElementById('recentTransactionDiv').innerHTML=req.responseText;
+getAcctStatFunc(user_login_id,account_number);
+}
+	
+
+} else {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+}	
+	
+}
+
+
+
+
+
+
+function getRecentTransFunc(user_login_id,account_number){
+
+
+if (user_login_id == "0") {
+//alert("Please login to access your account!");
+location='index.html';
+return false;
+}
+
+
+else{
+var user_login_id =  sessionStorage.getItem("user_login_id");
+
+}
+var strURL="severSrcipts/get_recent_transaction.php?user_login_id="+user_login_id+"&account_number="+account_number;
+
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+if(req.responseText==1){
+
+alert("Unable to load transactions!"); 
+
+return false;
+}
+
+
+
+else{
+document.getElementById('recentTransactionDiv').innerHTML=req.responseText;
+getAccountInfoFunc(user_login_id,account_number);
+}
+	
+
+} else {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+}	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+function getAccountInfoFunc(user_login_id,account_number){
+
+
+var strURL="severSrcipts/get_user_account_info_two.php?user_login_id="+user_login_id+"&account_number="+account_number;
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+if(req.responseText==1){
+
+////alert("Unable to load account information, please log in all over!"); 
+location='index.html';
+ 
+
+return false;
+}
+
+
+
+else{
+document.getElementById('accountInfo').innerHTML=req.responseText;
+getAcctStatFunc(user_login_id,account_number);
+}
+	
+
+} else {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+}
+}
+
+
+
+
+function getAcctStatFunc(user_login_id,account_number){
+
+
+var strURL="severSrcipts/get_user_account_statistics.php?user_login_id="+user_login_id+"&account_number="+account_number;
+
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+if(req.responseText==1){
+
+////alert("Unable to load account information, please log in all over!"); 
+location='index.html';
+ 
+
+return false;
+}
+
+
+
+else{
+document.getElementById('acctStatistics').innerHTML=req.responseText;
+}
+	
+
+} else {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+}
+
+}
+
+
+
+
+
+
+
+function viewTransDetailsFunc(transfer_refno,account_number,transaction_url){
+
+sessionStorage.setItem("transfer_refno", transfer_refno);
+sessionStorage.setItem("account_number", account_number);
+
+location = transaction_url;
+
+return false;
+
+}
+
+
+
+
+
+
+
+
+function getProfilePhotoFunc(user_login_id){
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+setInterval(function(){ 
+
+var user_login_id =  sessionStorage.getItem("user_login_id");
+
+var strURL="severSrcipts/check_user_logged_status_process.php?user_login_id="+user_login_id;
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+	
+	
+if(req.responseText==1){ // not found just log out
+
+setTimeout(function (){
+sessionStorage.clear();
+localStorage.clear();
+},500);
+
+setTimeout(function (){
+location='index.html';
+
+},600);
+return false;
+}
+
+
+
+
+else if(req.responseText==2){ // all good
+return false;
+}
+
+
+
+
+
+else if(req.responseText==3){ // all good
+
+setTimeout(function (){
+sessionStorage.clear();
+localStorage.clear();
+},500);
+
+setTimeout(function (){
+location='blocked';
+
+},600);
+return false;
+}
+
+
+else if(req.responseText==4){ // just log out
+
+setTimeout(function (){
+sessionStorage.clear();
+localStorage.clear();
+},500);
+
+setTimeout(function (){
+location='index.html';
+
+},600);
+return false;
+}
+	
+
+} else {
+	
+setTimeout(function (){
+sessionStorage.clear();
+localStorage.clear();
+},500);
+	
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+location='index.html';
+},600);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+} 
+
+
+}, 10000);
+
+
+
+
+
+
+function logOutFunc(){
+
+var user_login_id =  sessionStorage.getItem("user_login_id");
+
+var strURL="severSrcipts/logout_process.php?user_login_id="+user_login_id;
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+
+setTimeout(function (){
+sessionStorage.clear();
+localStorage.clear();
+},500);
+
+
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+
+location='index.html';
+
+},600);
+
+
+	
+
+} else {
+	
+setTimeout(function (){
+sessionStorage.clear();
+localStorage.clear();
+},500);
+	
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+location='index.html';
+},600);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+}
+
+}
+
+
+
+
+
+setTimeout(function (){
+resetLoggedTimeFunc();
+},4000);
+
+
+
+function resetLoggedTimeFunc(){
+var today = new Date();
+var hmsec = today.getHours() * 1000 * 60 * 60;
+var mmsec = today.getMinutes() * 1000 * 60;
+var smsec = today.getMinutes() * 1000;
+
+var loggedInTime = hmsec+mmsec+smsec;
+var minLoggedInTime = Math.floor((loggedInTime/1000/60));
+sessionStorage.setItem("minLoggedInTime", minLoggedInTime);
+
+var minLoggedInTime =  sessionStorage.getItem("minLoggedInTime");
+
+}
+
+
+
+setInterval(function() {
+var minLoggedInTime=  sessionStorage.getItem("minLoggedInTime");
+var today = new Date();
+
+var hmsec = today.getHours() * 1000 * 60 * 60;
+var mmsec = today.getMinutes() * 1000 * 60;
+var smsec = today.getMinutes() * 1000;
+//var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+var currentTime = hmsec+mmsec+smsec;
+var minCurrentTime = Math.floor((currentTime/1000/60));
+
+var myTimeDiff = minCurrentTime - minLoggedInTime;
+
+//alert(myTimeDiff);
+
+
+if(myTimeDiff>=15){
+logOutFunc();
+}
+
+}, 6000);
+
+
+
+function viewTransDetailFunc(transaction_url,transaction_refno,transaction_session_col){
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+sessionStorage.setItem(transaction_session_col, transaction_refno);
+
+
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+
+location = transaction_url;
+
+},500);
+
+
+}
+
+
+</script> -->
+<script type="text/javascript" src="js/date_time.js"></script>
+</body>
+</html>

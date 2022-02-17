@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
+<title>Fairway Credit Union Bank</title>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+<script src="js/font-awesome.js"></script>
+
+
+<link href="css/c3.min.css" rel="stylesheet">
+<link href="css/jquery-jvectormap.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet">
+
+
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+       
+        <![endif]-->
+</head>
+<body>
+<div class="main-wrapper" id="main-wrapper">
+
+
+
+<div class="preloader">
+<div class="loader">
+<div class="loader__figure"></div>
+<p class="loader__label">Fairway Credit Union Online Banking</p>
+</div>
+</div>
+
+
+
+<header class="topbar">
+ <div id="justMyPopUpAlert" style="text-align:center">
+<div style="background:#FFF; min-width:400px; padding:0px 0px 5px 0px;">
+<table width="100%" border="0">
+<tr style="background:#FC3; height:20px;">
+<td style="padding:10px; text-align:left; color:#069; font-weight:bold;">
+<img src="images/s_attention.png" width="16" height="16" style="float:left; margin-right:5px;" />Message Alert!
+<span style="display:inline-block; clear:both;"></span>
+</td>
+</tr>
+<tr>
+<td id="displayMsg2" style="padding:5px;font-style:italic; font-size:12px; font-weight:bold;">&nbsp;</td>
+</tr>
+</table>
+<input type="button" value="ok" name="ok_button2" id="ok_button2" class="b-close btn btn-primary" style="cursor:pointer; width:70px; padding:2px 7px;" />
+</div>
+</div> 
+ <div id="justMyPopUp" style="text-align:center">
+<div style="background:#FFF; min-width:400px; padding:0px 0px 5px 0px;">
+<table width="100%" border="0">
+<tr style="background:#FC3; height:20px;">
+<td style="padding:10px; text-align:left; color:#069; font-weight:bold;">
+<img src="images/s_attention.png" width="16" height="16" style="float:left; margin-right:5px;" />Message Alert!
+<span style="display:inline-block; clear:both;"></span>
+</td>
+</tr>
+<tr>
+<td id="displayMsg" style="padding:5px 10px; font-size:12px; font-style:italic; font-weight:bold;">&nbsp;</td>
+</tr>
+</table>
+<input type="button" value="ok" name="ok_button" id="ok_button" class="b-close btn btn-primary" style="cursor:pointer;" onClick="reloadPage()" />
+</div>
+</div> 
+<div id="loadingPop">
+<input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="CloseMeNowLog" />
+<i class="fa fa-spin fa-refresh" style="font-size:45px;"></i>
+</div>
+<div id="popUpLoader">
+<input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="ClosePopLoader">
+<div id="processing"><i class="fa fa-spin fa-refresh" style="font-size:45px;"></i></div>
+</div>
+
+
+
+<nav>
+<div class="nav-wrapper">
+
+
+
+<a href="javascript:void(0)" class="brand-logo" data-logobg="skin1">
+<span class="icon">
+<img class="light-logo" src="../images/logo-light-icon.png" alt="logos">
+<img class="dark-logo" src="../images/logo-icon.png" alt="logos">
+</span>
+<span class="text">
+<img class="light-logo" src="../images/logo-light-text.png" alt="logos">
+<img class="dark-logo" src="../images/logo-text.png" alt="logos">
+</span>
+</a>
+
+
+
+
+
+
+<ul class="left">
+<li class="hide-on-med-and-down">
+<a href="javascript: void(0);" class="nav-toggle">
+<span class="bars bar1"></span>
+<span class="bars bar2"></span>
+<span class="bars bar3"></span>
+</a>
+</li>
+<li class="hide-on-large-only">
+<a href="javascript: void(0);" class="sidebar-toggle">
+<span class="bars bar1"></span>
+<span class="bars bar2"></span>
+<span class="bars bar3"></span>
+</a>
+</li>
+</ul>
+
+
+
+ 
+
+
+<ul class="right">
+
+
+
+<li><a class="dropdown-trigger" href="javascript: void(0);" data-target="user_dropdown"><img id="userHeaderPic" src="../images/2.jpg" alt="user" class="circle profile-pic"></a>
+<ul id="user_dropdown" class="mailbox dropdown-content dropdown-user">
+<li>
+<div class="dw-user-box">
+<div class="u-img"><img id="secondHeadPix" src="../images/2.jpg" alt="user"></div>
+<div class="u-text">
+<h4 style="font-size:12px; font-weight:bold;" id="userRpName">Steve Harvey</h4>
+<p><span id="userRpLoginId">1003</span></p>
+<a href="profile-info.html" class="waves-effect waves-light btn-small red white-text">View Profile</a>
+</div>
+</div>
+</li>
+<li role="separator" class="divider"></li>
+<li><a href="profile-info.html"><i class="fa fa-user-circle"></i> My Profile</a></li>
+<li><a href="my-accounts.html"><i class="fa fa-briefcase fa-1x" style="margin-right:10px;"></i> My Accounts</a></li>
+<li><a href="inbox-compose.html"><i class="fa fa-envelope fa-1x" style="margin-right:10px;"></i> Contact Support</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="password-reset.html"><i class="fa fa-cog fa-1x" style="margin-right:10px;"></i>Reset Password</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="javascript:void(0);" onclick="logOutFunc();"><i class="fa fa-power-off"></i> Logout</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+</div>
+</nav>
+
+
+
+</header>
+
+
+
+<aside class="left-sidebar">
+<ul id="slide-out" class="sidenav">
+<li>
+<div class="user-profile" style="background-image: url(../images/user-bg.jpg);">
+<div class="user-name dropdown-trigger" data-target='dropdownuser'>
+<h6 class="white-text name"> <img style="max-width:30px;" id="leftHdPix" class="profile-user-img img-responsive img-circle" src="../images/2.jpg" alt="user"> <span id="hdNameSpan" style="font-size:12px; margin-left:10px;">Steve Harvey</span> <i class="fa fa-angle-down ml-auto"></i></h6>
+</div>
+<ul id='dropdownuser' class='dropdown-content'>
+<li><a href="profile-info.html"><i class="fa fa-user-circle fa-1x"></i> My Profile</a></li>
+<li><a href="my-accounts.html"><i class="fa fa-briefcase fa-1x"></i> My Account (s) </a></li>
+<li><a href="inbox-compose.html"><i class="fa fa-envelope fa-1x"></i> Contact Support</a></li>
+ <li role="separator" class="divider m-t-0"></li>
+<li><a href="password-reset.html"><i class="fa fa-cog fa-1x"></i> Reset Password</a></li>
+<li role="separator" class="divider m-t-0"></li>
+<li><a onclick="logOutFunc();" href="javascript:void(0)"><i class="fa fa-power-off fa-1x"></i> Logout</a></li>
+</ul>
+</div>
+</li>
+<li>
+<ul class="collapsible">
+<li class="small-cap"><span class="hide-menu">PERSONAL</span></li>
+<li>
+<a href="home.html" class="collapsible-header"><i class="fa fa-home" style="margin-right:10px;"></i><span class="hide-menu"> Home </span></a>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-briefcase" style="margin-right:10px;"></i><span class="hide-menu"> Account </span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="my-accounts.html"><i class="fa fa-briefcase" style="margin-right:10px;"></i><span class="hide-menu">My Account (s) </span></a></li>
+<li><a href="transaction-history.html"><i class="fa fa-book" style="margin-right:10px;"></i><span class="hide-menu">Transaction History</span></a></li>
+<li><a href="register-new-account.html"><i class="fa fa-user-plus" style="margin-right:10px;"></i><span class="hide-menu">Register New Account</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-list-alt" style="margin-right:10px;"></i><span class="hide-menu">Withdrawal / Transfer</span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="fund-transfer.html"><i class="fa fa-arrow-circle-right" style="margin-right:10px;"></i><span class="hide-menu">Transfer Fund</span></a></li>
+<li><a href="send-echeque.html"><i class="fa fa-bank" style="margin-right:10px;"></i><span class="hide-menu">Send eCheque</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-envelope-open" style="margin-right:10px;"></i><span class="hide-menu"> Message</span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="inbox-email.html"><i class="fa fa-envelope" style="margin-right:10px;"></i><span class="hide-menu" id="myInoxMsg">Inbox</span></a></li>
+<li><a href="sent-mails.html"><i class="fa fa-support" style="margin-right:10px;"></i><span class="hide-menu">My Support Tickets</span></a></li>
+<li><a href="inbox-compose.html"><i class="fa fa-edit" style="margin-right:10px;"></i><span class="hide-menu">Contact Support</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="cheque-deposit.html" class="collapsible-header"><i class="fa fa-bank" style="margin-right:10px;"></i><span class="hide-menu">Cheque Deposit </span></a>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-credit-card" style="margin-right:10px;"></i><span class="hide-menu"> Cards </span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="mycards.html"><i class="fa fa-credit-card" style="margin-right:10px;"></i><span class="hide-menu">My Cards</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-user" style="margin-right:10px;"></i><span class="hide-menu"> Profile </span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="password-reset.html"><i class="fa fa-key" style="margin-right:10px;"></i><span class="hide-menu">Password Reset</span></a></li>
+<li><a href="profile-info.html"><i class="fa fa-user-circle" style="margin-right:10px;"></i><span class="hide-menu">Profile Info</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript:void(0);" class="collapsible-header" onclick="logOutFunc();"><i class="fa fa-power-off" style="margin-right:10px;"></i><span class="hide-menu"> Log Out </span></a>
+</li>
+<li>
+</li>
+</ul>
+</li>
+</ul>
+</aside>
+
+
+
+
+
+
+<div class="page-wrapper">
+
+
+
+<div class="page-titles">
+<div class="d-flex align-items-center">
+    <span id="userNameHead">
+        <h5 class="font-medium m-b-0" id="userLoggedName">Atlas Zeus</h5>
+        <div class="row">
+        <h6 style="font-size:12px;">Login ID: <span id="userLoggedID">37600609187</span></h6>
+        <input type="hidden" value="160299892.jpeg" id="userHeaderPixV" name="userHeaderPixV">
+        </div>
+    </span>
+    <div class=" col-lg-6 col-md-12">
+        <span id="date_time" style="display:block; color:#f00; font-size:12px; font-weight:bold; text-align:center"></span>
+    </div>
+<div class="custom-breadcrumb ml-auto">
+<a href="home.html" class="breadcrumb">Home</a>
+<a href="javascript:void(0)" class="breadcrumb">Fund Transfer</a>
+<div style="padding-top:10px;">
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+    <div>
+    <div class="card">
+    <div class="card-content">
+    <form style="margin-bottom:20px;" onsubmit="return false" method="post" id="transForm" name="transForm">
+    <div id="tnxCode">
+    <input id="account_transfer_code_tnx" name="account_transfer_code_tnx" type="hidden" value="1">
+    <input id="account_otp_status_tnx" name="account_otp_status_tnx" type="hidden" value="1">
+    <input id="user_withdrawal_allowed_tnx" name="user_withdrawal_allowed_tnx" type="hidden" value="1">
+    <textarea id="user_withdrawal_not_allowed_msg" name="user_withdrawal_not_allowed_msg" style="display:none;"></textarea>
+    </div>
+    <div id="selectedAcctInfo">
+    <div class="row">
+    <label style="color:#5e35b1; font-weight:bold; padding-left:10px;">My Accounts</label>
+    <div class="input-field col s12">
+    <select id="account_number" name="account_number" class="browser-default" style="font-size:12px; font-weight:bold; color:#000;" onchange="getTransferInfoTwoFunc(this.value)">
+    <option value="">--Select An Account--</option>
+    <option value="0464691347">0464691347 (Business Account) / USD 496,468.80</option>
+    <option value="3442712639">3442712639 (Savings Account) / GBP 2,380,602.65</option>
+    <option value="7665606978">7665606978 (Offshore Account) / EUR 23,028.00</option>
+    </select>
+    </div>
+    </div>
+    <div class="row">
+    <div class="input-field col s12">
+    <i class="prefix" style="font-size:14px; font-style:normal; margin-right:5px; margin-bottom:-40px; padding-bottom:0px;">USD</i>
+    <input id="transfer_amount" name="transfer_amount" type="text" placeholder="1,500.00" onFocus="if (this.placeholder == '1,500.00') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = '1,500.00';}" type="text">
+    <label for="transfer_amount" class="">Amount</label>
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="input-field col s12">
+    <input id="transfer_ben_acct_name" name="transfer_ben_acct_name" type="text" placeholder="John Houston" onFocus="if (this.placeholder == 'John Houston') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'John Houston';}" type="text">
+    <label for="transfer_ben_acct_name">Beneficiary Account Name *</label>
+    </div>
+    </div>
+    <div class="row">
+    <div class="input-field col s12">
+    <input id="transfer_ben_acct_no" name="transfer_ben_acct_no" type="text" placeholder="401391839129" onFocus="if (this.placeholder == '401391839129') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = '401391839129';}" type="text">
+    <label for="transfer_ben_acct_no">Beneficiary Account Number *</label>
+    </div>
+    </div>
+    <div class="row" style="display:none;">
+    <div class="input-field col s12">
+    <input id="transfer_ben_phone_no" name="transfer_ben_phone_no" type="text" placeholder="+1(346)-291-3718" onFocus="if (this.placeholder == '+1(346)-291-3718') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = '+1(346)-291-3718';}" type="text">
+    <label for="transfer_ben_phone_no">Beneficiary Phone Number *</label>
+    </div>
+    </div>
+    <div class="row" style="display:none">
+    <div class="input-field col s12">
+    <input id="transfer_ben_email" name="transfer_ben_email" type="text" placeholder="johnhouston19@hotmail.com" onFocus="if (this.placeholder == 'johnhouston19@hotmail.com') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'johnhouston19@hotmail.com';}" type="email">
+    <label for="transfer_ben_email">Beneficiary Email Address *</label>
+    </div>
+    </div>
+    <div class="row">
+    <label style="padding-left:10px;">Transfer Destination *</label>
+    <div class="input-field col s12">
+    <select name="transfer_destination" id="transfer_destination" onchange="transDestFunc(this.value)" class="browser-default">
+    <option selected="selected" value="">-- Choose--</option>
+    <option value="Fairway Credit Union Bank">Fairway Credit Union Bank</option>
+    <option value="Other Bank">Other Bank</option>
+    </select>
+    </div>
+    </div>
+    <div class="row">
+    <label style="padding-left:10px;">Bank Locality *</label>
+    <div class="input-field col s12">
+    <select name="transfer_bank_locality" id="transfer_bank_locality" onchange="getBankCountryFunc()" class="browser-default">
+    <option selected="selected" value="">-- Choose--</option>
+    <option value="Local Bank (Same Country)">Local Bank (Same Country)</option>
+    <option value="Oversea Bank (Same Country)">Oversea Bank (Outside Country)</option>
+    </select>
+    </div>
+    </div>
+    <div class="row">
+    <div class="input-field col s12">
+    <input id="transfer_ben_bank_name" name="transfer_ben_bank_name" type="text" placeholder="Wells Fargo" onFocus="if (this.placeholder == 'Wells Fargo') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'Wells Fargo';}" type="text">
+    <label for="transfer_ben_bank_name">Beneficiary Bank Name *</label>
+    </div>
+    </div>
+    <div class="row">
+    <div class="input-field col s12">
+    <input id="transfer_ben_bank_branch" name="transfer_ben_bank_branch" type="text" placeholder="San Francisco" onFocus="if (this.placeholder == 'San Francisco') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'San Francisco';}" type="text">
+    <label for="transfer_ben_bank_name">Beneficiary Bank Branch </label>
+    </div>
+    </div>
+    <div class="row">
+    <div class="input-field col s12">
+    <input id="transfer_ben_bank_zip" name="transfer_ben_bank_zip" type="text" placeholder="94104" onFocus="if (this.placeholder == '94104') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = '94104';}" type="text">
+    <label for="transfer_ben_bank_zip">Beneficiary Bank Branch Zip / Postal</label>
+    </div>
+    </div>
+    <div class="row" style="display:none;">
+    <div class="input-field col s12">
+    <input id="transfer_ben_bank_routno" name="transfer_ben_bank_routno" type="text" placeholder="121000248" onFocus="if (this.placeholder == '121000248') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = '121000248';}" type="text">
+    <label for="transfer_ben_bank_routno">Routing Number / Sort Code </label>
+    </div>
+    </div>
+    <div class="row">
+    <div class="input-field col s12">
+    <input id="transfer_ben_bank_swift" name="transfer_ben_bank_swift" type="text" placeholder="WFBIUS6WFFX" onFocus="if (this.placeholder == 'WFBIUS6WFFX') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'WFBIUS6WFFX';}" type="text">
+    <label for="transfer_ben_bank_swift">SWIFT/BIC/IBAN</label>
+    </div>
+    </div>
+    <div class="row" style="display:none;">
+    <div class="input-field col s12">
+    <input id="transfer_ben_bank_iban" name="transfer_ben_bank_iban" type="text" placeholder="GB29NWBK60161331926819" onFocus="if (this.placeholder == 'GB29NWBK60161331926819') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'GB29NWBK60161331926819';}" type="text">
+    <label for="transfer_ben_bank_iban">IBAN</label>
+    </div>
+    </div>
+    <div class="row">
+    <label style="padding-left:10px;">Beneficiary Bank Country</label>
+    <div class="input-field col s12">
+    <select id="transfer_ben_bank_country" name="transfer_ben_bank_country" class="browser-default">
+    <option value="" selected>--Select Country--</option>
+    <option value="Afghanistan">Afghanista</option>
+    <option value="Aland Islands">Aland Islands</option>
+    <option value="Albania">Albania</option>
+    <option value="Algeria">Algeria</option>
+    <option value="American Samoa">American Samoa</option>
+    <option value="Andorra">Andorra</option>
+    <option value="Angola">Angola</option>
+    <option value="Anguilla">Anguilla</option>
+    <option value="Antarctica">Antarctica</option>
+    <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+    <option value="Argentina">Argentina</option>
+    <option value="Armenia">Armenia</option>
+    <option value="Aruba">Aruba</option>
+    <option value="Australia">Australia</option>
+    <option value="Austria">Austria</option>
+    <option value="Azerbaijan">Azerbaijan</option>
+    <option value="Bahamas">Bahamas</option>
+    <option value="Bahrain">Bahrain</option>
+    <option value="Bangladesh">Bangladesh</option>
+    <option value="Barbados">Barbados</option>
+    <option value="Belarus">Belarus</option>
+    <option value="Belgium">Belgium</option>
+    <option value="Belize">Belize</option>
+    <option value="Benin">Benin</option>
+    <option value="Bermuda">Bermuda</option>
+    <option value="Bhutan">Bhutan</option>
+    <option value="Bolivia">Bolivia</option>
+    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+    <option value="Botswana">Botswana</option>
+    <option value="Bouvet Island">Bouvet Island</option>
+    <option value="Brazil">Brazil</option>
+    <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+    <option value="British Virgin Islands">British Virgin Islands</option>
+    <option value="Brunei">Brunei</option>
+    <option value="Bulgaria">Bulgaria</option>
+    <option value="Burkina Faso">Burkina Faso</option>
+    <option value="Burundi">Burundi</option>
+    <option value="Cambodia">Cambodia</option>
+    <option value="Cameroon">Cameroon</option>
+    <option value="Canada">Canada</option>
+    <option value="Cape Verde">Cape Verde</option>
+    <option value="Cayman Islands">Cayman Islands</option>
+    <option value="Central African Republic">Central African Republic</option>
+    <option value="Chad">Chad</option>
+    <option value="Chile">Chile</option>
+    <option value="China">China</option>
+    <option value="Christmas Island">Christmas Island</option>
+    <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+    <option value="Colombia">Colombia</option>
+    <option value="Comoros">Comoros</option>
+    <option value="Congo">Congo</option>
+    <option value="Cook Islands">Cook Islands</option>
+    <option value="Costa Rica">Costa Rica</option>
+    <option value="Croatia">Croatia</option>
+    <option value="Cuba">Cuba</option>
+    <option value="Cyprus">Cyprus</option>
+    <option value="Czech Republic">Czech Republic</option>
+    <option value="Democratic Republic of Congo">Democratic Republic of Congo</option>
+    <option value="Denmark">Denmark</option>
+    <option value="Disputed Territory">Disputed Territory</option>
+    <option value="Djibouti">Djibouti</option>
+    <option value="Dominica">Dominica</option>
+    <option value="Dominican Republic">Dominican Republic</option>
+    <option value="East Timor">East Timor</option>
+    <option value="Ecuador">Ecuador</option>
+    <option value="Egypt">Egypt</option>
+    <option value="El Salvador">El Salvador</option>
+    <option value="Equatorial Guinea">Equatorial Guinea</option>
+    <option value="Eritrea">Eritrea</option>
+    <option value="Estonia">Estonia</option>
+    <option value="Ethiopia">Ethiopia</option>
+    <option value="Falkland Islands">Falkland Islands</option>
+    <option value="Faroe Islands">Faroe Islands</option>
+    <option value="Federated States of Micronesia">Federated States of Micronesia</option>
+    <option value="Fiji">Fiji</option>
+    <option value="Finland">Finland</option>
+    <option value="France">France</option>
+    <option value="French Guyana">French Guyana</option>
+    <option value="French Polynesia">French Polynesia</option>
+    <option value="French Southern Territories">French Southern Territories</option>
+    <option value="Gabon">Gabon</option>
+    <option value="Gambia">Gambia</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Germany">Germany</option>
+    <option value="Ghana">Ghana</option>
+    <option value="Gibraltar">Gibraltar</option>
+    <option value="Greece">Greece</option>
+    <option value="Greenland">Greenland</option>
+    <option value="Grenada">Grenada</option>
+    <option value="Guadeloupe">Guadeloupe</option>
+    <option value="Guam">Guam</option>
+    <option value="Guatemala">Guatemala</option>
+    <option value="Guinea">Guinea</option>
+    <option value="Guinea-Bissau">Guinea-Bissau</option>
+    <option value="Guyana">Guyana</option>
+    <option value="Haiti">Haiti</option>
+    <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+    <option value="Honduras">Honduras</option>
+    <option value="Hong Kong">Hong Kong</option>
+    <option value="Hungary">Hungary</option>
+    <option value="Iceland">Iceland</option>
+    <option value="India">India</option>
+    <option value="Indonesia">Indonesia</option>
+    <option value="Iran">Iran</option>
+    <option value="Iraq">Iraq</option>
+    <option value="Iraq-Saudi Arabia Neutral Zone">Iraq-Saudi Arabia Neutral Zone</option>
+    <option value="Ireland">Ireland</option>
+    <option value="Israel">Israel</option>
+    <option value="Italy">Italy</option>
+    <option value="Ivory Coast">Ivory Coast</option>
+    <option value="Jamaica">Jamaica</option>
+    <option value="Japan">Japan</option>
+    <option value="Jordan">Jordan</option>
+    <option value="Kazakhstan">Kazakhstan</option>
+    <option value="Kenya">Kenya</option>
+    <option value="Kiribati">Kiribati</option>
+    <option value="Kuwait">Kuwait</option>
+    <option value="Kyrgyzstan">Kyrgyzstan</option>
+    <option value="Laos">Laos</option>
+    <option value="Latvia">Latvia</option>
+    <option value="Lebanon">Lebanon</option>
+    <option value="Lesotho">Lesotho</option>
+    <option value="Liberia">Liberia</option>
+    <option value="Libya">Libya</option>
+    <option value="Liechtenstein">Liechtenstein</option>
+    <option value="Lithuania">Lithuania</option>
+    <option value="Luxembourg">Luxembourg</option>
+    <option value="Macau">Macau</option>
+    <option value="Macedonia">Macedonia</option>
+    <option value="Madagascar">Madagascar</option>
+    <option value="Malawi">Malawi</option>
+    <option value="Malaysia">Malaysia</option>
+    <option value="Maldives">Maldives</option>
+    <option value="Mali">Mali</option>
+    <option value="Malta">Malta</option>
+    <option value="Marshall Islands">Marshall Islands</option>
+    <option value="Martinique">Martinique</option>
+    <option value="Mauritania">Mauritania</option>
+    <option value="Mauritius">Mauritius</option>
+    <option value="Mayotte">Mayotte</option>
+    <option value="Mexico">Mexico</option>
+    <option value="Moldova">Moldova</option>
+    <option value="Monaco">Monaco</option>
+    <option value="Mongolia">Mongolia</option>
+    <option value="Montenegro">Montenegro</option>
+    <option value="Montserrat">Montserrat</option>
+    <option value="Morocco">Morocco</option>
+    <option value="Mozambique">Mozambique</option>
+    <option value="Myanmar">Myanmar</option>
+    <option value="Namibia">Namibia</option>
+    <option value="Nauru">Nauru</option>
+    <option value="Nepal">Nepal</option>
+    <option value="Netherlands Antilles">Netherlands Antilles</option>
+    <option value="Netherlands">Netherlands</option>
+    <option value="New Caledonia">New Caledonia</option>
+    <option value="New Zealand">New Zealand</option>
+    <option value="Nicaragua">Nicaragua</option>
+    <option value="Niger">Niger</option>
+    <option value="Nigeria">Nigeria</option>
+    <option value="Niue">Niue</option>
+    <option value="Norfolk Island">Norfolk Island</option>
+    <option value="North Korea">North Korea</option>
+    <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+    <option value="Norway">Norway</option>
+    <option value="Oman">Oman</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="Palau">Palau</option>
+    <option value="Palestinian Territories">Palestinian Territories</option>
+    <option value="Panama">Panama</option>
+    <option value="Papua New Guinea">Papua New Guinea</option>
+     <option value="Paraguay">Paraguay</option>
+    <option value="Peru">Peru</option>
+    <option value="Philippines">Philippines</option>
+    <option value="Pitcairn Islands">Pitcairn Islands</option>
+    <option value="Poland">Poland</option>
+    <option value="Portugal">Portugal</option>
+    <option value="Puerto Rico">Puerto Rico</option>
+    <option value="Qatar">Qatar</option>
+    <option value="Reunion">Reunion</option>
+    <option value="Romania">Romania</option>
+    <option value="Russia">Russia</option>
+    <option value="Rwanda">Rwanda</option>
+    <option value="Saint Helena and Dependencies">Saint Helena and Dependencies</option>
+    <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+    <option value="Saint Lucia">Saint Lucia</option>
+    <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+    <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+    <option value="Samoa">Samoa</option>
+    <option value="San Marino">San Marino</option>
+    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+    <option value="Saudi Arabia">Saudi Arabia</option>
+    <option value="Senegal">Senegal</option>
+    <option value="Serbia">Serbia</option>
+    <option value="Seychelles">Seychelles</option>
+    <option value="Sierra Leone">Sierra Leone</option>
+    <option value="Singapore">Singapore</option>
+    <option value="Slovakia">Slovakia</option>
+    <option value="Slovenia">Slovenia</option>
+    <option value="Solomon Islands">Solomon Islands</option>
+    <option value="Somalia">Somalia</option>
+    <option value="South Africa">South Africa</option>
+    <option value="South Georgia and South Sandwich Islands">South Georgia and South Sandwich Islands </option>
+    <option value="South Korea">South Korea</option>
+    <option value="Spain">Spain </option>
+    <option value="Spratly Islands">Spratly Islands</option>
+    <option value="Sri Lanka">Sri Lanka</option>
+    <option value="Sudan">Sudan</option>
+    <option value="Suriname">Suriname</option>
+    <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+    <option value="Swaziland">Swaziland</option>
+    <option value="Sweden">Sweden</option>
+    <option value="Switzerland">Switzerland</option>
+    <option value="Syria">Syria</option>
+    <option value="Taiwan">Taiwan</option>
+    <option value="Tajikistan">Tajikistan</option>
+    <option value="Tanzania">Tanzania</option>
+    <option value="Thailand">Thailand</option>
+    <option value="Togo">Togo</option>
+    <option value="Tokelau">Tokelau</option>
+    <option value="Tonga">Tonga</option>
+    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+    <option value="Tunisia">Tunisia</option>
+    <option value="Turkey">Turkey</option>
+    <option value="Turkmenistan">Turkmenistan</option>
+    <option value="Turks And Caicos Islands">Turks And Caicos Islands</option>
+    <option value="Tuvalu">Tuvalu</option>
+    <option value="US Virgin Islands">US Virgin Islands</option>
+    <option value="Uganda">Uganda</option>
+    <option value="Ukraine">Ukraine</option>
+    <option value="United Arab Emirates">United Arab Emirates</option>
+    <option value="United Kingdom">United Kingdom</option>
+    <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+    <option value="United States">United States</option>
+    <option value="Uruguay">Uruguay</option>
+    <option value="Uzbekistan">Uzbekistan</option>
+    <option value="Vanuatu">Vanuatu</option>
+    <option value="Vatican City">Vatican City</option>
+    <option value="Venezuela">Venezuela</option>
+    <option value="Vietnam">Vietnam</option>
+    <option value="Wallis and Futuna">Wallis and Futuna</option>
+    <option value="Western Sahara">Western Sahara</option>
+    <option value="Yemen">Yemen</option>
+    <option value="Zambia">Zambia</option>
+    <option value="Zimbabwe">Zimbabwe</option>
+    </select>
+    </div>
+    </div>
+    <div class="row">
+    <label>Description / Remarks / Purpose</label>
+    <div class="input-field col s12">
+    <textarea class="form-control" name="transfer_desc" id="transfer_desc" placeholder="Description / Remarks / Purpose" onFocus="if (this.placeholder == 'Description / Remarks / Purpose') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'Description / Remarks / Purpose';}"></textarea>
+    </div>
+    </div>
+    <div class="row">
+    <div class="input-field col s12">
+    <button class="btn cyan waves-effect waves-light" type="submit" name="action" onclick="submitFundTransFunc()">
+    Submit Fund Transfer
+    </button>
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <footer class="center-align m-b-30 m-l-15 m-r-15">All Rights Reserved &reg; <script type="text/javascript"> var d = new Date(); document.write(d.getFullYear()); </script> <br> <a>Fairway Credit Union Bank</a>.</footer>
+</div>
+
+
+
+
+
+
+<div class="chat-windows "></div>
+
+
+
+</div>
+
+
+
+<script data-cfasync="false" src="js/email-decode.min.js">
+</script><script src="js/jquery.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/perfect-scrollbar.jquery.min.js"></script>
+
+
+
+<script src="js/app.js"></script>
+<script src="js/app.init.js"></script>
+<script src="js/app-style-switcher.js"></script>
+
+
+
+<script src="js/custom.min.js"></script>
+
+
+
+<script src="js/jquery-jvectormap.min.js"></script>
+<script src="js/jquery-jvectormap-world-mill-en.js"></script>
+
+<script src="js/d3.min.js"></script>
+<script src="js/c3.min.js"></script>
+<script src="js/dashboard2.js"></script>
+<script src="js/sparkline.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/jquery.bpopups2.min.js"></script>
+<script type="text/javascript" src="js/date_time.js"></script>
+</body>
+</html>

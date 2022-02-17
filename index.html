@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+<title>Fairway Credit Union Bank - Account Login</title>
+
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<script src="dashboard/js/font-awesome.js"></script>
+
+<link href="dashboard/css/c3.min.css" rel="stylesheet">
+<link href="dashboard/css/jquery-jvectormap.css" rel="stylesheet" />
+<link href="dashboard/css/style.css" rel="stylesheet">
+<link href="css/authentication.css" rel="stylesheet">
+
+
+
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+ <div id="justMyPopUpAlert" style="text-align:center">
+<div style="background:#FFF; min-width:400px; padding:0px 0px 5px 0px;">
+<table width="100%" border="0">
+<tr style="background:#FC3; height:20px;">
+<td style="padding:10px; text-align:left; color:#069; font-weight:bold;">
+<img src="images/s_attention.png" width="16" height="16" style="float:left; margin-right:5px;" />Message Alert!
+<span style="display:inline-block; clear:both;"></span>
+</td>
+</tr>
+<tr>
+<td id="displayMsg2" style="padding:5px;font-style:italic; font-size:12px; font-weight:bold;">&nbsp;</td>
+</tr>
+</table>
+<input type="button" value="ok" name="ok_button2" id="ok_button2" class="b-close btn btn-primary" style="cursor:pointer; width:70px; padding:2px 7px;" />
+</div>
+</div> 
+ <div id="justMyPopUp" style="text-align:center">
+<div style="background:#FFF; min-width:400px; padding:0px 0px 5px 0px;">
+<table width="100%" border="0">
+<tr style="background:#FC3; height:20px;">
+<td style="padding:10px; text-align:left; color:#069; font-weight:bold;">
+<img src="images/s_attention.png" width="16" height="16" style="float:left; margin-right:5px;" />Message Alert!
+<span style="display:inline-block; clear:both;"></span>
+</td>
+</tr>
+<tr>
+<td id="displayMsg" style="padding:5px 10px; font-size:12px; font-style:italic; font-weight:bold;">&nbsp;</td>
+</tr>
+</table>
+<input type="button" value="ok" name="ok_button" id="ok_button" class="b-close btn btn-primary" style="cursor:pointer;" onClick="reloadPage()" />
+</div>
+</div> 
+<div id="loadingPop">
+<input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="CloseMeNowLog" />
+<i class="fa fa-spin fa-refresh" style="font-size:45px;"></i>
+</div>
+<div id="popUpLoader">
+<input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="ClosePopLoader">
+<div id="processing"><i class="fa fa-spin fa-refresh" style="font-size:45px;"></i></div>
+</div>
+<div id="iniTransfer">
+<button class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="CloseMeNowPlease">Close</button>
+<img src="images/trans.gif" />
+<div style="text-align:center; font-size:12px; color:#fff;" id="tranMessage">Reseting password...</div>
+</div>
+<div class="main-wrapper">
+
+
+
+<div class="preloader">
+<div class="loader">
+<div class="loader__figure"></div>
+<p class="loader__label">Fairway Credit Union Bank</p>
+</div>
+</div>
+
+
+
+
+
+
+<div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(assets/images/auth-bg2.jpg) no-repeat left center;">
+<div class="container">
+<div class="row">
+<div class="col s12 l8 m6 demo-text">
+<span class="db"><img src="images/logo.png" alt="logo" style="max-width:250px;" /></span>
+<h1 class="font-light m-t-40">Welcome to <br><span class="font-medium black-text">Fairway Credit Union Online Banking</span></h1>
+<p>With our Online Banking, you can, enjoy the convenience of managing your finances quickly and easily at a time that suits you.
+</p>
+<p>A secure way to access your accounts, manage payments, check your statements and much more, 24 hours a day.</p>
+</div>
+</div>
+<div class="auth-box auth-sidebar">
+<div id="loginform">
+<div class="p-l-10">
+<h5 class="font-medium m-b-0 m-t-40">Sign In to your account</h5>
+<small>Account Login</small>
+</div>
+
+<div class="row">
+<form class="col s12" method="post" name="acct_loginForm" id="acct_loginForm" action="" onsubmit="return false">
+
+<div class="row">
+<div class="input-field col s12">
+<input id="user_login_id" name="user_login_id" type="text" class="validate" required>
+<label for="user_login_id">Login ID</label>
+</div>
+</div>
+
+<div class="row">
+<div class="input-field col s12">
+<input id="user_password" name="user_password" type="password" class="validate" required>
+<label for="user_password">Password</label>
+</div>
+</div>
+
+<div class="row m-t-5">
+<div class="col s12 right-align"><a href="javascript:void(0)" class="link" id="to-recover">Forgot Password?</a></div>
+</div>
+
+<div class="row m-t-40">
+<div class="col s12">
+<button class="btn-large w100 btn cyan waves-effect waves-light" type="submit" onclick="logonNow()">Login</button>
+</div>
+</div>
+</form>
+</div>
+<div class="center-align m-t-20 db">
+Don't have an account? <a href="register.html">Sign Up!</a>
+</div>
+</div>
+<div id="recoverform">
+<div class="p-l-10">
+<h5 class="font-medium m-b-0 m-t-40">Recover password</h5>
+
+</div>
+<div class="row">
+
+<form class="col s12" method="post" name="pwdForm" id="pwdForm" action="" onsubmit="return false">
+
+<div class="row">
+<div class="input-field col s12">
+<input name="user_email_address" id="user_email_address" type="email" class="validate" required>
+<label for="email1">Email</label>
+</div>
+</div>
+
+<div class="row m-t-20">
+<div class="col s12">
+<button class="btn-large w100 red" type="submit" name="action" onClick="submitPwdReqFunc()">Recover Password</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<script data-cfasync="false" src="dashboard/js/email-decode.min.js">
+</script><script src="dashboard/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="dashboard/js/materialize.min.js"></script>
+<script src="dashboard/js/perfect-scrollbar.jquery.min.js"></script>
+
+
+
+<script>
+        $('.tooltipped').tooltip();
+        // ==============================================================
+        // Login and Recover Password
+        // ==============================================================
+        $('#to-recover').on("click", function() {
+        $("#loginform").slideUp();
+        $("#recoverform").fadeIn();
+        });
+        $(function() {
+        $(".preloader").fadeOut();
+        });
+        </script>
+<script src="dashboard/js/jquery.bpopups2.min.js"></script>
+<!-- <script language="javascript" type="text/javascript">
+
+
+
+
+ function getXMLHTTP() { //fuction to return the xml http object
+		var xmlhttp=false;	
+		try{
+			xmlhttp=new XMLHttpRequest();
+		}
+		catch(e)	{		
+			try{			
+				xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch(e){
+				try{
+				xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+				}
+				catch(e1){
+					xmlhttp=false;
+				}
+			}
+		}
+		 	
+		return xmlhttp;
+    }
+	
+
+
+function logonNow(){
+												
+var user_login_id= document.getElementById('user_login_id').value;
+user_login_id=user_login_id.replace(/^\s+|\s+$/g,'');
+if(user_login_id==''){
+alert("Please enter your login id!");
+document.getElementById("user_login_id").focus();
+return false;
+}
+
+
+
+
+var user_password= document.getElementById('user_password').value;
+user_password=user_password.replace(/^\s+|\s+$/g,'');
+
+if(user_password==''){
+alert("Please enter your password!");
+document.getElementById("user_password").focus();
+return false;
+}
+
+
+
+
+var dataString = $('#acct_loginForm').serialize();
+var strURL="severSrcipts/user_account_login_process.php";
+
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+
+var req = getXMLHTTP();
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+					// only if "OK"
+if (req.status == 200) {
+
+if(req.responseText==4){
+
+var today = new Date();
+
+var hmsec = today.getHours() * 1000 * 60 * 60;
+var mmsec = today.getMinutes() * 1000 * 60;
+var smsec = today.getMinutes() * 1000;
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+var loggedInTime = hmsec+mmsec+smsec;
+var minLoggedInTime = Math.floor((loggedInTime/1000/60));
+
+sessionStorage.setItem("minLoggedInTime", minLoggedInTime);
+
+sessionStorage.setItem("user_login_id", user_login_id);
+
+//localStorage.setItem("user_login_id", user_login_id);
+
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+location='home.html';
+},1000);
+
+return false;
+}
+
+
+
+
+else if(req.responseText==1){
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+alert("Invalid Login!");
+
+},300);
+return false; 
+}
+
+
+
+else if(req.responseText==3){
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+//alert("Account not autheticated!");
+
+//sessionStorage.setItem("user_login_id_blocked", user_login_id);
+//location='blocked';
+blockedFunc(user_login_id);
+},300);
+return false; 
+}
+
+
+
+else {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+alert("Authorisation failed");
+//alert(req.responseText);
+},300);
+
+return false; 
+}
+
+
+
+
+										
+} else {
+setTimeout(function (){document.getElementById('ClosePopLoader').click();
+},300);
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText+ "!");
+},500);
+return false; 
+}
+}				
+	}
+		
+req.open("POST", strURL, true);
+req.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+req.send(dataString);
+}	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function blockedFunc(user_login_id){
+
+
+var strURL="severSrcipts/get_user_blocked_message.php?user_login_id="+user_login_id;
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+
+if(req.responseText==1){
+
+alert("Account details not found!"); 
+//location='view-clients';
+
+return false;
+}
+
+
+
+
+
+else{
+setTimeout(function (){
+alert(req.responseText);
+sessionStorage.setItem("user_login_id_blocked", user_login_id);
+location='blocked';
+
+},300);
+return false; 
+}
+
+
+
+	
+
+} else {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+function submitPwdReqFunc(){
+
+													
+var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+/*var regPattern = /^[R]+[B]+[0-9]{8}$/;*/
+
+var phonePattern = /^[0-9]+\.{11}$/;
+var namePattern = /^[A-Za-z ]+$/;
+
+
+var user_email_address = document.getElementById('user_email_address').value;
+user_email_address=user_email_address.replace(/^\s+|\s+$/g,'');
+if(user_email_address==''){
+alert("Please enter email address address");
+document.getElementById('user_email_address').focus();
+return false;
+}
+
+
+var myemailCheck1=emailPattern.test(user_email_address);
+    
+	if(myemailCheck1==false){
+	alert("Please provide a valid email address");
+	document.getElementById("user_email_address").focus();
+	return false;
+	}
+	
+
+
+var dataString = $('#pwdForm').serialize();
+var strURL="severSrcipts/user_pwd_req_process.php";
+
+
+$('#loadingPop').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+
+var req = getXMLHTTP();
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+
+					// only if "OK"
+if (req.status == 200) {
+setTimeout(function (){
+document.getElementById('CloseMeNowLog').click();
+
+if(req.responseText==1){
+setTimeout(function (){
+
+alert("Please check your email address for recovery details!");
+location.reload(true);
+
+},300);
+
+
+return false;
+
+}
+
+
+
+else if(req.responseText==2){
+alert("Your email address was not found!");
+return false; 
+}
+
+
+
+
+
+else {
+alert("Unable to process your request!");
+return false; 
+}
+
+},1000);
+
+
+										
+} else {
+setTimeout(function (){document.getElementById('CloseMeNowLog').click();
+},300);
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText+ "!");
+},500);
+return false; 
+}
+}				
+	}
+		
+req.open("POST", strURL, true);
+req.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+req.send(dataString);
+}	
+	
+}
+
+</script> -->
+</body>
+</html>

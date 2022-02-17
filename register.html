@@ -1,0 +1,1470 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+<title>Fairway Credit Union Bank - Account Login</title>
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+
+<link href="dashboard/css/c3.min.css" rel="stylesheet">
+<link href="dashboard/css/jquery-jvectormap.css" rel="stylesheet" />
+<link href="dashboard/css/style.css" rel="stylesheet">
+<link href="css/authentication.css" rel="stylesheet">
+
+
+
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+ <div id="justMyPopUpAlert" style="text-align:center">
+<div style="background:#FFF; min-width:400px; padding:0px 0px 5px 0px;">
+<table width="100%" border="0">
+<tr style="background:#FC3; height:20px;">
+<td style="padding:10px; text-align:left; color:#069; font-weight:bold;">
+<img src="images/s_attention.png" width="16" height="16" style="float:left; margin-right:5px;" />Message Alert!
+<span style="display:inline-block; clear:both;"></span>
+</td>
+</tr>
+<tr>
+<td id="displayMsg2" style="padding:5px;font-style:italic; font-size:12px; font-weight:bold;">&nbsp;</td>
+</tr>
+</table>
+<input type="button" value="ok" name="ok_button2" id="ok_button2" class="b-close btn btn-primary" style="cursor:pointer; width:70px; padding:2px 7px;" />
+</div>
+</div> 
+ <div id="justMyPopUp" style="text-align:center">
+<div style="background:#FFF; min-width:400px; padding:0px 0px 5px 0px;">
+<table width="100%" border="0">
+<tr style="background:#FC3; height:20px;">
+<td style="padding:10px; text-align:left; color:#069; font-weight:bold;">
+<img src="images/s_attention.png" width="16" height="16" style="float:left; margin-right:5px;" />Message Alert!
+<span style="display:inline-block; clear:both;"></span>
+</td>
+</tr>
+<tr>
+<td id="displayMsg" style="padding:5px 10px; font-size:12px; font-style:italic; font-weight:bold;">&nbsp;</td>
+</tr>
+</table>
+<input type="button" value="ok" name="ok_button" id="ok_button" class="b-close btn btn-primary" style="cursor:pointer;" onClick="reloadPage()" />
+</div>
+</div> 
+<div id="loadingPop">
+<input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="CloseMeNowLog" />
+<i class="fa fa-spin fa-refresh" style="font-size:45px;"></i>
+</div>
+<div id="popUpLoader">
+<input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="ClosePopLoader">
+<div id="processing"><i class="fa fa-spin fa-refresh" style="font-size:45px;"></i></div>
+</div>
+ <div id="iniTransfer">
+<button class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="CloseMeNowPlease">Close</button>
+<img src="images/trans.gif" />
+<div style="text-align:center; font-size:12px; color:#fff;" id="tranMessage">Reseting password...</div>
+</div>
+<div class="main-wrapper">
+
+
+
+<div class="preloader">
+<div class="loader">
+<div class="loader__figure"></div>
+<p class="loader__label">Fairway Credit Union Online Banking</p>
+</div>
+</div>
+
+
+
+
+
+
+<div class="auth-wrapper d-flex no-block justify-content-center align-items-center" style="background:url(assets/images/auth-bg.jpg) no-repeat center center;">
+<div class="row" style="background:#fff;">
+<div id="loginform">
+<div class="logo" style="text-align:center">
+<span class="db"><img src="images/logo-text.png" alt="logo" style="max-width:150px;" /></span>
+<h5 class="font-medium m-b-20">Register for online banking</h5>
+</div>
+
+<div class="row">
+<form style="margin-bottom:20px;" onsubmit="return false" method="post" id="profileUpdateForm" name="profileUpdateForm">
+<input type="hidden" name="editUser_login_id" id="editUser_login_id" value="">
+<div class="row">
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_firstname">First Name *</label>
+<input class="form-control" value="" id="user_firstname" name="user_firstname" type="text" placeholder="First Name" onFocus="if (this.placeholder == 'First Name') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'First Name';}">
+</div>
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_lastname">Last Name *</label>
+<input class="form-control" value="" id="user_lastname" name="user_lastname" type="text" placeholder="Last Name" onFocus="if (this.placeholder == 'Last Name') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'Last Name';}">
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_phone">Phone Number *</label>
+<input class="form-control" value="" id="user_phone" name="user_phone" type="text" placeholder="Phone Number" onFocus="if (this.placeholder == 'Phone Number') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'Phone Number';}">
+</div>
+
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_email_address">Email Address *</label>
+<input class="form-control" value="" id="user_email_address" name="user_email_address" type="email" placeholder="Email Address" onFocus="if (this.placeholder == 'Email Address') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'Email Address';}">
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_address">Contact Address *</label>
+<input class="form-control" value="" id="user_address" name="user_address" type="text" placeholder="Contact Address" onFocus="if (this.placeholder == 'Contact Address') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'Contact Address';}">
+</div>
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_city">City *</label>
+<input class="form-control" value="" id="user_city" name="user_city" type="text" placeholder="City" onFocus="if (this.placeholder == 'City') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'City';}">
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_state">State / Province *</label>
+<input class="form-control" value="" id="user_state" name="user_state" type="text" placeholder="State / Province" onFocus="if (this.placeholder == 'State / Province') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'State / Province';}">
+</div>
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_zip_code">Zip / Postal Code *</label>
+<input class="form-control" value="" id="user_zip_code" name="user_zip_code" type="text" placeholder="Zip / Postal Code" onFocus="if (this.placeholder == 'Zip / Postal Code') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'Zip / Postal Code';}">
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_country_id">Country *</label>
+<span id="countrySpan">
+    <select class="form-control" id="user_country_id" name="user_country_id" onchange="getAnnualCurFunc(this.value);">
+        <option value="1">Afghanistan</option>
+        <option value="2">Aland Islands</option>
+        <option value="3">Albania</option>
+        <option value="4">Algeria</option>
+        <option value="5">American Samoa</option>
+        <option value="6">Andorra</option>
+        <option value="7">Angola</option>
+        <option value="8">Anguilla</option>
+        <option value="9">Antarctica</option>
+        <option value="10">Antigua &amp; Barbuda</option>
+        <option value="11">Argentina</option>
+        <option value="12">Armenia</option>
+        <option value="13">Aruba</option>
+        <option value="14">Ascension Island</option>
+        <option value="15">Australia</option>
+        <option value="16">Austria</option>
+        <option value="17">Azerbaijan</option>
+        <option value="18">Bahamas</option>
+        <option value="19">Bahrain</option>
+        <option value="20">Bangladesh</option>
+        <option value="21">Barbados</option>
+        <option value="22">Belarus</option>
+        <option value="23">Belize</option>
+        <option value="24">Benin</option>
+        <option value="25">Bermuda</option>
+        <option value="26">Bhutan</option>
+        <option value="27">Bolivia</option>
+        <option value="28">Bosnia &amp; Herzegovina</option>
+        <option value="29">Botswana</option>
+        <option value="30">Brazil</option>
+        <option value="31">British Indian Ocean Territory</option>
+        <option value="32">British Virgin Islands</option>
+        <option value="33">Brunei</option>
+        <option value="34">Bulgaria</option>
+        <option value="35">Burkina Faso</option>
+        <option value="36">Burundi</option>
+        <option value="37">Cambodia</option>
+        <option value="38">Cameroon</option>
+        <option value="39">Canada</option>
+        <option value="40">Canary Islands</option>
+        <option value="41">Cape Verde</option>
+        <option value="42">Caribbean Netherlands</option>
+        <option value="43">Cayman Islands</option>
+        <option value="44">Central African Republic</option>
+        <option value="45">Ceuta &amp; Melilla</option>
+        <option value="46">Chad</option>
+        <option value="47">Chile</option>
+        <option value="48">China</option>
+        <option value="49">Christmas Island</option>
+        <option value="50">Cocos (Keeling) Islands</option>
+        <option value="51">Colombia</option>
+        <option value="52">Comoros</option>
+        <option value="53">Congo - Brazzaville</option>
+        <option value="54">Congo - Kinshasa</option>
+        <option value="55">Cook Islands</option>
+        <option value="56">Costa Rica</option>
+        <option value="57">Cote d'Ivoire</option>
+        <option value="58">Croatia</option>
+        <option value="59">Cuba</option>
+        <option value="60">Curacao</option>
+        <option value="61">Cyprus</option>
+        <option value="62">Czech Republic</option>
+        <option value="63">Denmark</option>
+        <option value="64">Diego Garcia</option>
+        <option value="65">Djibouti</option>
+        <option value="66">Dominica</option>
+        <option value="67">Dominican Republic</option>
+        <option value="224">East Timor</option>
+        <option value="68">Ecuador</option>
+        <option value="69">Egypt</option>
+        <option value="70">El Salvador</option>
+        <option value="71">Equatorial Guinea</option>
+        <option value="72">Eritrea</option>
+        <option value="73">Estonia</option>
+        <option value="74">Ethiopia</option>
+        <option value="75">Falkland Islands</option>
+        <option value="76">Faroe Islands</option>
+        <option value="77">Fiji</option>
+        <option value="78">Finland</option>
+        <option value="79">France</option>
+        <option value="80">French Guiana</option>
+        <option value="81">French Polynesia</option>
+        <option value="82">French Southern Territories</option>
+        <option value="83">Gabon</option>
+        <option value="84">Gambia</option>
+        <option value="85">Georgia</option>
+        <option value="86">Germany</option>
+        <option value="87">Ghana</option>
+        <option value="88">Gibraltar</option>
+        <option value="89">Greece</option>
+        <option value="90">Greenland</option>
+        <option value="91">Grenada</option>
+        <option value="92">Guadeloupe</option>
+        <option value="93">Guam</option>
+        <option value="94">Guatemala</option>
+        <option value="95">Guernsey</option>
+        <option value="96">Guinea</option>
+        <option value="97">Guinea-Bissau</option>
+        <option value="98">Guyana</option>
+        <option value="99">Haiti</option>
+        <option value="100">Honduras</option>
+        <option value="101">Hong Kong</option>
+        <option value="102">Hungary</option>
+        <option value="103">Iceland</option>
+        <option value="104">India</option>
+        <option value="105">Indonesia</option>
+        <option value="106">Iran</option>
+        <option value="107">Iraq</option>
+        <option value="108">Ireland</option>
+        <option value="109">Isle of Man</option>
+        <option value="110">Israel</option>
+        <option value="111">Italy</option>
+        <option value="112">Jamaica</option>
+        <option value="113">Japan</option>
+        <option value="114">Jersey</option>
+        <option value="115">Jordan</option>
+        <option value="116">Kazakhstan</option>
+        <option value="117">Kenya</option>
+        <option value="118">Kiribati</option>
+        <option value="119">Kosovo</option>
+        <option value="120">Kuwait</option>
+        <option value="121">Kyrgyzstan</option>
+        <option value="122">Laos</option>
+        <option value="123">Latvia</option>
+        <option value="124">Lebanon</option>
+        <option value="125">Lesotho</option>
+        <option value="126">Liberia</option>
+        <option value="127">Libya</option>
+        <option value="128">Liechtenstein</option>
+        <option value="129">Lithuania</option>
+        <option value="130">Luxembourg</option>
+        <option value="131">Macau SAR China</option>
+        <option value="132">Macedonia</option>
+        <option value="133">Madagascar</option>
+        <option value="134">Malawi</option>
+        <option value="135">Malaysia</option>
+        <option value="136">Maldives</option>
+        <option value="137">Mali</option>
+        <option value="138">Malta</option>
+        <option value="139">Marshall Islands</option>
+        <option value="140">Martinique</option>
+        <option value="141">Mauritania</option>
+        <option value="142">Mauritius</option>
+        <option value="143">Mayotte</option>
+        <option value="144">Mexico</option>
+        <option value="145">Micronesia</option>
+        <option value="146">Moldova</option>
+        <option value="147">Monaco</option>
+        <option value="148">Mongolia</option>
+        <option value="149">Montenegro</option>
+        <option value="150">Montserrat</option>
+        <option value="151">Morocco</option>
+        <option value="152">Mozambique</option>
+        <option value="153">Myanmar</option>
+        <option value="154">Namibia</option>
+        <option value="155">Nauru</option>
+        <option value="156">Nepal</option>
+        <option value="157">Netherlands</option>
+        <option value="158">New Caledonia</option>
+        <option value="159">New Zealand</option>
+        <option value="160">Nicaragua</option>
+        <option value="161">Niger</option>
+        <option value="162">Nigeria</option>
+        <option value="163">Niue</option>
+        <option value="164">Norfolk Island</option>
+        <option value="165">North Korea</option>
+        <option value="166">Northern Mariana Islands</option>
+        <option value="167">Norway</option>
+        <option value="168">Oman</option>
+        <option value="169">Pakistan</option>
+        <option value="170">Palau</option>
+        <option value="171">Palestine</option>
+        <option value="172">Panama</option>
+        <option value="173">Papua New Guinea</option>
+        <option value="174">Paraguay</option>
+        <option value="175">Peru</option>
+        <option value="176">Philippines</option>
+        <option value="177">Pitcairn Islands</option>
+        <option value="178">Poland</option>
+        <option value="179">Portugal</option>
+        <option value="180">Puerto Rico</option>
+        <option value="181">Qatar</option>
+        <option value="182">Reunion</option>
+        <option value="183">Romania</option>
+        <option value="184">Russia</option>
+        <option value="185">Rwanda</option>
+        <option value="186">Samoa</option>
+        <option value="187">San Marino</option>
+        <option value="188">Sao Tome &amp; Principe</option>
+        <option value="189">Saudi Arabia</option>
+        <option value="190">Senegal</option>
+        <option value="191">Serbia</option>
+        <option value="192">Seychelles</option>
+        <option value="193">Sierra Leone</option>
+        <option value="194">Singapore</option>
+        <option value="195">Sint Maarten</option>
+        <option value="196">Slovakia</option>
+        <option value="197">Slovenia</option>
+        <option value="198">Solomon Islands</option>
+        <option value="199">Somalia</option>
+        <option value="200">South Africa</option>
+        <option value="201">South Georgia &amp; South Sandwich Islands</option>
+        <option value="202">South Korea</option>
+        <option value="203">South Sudan</option>
+        <option value="204">Spain</option>
+        <option value="205">Sri Lanka</option>
+        <option value="206">St. Barthelemy</option>
+        <option value="207">St. Helena</option>
+        <option value="208">St. Kitts &amp; Nevis</option>
+        <option value="209">St. Lucia</option>
+        <option value="210">St. Martin</option>
+        <option value="211">St. Pierre &amp; Miquelon</option>
+        <option value="212">St. Vincent &amp; Grenadines</option>
+        <option value="213">Sudan</option>
+        <option value="214">Suriname</option>
+        <option value="215">Svalbard &amp; Jan Mayen</option>
+        <option value="216">Swaziland</option>
+        <option value="217">Sweden</option>
+        <option value="218">Switzerland</option>
+        <option value="219">Syria</option>
+        <option value="220">Taiwan</option>
+        <option value="221">Tajikistan</option>
+        <option value="222">Tanzania</option>
+        <option value="223">Thailand</option>
+        <option value="225">Togo</option>
+        <option value="226">Tokelau</option>
+        <option value="227">Tonga</option>
+        <option value="228">Trinidad &amp; Tobago</option>
+        <option value="229">Tristan da Cunha</option>
+        <option value="230">Tunisia</option>
+        <option value="231">Turkey</option>
+        <option value="232">Turkmenistan</option>
+        <option value="233">Turks &amp; Caicos Islands</option>
+        <option value="234">Tuvalu</option>
+        <option value="235">U.S. Virgin Islands</option>
+        <option value="236">Uganda</option>
+        <option value="237">Ukraine</option>
+        <option value="238">United Arab Emirates</option>
+        <option value="239">United Kingdom</option>
+        <option value="251">United States</option>
+        <option value="240">Uruguay</option>
+        <option value="241">Uzbekistan</option>
+        <option value="242">Vanuatu</option>
+        <option value="243">Vatican City</option>
+        <option value="244">Venezuela</option>
+        <option value="245">Vietnam</option>
+        <option value="246">Wallis &amp; Futuna</option>
+        <option value="247">Western Sahara</option>
+        <option value="248">Yemen</option>
+        <option value="249">Zambia</option>
+        <option value="250">Zimbabwe</option>
+        </select>
+</span>
+</div>
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_gender">Gender *</label>
+<select class="form-control" id="user_gender" name="user_gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    </select>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_dob">Date of birth (mm-dd-yyyy)*</label>
+<input class="form-control" type="text" name="user_dob" id="user_dob" placeholder="Date of birth" value="" onFocus="if (this.placeholder == 'Date of birth') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'Date of birth';}">
+</div>
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_occupation">Occupation </label>
+<input class="form-control" type="text" name="user_occupation" id="user_occupation" placeholder="Occupation" value="" onFocus="if (this.placeholder == 'Occupation') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'Occupation';}">
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="user_password">Password *</label>
+<input class="form-control" type="password" name="user_password" id="user_password" placeholder="Password" value="" onFocus="if (this.placeholder == 'Password') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'Password';}">
+</div>
+<div class="col-lg-6 col-md-12" style="padding-top:20px;">
+<label for="cnuser_password">Password *</label>
+<input class="form-control" type="password" name="cnuser_password" id="cnuser_password" placeholder="Retype Password" value="" onFocus="if (this.placeholder == 'Retype Password') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = 'Retype Password';}">
+</div>
+</div>
+<div class="row">
+<div class="col-lg-12 col-md-12" style="padding-top:20px;">
+<label for="user_state"> ANNUAL INCOME </label>
+</div>
+<div class="col-lg-6 col-md-12" style="padding-top:10px;">
+<label for="user_annual_cur"></label>
+<select class="form-control" id="user_annual_cur" name="user_annual_cur">
+    <option value="AFN">AFN</option>
+    <option value="EUR">EUR</option>
+    <option value="LEK">LEK</option>
+    <option value="DZD">DZD</option>
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="AOA">AOA</option>
+    <option value="XCD">XCD</option>
+    <option value="USD">USD</option>
+    <option value="XCD">XCD</option>
+    <option value="ARS">ARS</option>
+    <option value="AMD">AMD</option>
+    <option value="AWG">AWG</option>
+    <option value="SHP">SHP</option>
+    <option value="AUD">AUD</option>
+    <option value="EUR">EUR</option>
+    <option value="AZN">AZN</option>
+    <option value="BSD">BSD</option>
+    <option value="BHD">BHD</option>
+    <option value="BDT">BDT</option>
+    <option value="BBD">BBD</option>
+    <option value="BYR">BYR</option>
+    <option value="BZD">BZD</option>
+    <option value="XOF">XOF</option>
+    <option value="BMD">BMD</option>
+    <option value="BTN">BTN</option>
+    <option value="BOB">BOB</option>
+    <option value="BAM">BAM</option>
+    <option value="BWP">BWP</option>
+    <option value="BRL">BRL</option>
+    <option value="USD">USD</option>
+    <option value="USD">USD</option>
+    <option value="BND">BND</option>
+    <option value="BGN">BGN</option>
+    <option value="XOF">XOF</option>
+    <option value="BIF">BIF</option>
+    <option value="KHR">KHR</option>
+    <option value="XAF">XAF</option>
+    <option value="CAD">CAD</option>
+    <option value="EUR">EUR</option>
+    <option value="CVE">CVE</option>
+    <option value="USD">USD</option>
+    <option value="KYD">KYD</option>
+    <option value="XAF">XAF</option>
+    <option value="EUR">EUR</option>
+    <option value="XAF">XAF</option>
+    <option value="CLP">CLP</option>
+    <option value="CNY">CNY</option>
+    <option value="AUD">AUD</option>
+    <option value="AUD">AUD</option>
+    <option value="COP">COP</option>
+    <option value="KMF">KMF</option>
+    <option value="XAF">XAF</option>
+    <option value="CDF">CDF</option>
+    <option value="NZD">NZD</option>
+    <option value="CRC">CRC</option>
+    <option value="XOF">XOF</option>
+    <option value="HRK">HRK</option>
+    <option value="CUP">CUP</option>
+    <option value="ANG">ANG</option>
+    <option value="EUR">EUR</option>
+    <option value="CZK">CZK</option>
+    <option value="DKK">DKK</option>
+    <option value="USD">USD</option>
+    <option value="DJF">DJF</option>
+    <option value="XCD">XCD</option>
+    <option value="DOP">DOP</option>
+    <option value="USD">USD</option>
+    <option value="USD">USD</option>
+    <option value="EGP">EGP</option>
+    <option value="USD">USD</option>
+    <option value="XAF">XAF</option>
+    <option value="ERN">ERN</option>
+    <option value="EUR">EUR</option>
+    <option value="ETB">ETB</option>
+    <option value="FKP">FKP</option>
+    <option value="DKK">DKK</option>
+    <option value="FJD">FJD</option>
+    <option value="EUR">EUR</option>
+    <option value="EUR">EUR</option>
+    <option value="EUR">EUR</option>
+    <option value="XPF">XPF</option>
+    <option value="EUR">EUR</option>
+    <option value="XAF">XAF</option>
+    <option value="GMD">GMD</option>
+    <option value="GEL">GEL</option>
+    <option value="EUR">EUR</option>
+    <option value="GHS">GHS</option>
+    <option value="GIP">GIP</option>
+    <option value="EUR">EUR</option>
+    <option value="DKK">DKK</option>
+    <option value="XCD">XCD</option>
+    <option value="EUR">EUR</option>
+    <option value="USD">USD</option>
+    <option value="GTQ">GTQ</option>
+    <option value="GBP">GBP</option>
+    <option value="GNF">GNF</option>
+    <option value="XOF">XOF</option>
+    <option value="GYD">GYD</option>
+    <option value="HTG">HTG</option>
+    <option value="HNL">HNL</option>
+    <option value="HKD">HKD</option>
+    <option value="HUF">HUF</option>
+    <option value="ISK">ISK</option>
+    <option value="INR">INR</option>
+    <option value="IDR">IDR</option>
+    <option value="IRR">IRR</option>
+    <option value="IQD">IQD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="ILS">ILS</option>
+    <option value="EUR">EUR</option>
+    <option value="JMD">JMD</option>
+    <option value="JPY">JPY</option>
+    <option value="GBP">GBP</option>
+    <option value="JOD">JOD</option>
+    <option value="KZT">KZT</option>
+    <option value="KES">KES</option>
+    <option value="AUD">AUD</option>
+    <option value="EUR">EUR</option>
+    <option value="KWD">KWD</option>
+    <option value="KGS">KGS</option>
+    <option value="LAK">LAK</option>
+    <option value="EUR">EUR</option>
+    <option value="LBP">LBP</option>
+    <option value="LSL">LSL</option>
+    <option value="LRD">LRD</option>
+    <option value="LYD">LYD</option>
+    <option value="CHF">CHF</option>
+    <option value="EUR">EUR</option>
+    <option value="EUR">EUR</option>
+    <option value="MOP">MOP</option>
+    <option value="MKD">MKD</option>
+    <option value="MGA">MGA</option>
+    <option value="MWK">MWK</option>
+    <option value="MYR">MYR</option>
+    <option value="MVR">MVR</option>
+    <option value="XOF">XOF</option>
+    <option value="EUR">EUR</option>
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="MRU">MRU</option>
+    <option value="MUR">MUR</option>
+    <option value="EUR">EUR</option>
+    <option value="MXN">MXN</option>
+    <option value="USD">USD</option>
+    <option value="MDL">MDL</option>
+    <option value="EUR">EUR</option>
+    <option value="MNT">MNT</option>
+    <option value="EUR">EUR</option>
+    <option value="XCD">XCD</option>
+    <option value="MAD">MAD</option>
+    <option value="MZN">MZN</option>
+    <option value="MMK">MMK</option>
+    <option value="NAD">NAD</option>
+    <option value="AUD">AUD</option>
+    <option value="NPR">NPR</option>
+    <option value="EUR">EUR</option>
+    <option value="XPF">XPF</option>
+    <option value="NZD">NZD</option>
+    <option value="NIO">NIO</option>
+    <option value="XOF">XOF</option>
+    <option value="NGN">NGN</option>
+    <option value="NZD">NZD</option>
+    <option value="AUD">AUD</option>
+    <option value="KPW">KPW</option>
+    <option value="USD">USD</option>
+    <option value="NOK">NOK</option>
+    <option value="OMR">OMR</option>
+    <option value="PKR">PKR</option>
+    <option value="USD">USD</option>
+    <option value="ILS">ILS</option>
+    <option value="PAB">PAB</option>
+    <option value="PGK">PGK</option>
+    <option value="PYG">PYG</option>
+    <option value="PEN">PEN</option>
+    <option value="PHP">PHP</option>
+    <option value="NZD">NZD</option>
+    <option value="PLN">PLN</option>
+    <option value="EUR">EUR</option>
+    <option value="USD">USD</option>
+    <option value="QAR">QAR</option>
+    <option value="EUR">EUR</option>
+    <option value="RON">RON</option>
+    <option value="RUB">RUB</option>
+    <option value="RWF">RWF</option>
+    <option value="WST">WST</option>
+    <option value="EUR">EUR</option>
+    <option value="STD">STD</option>
+    <option value="SAR">SAR</option>
+    <option value="XOF">XOF</option>
+    <option value="RSD">RSD</option>
+    <option value="SCR">SCR</option>
+    <option value="SLL">SLL</option>
+    <option value="SGD">SGD</option>
+    <option value="ANG">ANG</option>
+    <option value="EUR">EUR</option>
+    <option value="EUR">EUR</option>
+    <option value="SBD">SBD</option>
+    <option value="SOS">SOS</option>
+    <option value="ZAR">ZAR</option>
+    <option value="GBP">GBP</option>
+    <option value="KRW">KRW</option>
+    <option value="SSP">SSP</option>
+    <option value="EUR">EUR</option>
+    <option value="LKR">LKR</option>
+    <option value="EUR">EUR</option>
+    <option value="SHP">SHP</option>
+    <option value="XCD">XCD</option>
+    <option value="XCD">XCD</option>
+    <option value="EUR">EUR</option>
+    <option value="EUR">EUR</option>
+    <option value="XCD">XCD</option>
+    <option value="SDG">SDG</option>
+    <option value="SRD">SRD</option>
+    <option value="NOK">NOK</option>
+    <option value="SZL">SZL</option>
+    <option value="SEK">SEK</option>
+    <option value="CHF">CHF</option>
+    <option value="SYP">SYP</option>
+    <option value="TWD">TWD</option>
+    <option value="TJS">TJS</option>
+    <option value="TZS">TZS</option>
+    <option value="THB">THB</option>
+    <option value="XOF">XOF</option>
+    <option value="NZD">NZD</option>
+    <option value="TOP">TOP</option>
+    <option value="TTD">TTD</option>
+    <option value="GBP">GBP</option>
+    <option value="TND">TND</option>
+    <option value="TRY">TRY</option>
+    <option value="TMT">TMT</option>
+    <option value="USD">USD</option>
+    <option value="AUD">AUD</option>
+    <option value="USD">USD</option>
+    <option value="UGX">UGX</option>
+    <option value="UAH">UAH</option>
+    <option value="AED">AED</option>
+    <option value="GBP">GBP</option>
+    <option value="USD">USD</option>
+    <option value="UYU">UYU</option>
+    <option value="UZS">UZS</option>
+    <option value="VUV">VUV</option>
+    <option value="EUR">EUR</option>
+    <option value="VEF">VEF</option>
+    <option value="VND">VND</option>
+    <option value="XPF">XPF</option>
+    <option value="MAD">MAD</option>
+    <option value="YER">YER</option>
+    <option value="ZMW">ZMW</option>
+    <option value="ZWD">ZWD</option>
+    
+    
+    </select>
+</div>
+<div class="col-lg-6 col-md-12" style="padding-top:10px;">
+<label for="user_annual_income">Annual Income Figure</label>
+<input class="form-control" value="" id="user_annual_income" name="user_annual_income" type="text" placeholder="10,000,000.00" onFocus="if (this.placeholder == '10,000,000.00') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = '10,000,000.00';}">
+</div>
+</div>
+<div class="row">
+<div class="col-lg-4 col-md-12" style="padding-top:20px;">
+<label for="user_country_id">Account Type *</label>
+<select id="account_typeID" name="account_typeID" class="form-control" style="font-size:12px;">
+    <option value="">--Select Account Type--</option>
+    <option value="1">Basic Checking Account</option>
+    <option value="7">Brokerage Account</option>
+    <option value="9">Business Account</option>
+    <option value="5">CDs Account</option>
+    <option value="12">Current Account</option>
+    <option value="3">Interest Bearing Checking Account</option>
+    <option value="6">IRAs Account</option>
+    <option value="4">Money Market Account</option>
+    <option value="8">Offshore Account</option>
+    <option value="2">Savings Account</option>
+    </select>
+</div>
+<div class="col-lg-3 col-md-12" style="padding-top:20px;">
+<label for="user_country_id">Account Currency *</label>
+<select id="account_currency_id" name="account_currency_id" class="form-control" onchange="getCurFunc();" style="font-size:12px;">
+    <option value="1" selected="">USD</option>
+    <option value="2">GBP</option>
+    <option value="3">EUR</option>
+    <option value="4">TRY</option>
+    <option value="5">CNY</option>
+    </select>
+</div>
+<div class="col-lg-5 col-md-12" style="padding-top:20px;">
+<div class="row">
+<div class="input-field col s12">
+<i id="curPrefix" class="prefix" style="font-size:12px; font-style:normal; margin-right:5px; margin-bottom:-40px; padding-bottom:0px;">USD</i>
+<input class="form-control" id="account_initial_deposit" name="account_initial_deposit" type="text" placeholder="1,500.00" onFocus="if (this.placeholder == '1,500.00') {this.placeholder = '';}" onBlur="if (this.placeholder == '') {this.placeholder = '1,500.00';}" type="text">
+<label for="transfer_amount" class="">Initial Deposit Amount</label>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-12 col-md-12" style="padding-top:20px;">
+<button class="btn btn-primary" id="js-contact-btn" type="submit" onclick="submitRegFunc()">Submit Registration</button>
+</div>
+</div>
+</form>
+</div>
+<div class="center-align m-t-10 m-b-20 db">
+Already have an account? <a href="index.html">Login</a>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<script data-cfasync="false" src="dashboard/js/email-decode.min.js">
+</script><script src="dashboard/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="dashboard/js/materialize.min.js"></script>
+<script src="dashboard/js/perfect-scrollbar.jquery.min.js"></script>
+
+
+
+<script>
+        $('.tooltipped').tooltip();
+        // ==============================================================
+        // Login and Recover Password
+        // ==============================================================
+        $('#to-recover').on("click", function() {
+        $("#loginform").slideUp();
+        $("#recoverform").fadeIn();
+        });
+        $(function() {
+        $(".preloader").fadeOut();
+        });
+        </script>
+<script src="dashboard/js/jquery.bpopups2.min.js"></script>
+<!-- <script language="javascript" type="text/javascript">
+
+
+
+
+ function getXMLHTTP() { //fuction to return the xml http object
+		var xmlhttp=false;	
+		try{
+			xmlhttp=new XMLHttpRequest();
+		}
+		catch(e)	{		
+			try{			
+				xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch(e){
+				try{
+				xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+				}
+				catch(e1){
+					xmlhttp=false;
+				}
+			}
+		}
+		 	
+		return xmlhttp;
+    }
+	
+
+
+
+$( document ).ready(function() {
+//getMenuFunc();
+
+getCountryFunc();
+
+});
+
+
+
+
+
+
+
+function getCountryFunc(){	
+
+
+var strURL="severSrcipts/get_country.php";
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+
+
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+document.getElementById('countrySpan').innerHTML=req.responseText;
+getAnnualIncomeCur();
+
+	
+
+} else {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+function getAnnualIncomeCur(){	
+
+
+var strURL="severSrcipts/get_country_currency.php";
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+
+
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+document.getElementById('user_annual_cur').innerHTML=req.responseText;
+getAccTypeFunc();
+
+	
+
+} else {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+}
+
+}
+
+
+
+
+
+
+function getAccTypeFunc(){
+
+
+var strURL="severSrcipts/get_reg_account_type.php";
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+
+
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+document.getElementById('account_typeID').innerHTML=req.responseText;
+getAccCurrencyFunc();
+
+	
+
+} else {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getAccCurrencyFunc(){
+
+var strURL="severSrcipts/get_reg_account_currencies.php";
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var req = getXMLHTTP();
+
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+// only if "OK"
+if (req.status == 200) {
+
+
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+document.getElementById('account_currency_id').innerHTML=req.responseText;
+//getAccCurrencyFunc();
+
+} else {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText);
+
+return false;
+
+},1000);
+
+
+}
+
+}				
+ }		
+req.open("GET", strURL, true);
+req.send(null);
+}
+
+
+}
+
+
+
+
+
+
+function getAnnualCurFunc(c){
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+var cntCur = document.getElementById('cntCur'+c).value;
+
+document.getElementById('user_annual_cur').value=cntCur;
+
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+},500);
+
+}
+
+
+
+
+function submitRegFunc(){
+												
+var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+/*var regPattern = /^[R]+[B]+[0-9]{8}$/;*/
+
+var phonePattern = /^[0-9]+\.{11}$/;
+var namePattern = /^[A-Za-z ]+$/;
+
+var user_firstname= document.getElementById('user_firstname').value;
+user_firstname=user_firstname.replace(/^\s+|\s+$/g,'');
+if(user_firstname==''){
+alert("Please provide first name!");
+document.getElementById("user_firstname").focus();
+return false;
+}
+
+
+
+
+
+var user_lastname= document.getElementById('user_lastname').value;
+user_lastname=user_lastname.replace(/^\s+|\s+$/g,'');
+
+if(user_lastname==''){
+alert("Please provide last name!");
+document.getElementById("user_lastname").focus();
+return false;
+}
+
+
+
+
+
+var user_phone = document.getElementById('user_phone').value;
+user_phone=user_phone.replace(/^\s+|\s+$/g,'');
+var user_phone = user_phone.replace(/,/g, "");
+
+
+
+if(user_phone==''){
+alert ("Please provide phone number!");
+document.getElementById("user_phone").focus();
+return false;
+}
+
+
+
+var user_email_address = document.getElementById('user_email_address').value;
+user_email_address=user_email_address.replace(/^\s+|\s+$/g,'');
+var user_email_address = user_email_address.replace(/,/g, "");
+
+
+
+if(user_email_address==''){
+alert ("Please provide email address!");
+document.getElementById("user_email_address").focus();
+return false;
+}
+
+
+
+
+var myemailCheck1=emailPattern.test(user_email_address);
+    
+	if(myemailCheck1==false){
+	alert("Please provide a valid email address");
+	document.getElementById("user_email_address").focus();
+	return false;
+	}
+
+
+
+var user_address= document.getElementById('user_address').value;
+user_address=user_address.replace(/^\s+|\s+$/g,'');
+user_address = user_address.replace(/,/g, "");
+
+if(user_address==''){
+alert("Please provide contact address!");
+document.getElementById("user_address").focus();
+return false;
+}
+
+
+
+
+
+var user_city= document.getElementById('user_city').value;
+user_city=user_city.replace(/^\s+|\s+$/g,'');
+user_city = user_city.replace(/,/g, "");
+
+if(user_city==''){
+alert("Please provide city of residence!");
+document.getElementById("user_city").focus();
+return false;
+}
+
+
+
+
+
+
+var user_state= document.getElementById('user_state').value;
+user_state=user_state.replace(/^\s+|\s+$/g,'');
+user_state = user_state.replace(/,/g, "");
+
+if(user_state==''){
+alert("Please provide state / province of residence!");
+document.getElementById("user_state").focus();
+return false;
+}
+
+
+
+
+
+
+var user_zip_code = document.getElementById('user_zip_code').value;
+user_zip_code=user_zip_code.replace(/^\s+|\s+$/g,'');
+if(user_zip_code==''){
+alert("Please provide zip / postal code!");
+document.getElementById('user_zip_code').focus();
+return false;
+}
+
+
+
+
+
+
+var user_country_id= document.getElementById('user_country_id').value;
+user_country_id=user_country_id.replace(/^\s+|\s+$/g,'');
+user_country_id = user_country_id.replace(/,/g, "");
+
+if(user_country_id==''){
+alert("Please select country of residence!");
+document.getElementById("user_country_id").focus();
+return false;
+}
+
+
+
+
+var user_gender= document.getElementById('user_gender').value;
+user_gender=user_gender.replace(/^\s+|\s+$/g,'');
+user_gender = user_gender.replace(/,/g, "");
+
+if(user_gender==''){
+alert("Please select gender!");
+document.getElementById("user_gender").focus();
+return false;
+}
+
+
+
+
+
+var user_dob= document.getElementById('user_dob').value;
+user_dob=user_dob.replace(/^\s+|\s+$/g,'');
+user_dob = user_dob.replace(/,/g, "");
+
+if(user_dob==''){
+alert("Please provide date of birth!");
+document.getElementById("user_dob").focus();
+return false;
+}
+
+
+
+
+var user_password= document.getElementById('user_password').value;
+user_password=user_password.replace(/^\s+|\s+$/g,'');
+user_password = user_password.replace(/,/g, "");
+
+if(user_password==''){
+alert("Please provide password!");
+document.getElementById("user_password").focus();
+return false;
+}
+
+
+
+
+var cnuser_password= document.getElementById('cnuser_password').value;
+cnuser_password=cnuser_password.replace(/^\s+|\s+$/g,'');
+cnuser_password = cnuser_password.replace(/,/g, "");
+
+if(cnuser_password==''){
+alert("Please provide password!");
+document.getElementById("cnuser_password").focus();
+return false;
+}
+
+
+
+if(cnuser_password!=user_password){
+alert("Passwords do not match!");
+document.getElementById("cnuser_password").focus();
+return false;
+}
+
+
+
+
+
+var user_annual_income= document.getElementById('user_annual_income').value;
+user_annual_income=user_annual_income.replace(/^\s+|\s+$/g,'');
+user_annual_income = user_annual_income.replace(/,/g, "");
+user_annual_income = user_annual_income.replace(/,/g, "");
+
+
+
+
+if(user_annual_income!='' && isNaN(user_annual_income)){
+alert ("Only numeric value is allowed for annual income!");
+document.getElementById("user_annual_income").focus();
+return false;
+}
+
+
+
+
+var account_typeID= document.getElementById('account_typeID').value;
+account_typeID=account_typeID.replace(/^\s+|\s+$/g,'');
+if(account_typeID==''){
+alert("Please select an account type!");
+document.getElementById("account_typeID").focus();
+return false;
+}
+
+
+
+
+
+var account_currency_id= document.getElementById('account_currency_id').value;
+account_currency_id=account_currency_id.replace(/^\s+|\s+$/g,'');
+
+if(account_currency_id==''){
+alert("Please select account currency!");
+document.getElementById("account_currency_id").focus();
+return false;
+}
+
+
+
+
+var account_initial_deposit= document.getElementById('account_initial_deposit').value;
+account_initial_deposit=account_initial_deposit.replace(/^\s+|\s+$/g,'');
+account_initial_deposit = account_initial_deposit.replace(/,/g, "");
+account_initial_deposit = account_initial_deposit.replace(/,/g, "");
+
+
+
+
+
+if(account_initial_deposit!='' && isNaN(account_initial_deposit)){
+alert ("Only numeric value is allowed for initial!");
+document.getElementById("account_initial_deposit").focus();
+return false;
+}
+
+
+
+var account_currency = document.getElementById('account_currency_id').options[document.getElementById('account_currency_id').selectedIndex].text;
+
+var account_type_name = document.getElementById('account_typeID').options[document.getElementById('account_typeID').selectedIndex].text;
+
+var dataString = $('#profileUpdateForm').serialize()+"&account_currency="+account_currency;
+
+
+var strURL="severSrcipts/create_new_profile_process.php";
+
+
+$('#popUpLoader').bPopup({
+modalClose: false,
+opacity: 0.3,
+positionStyle: 'fixed' //'fixed' or 'absolute'
+});
+
+
+
+var req = getXMLHTTP();
+if (req) {
+req.onreadystatechange = function() {
+if (req.readyState == 4) {
+					// only if "OK"
+if (req.status == 200) {
+setTimeout(function (){
+document.getElementById('ClosePopLoader').click();
+
+
+if(req.responseText==1){
+
+alert("Account profile successfully submitted, your new account details will be sent to you shortly!");
+location.reload(true);
+return false;
+
+}
+
+
+
+
+else if(req.responseText==2){
+alert("Sorry, the email address you provided is currently registered for another customer!");
+return false; 
+}
+
+
+
+else if(req.responseText==3){
+alert("Sorry, the phone number you provided is currently registered for another customer!");
+return false; 
+}
+
+
+
+else {
+alert("Unable to process your request, please try later!");
+return false; 
+}
+
+},1000);
+
+
+										
+} else {
+setTimeout(function (){document.getElementById('ClosePopLoader').click();
+},300);
+
+setTimeout(function (){
+alert("There was a problem while using XMLHTTP:\n" + req.statusText+ "!");
+},500);
+return false; 
+}
+}				
+	}
+		
+req.open("POST", strURL, true);
+req.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+req.send(dataString);
+}	
+	
+}
+
+
+
+function getCurFunc(){
+var account_currency = document.getElementById('account_currency_id').options[document.getElementById('account_currency_id').selectedIndex].text;
+
+document.getElementById('curPrefix').innerHTML=account_currency;
+
+}
+
+
+</script> -->
+</body>
+</html>

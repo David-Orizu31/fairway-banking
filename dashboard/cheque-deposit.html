@@ -1,0 +1,685 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
+<title>Fairway Credit Union Bank</title>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+<script src="js/font-awesome.js"></script>
+
+
+<link href="css/c3.min.css" rel="stylesheet">
+<link href="css/jquery-jvectormap.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet">
+
+
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+       
+        <![endif]-->
+</head>
+<body>
+<div class="main-wrapper" id="main-wrapper">
+
+
+
+<div class="preloader">
+<div class="loader">
+<div class="loader__figure"></div>
+<p class="loader__label">Fairway Credit Union Online Banking</p>
+</div>
+</div>
+
+
+
+<header class="topbar">
+ <div id="justMyPopUpAlert" style="text-align:center">
+<div style="background:#FFF; min-width:400px; padding:0px 0px 5px 0px;">
+<table width="100%" border="0">
+<tr style="background:#FC3; height:20px;">
+<td style="padding:10px; text-align:left; color:#069; font-weight:bold;">
+<img src="images/s_attention.png" width="16" height="16" style="float:left; margin-right:5px;" />Message Alert!
+<span style="display:inline-block; clear:both;"></span>
+</td>
+</tr>
+<tr>
+<td id="displayMsg2" style="padding:5px;font-style:italic; font-size:12px; font-weight:bold;">&nbsp;</td>
+</tr>
+</table>
+<input type="button" value="ok" name="ok_button2" id="ok_button2" class="b-close btn btn-primary" style="cursor:pointer; width:70px; padding:2px 7px;" />
+</div>
+</div> 
+ <div id="justMyPopUp" style="text-align:center">
+<div style="background:#FFF; min-width:400px; padding:0px 0px 5px 0px;">
+<table width="100%" border="0">
+<tr style="background:#FC3; height:20px;">
+<td style="padding:10px; text-align:left; color:#069; font-weight:bold;">
+<img src="images/s_attention.png" width="16" height="16" style="float:left; margin-right:5px;" />Message Alert!
+<span style="display:inline-block; clear:both;"></span>
+</td>
+</tr>
+<tr>
+<td id="displayMsg" style="padding:5px 10px; font-size:12px; font-style:italic; font-weight:bold;">&nbsp;</td>
+</tr>
+</table>
+<input type="button" value="ok" name="ok_button" id="ok_button" class="b-close btn btn-primary" style="cursor:pointer;" onClick="reloadPage()" />
+</div>
+</div> 
+<div id="loadingPop">
+<input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="CloseMeNowLog" />
+<i class="fa fa-spin fa-refresh" style="font-size:45px;"></i>
+</div>
+<div id="popUpLoader">
+<input type="button" class="b-close" style="cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px; font-size:18px; font-weight:bold; display:none;" id="ClosePopLoader">
+<div id="processing"><i class="fa fa-spin fa-refresh" style="font-size:45px;"></i></div>
+</div>
+
+
+
+<nav>
+<div class="nav-wrapper">
+
+
+
+<a href="javascript:void(0)" class="brand-logo" data-logobg="skin1">
+<span class="icon">
+<img class="light-logo" src="../images/logo-light-icon.png" alt="logos">
+<img class="dark-logo" src="../images/logo-icon.png" alt="logos">
+</span>
+<span class="text">
+<img class="light-logo" src="../images/logo-light-text.png" alt="logos">
+<img class="dark-logo" src="../images/logo-text.png" alt="logos">
+</span>
+</a>
+
+
+
+
+
+
+<ul class="left">
+<li class="hide-on-med-and-down">
+<a href="javascript: void(0);" class="nav-toggle">
+<span class="bars bar1"></span>
+<span class="bars bar2"></span>
+<span class="bars bar3"></span>
+</a>
+</li>
+<li class="hide-on-large-only">
+<a href="javascript: void(0);" class="sidebar-toggle">
+<span class="bars bar1"></span>
+<span class="bars bar2"></span>
+<span class="bars bar3"></span>
+</a>
+</li>
+</ul>
+
+
+
+ 
+
+
+<ul class="right">
+
+
+
+<li><a class="dropdown-trigger" href="javascript: void(0);" data-target="user_dropdown"><img id="userHeaderPic" src="../images/2.jpg" alt="user" class="circle profile-pic"></a>
+<ul id="user_dropdown" class="mailbox dropdown-content dropdown-user">
+<li>
+<div class="dw-user-box">
+<div class="u-img"><img id="secondHeadPix" src="../images/2.jpg" alt="user"></div>
+<div class="u-text">
+<h4 style="font-size:12px; font-weight:bold;" id="userRpName">Steve Harvey</h4>
+<p><span id="userRpLoginId">1003</span></p>
+<a href="profile-info.html" class="waves-effect waves-light btn-small red white-text">View Profile</a>
+</div>
+</div>
+</li>
+<li role="separator" class="divider"></li>
+<li><a href="profile-info.html"><i class="fa fa-user-circle"></i> My Profile</a></li>
+<li><a href="my-accounts.html"><i class="fa fa-briefcase fa-1x" style="margin-right:10px;"></i> My Accounts</a></li>
+<li><a href="inbox-compose.html"><i class="fa fa-envelope fa-1x" style="margin-right:10px;"></i> Contact Support</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="password-reset.html"><i class="fa fa-cog fa-1x" style="margin-right:10px;"></i>Reset Password</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="javascript:void(0);" onclick="logOutFunc();"><i class="fa fa-power-off"></i> Logout</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+</div>
+</nav>
+
+
+
+</header>
+
+
+
+<aside class="left-sidebar">
+<ul id="slide-out" class="sidenav">
+<li>
+<div class="user-profile" style="background-image: url(../images/user-bg.jpg);">
+<div class="user-name dropdown-trigger" data-target='dropdownuser'>
+<h6 class="white-text name"> <img style="max-width:30px;" id="leftHdPix" class="profile-user-img img-responsive img-circle" src="../images/2.jpg" alt="user"> <span id="hdNameSpan" style="font-size:12px; margin-left:10px;">Steve Harvey</span> <i class="fa fa-angle-down ml-auto"></i></h6>
+</div>
+<ul id='dropdownuser' class='dropdown-content'>
+<li><a href="profile-info.html"><i class="fa fa-user-circle fa-1x"></i> My Profile</a></li>
+<li><a href="my-accounts.html"><i class="fa fa-briefcase fa-1x"></i> My Account (s) </a></li>
+<li><a href="inbox-compose.html"><i class="fa fa-envelope fa-1x"></i> Contact Support</a></li>
+ <li role="separator" class="divider m-t-0"></li>
+<li><a href="password-reset.html"><i class="fa fa-cog fa-1x"></i> Reset Password</a></li>
+<li role="separator" class="divider m-t-0"></li>
+<li><a onclick="logOutFunc();" href="javascript:void(0)"><i class="fa fa-power-off fa-1x"></i> Logout</a></li>
+</ul>
+</div>
+</li>
+<li>
+<ul class="collapsible">
+<li class="small-cap"><span class="hide-menu">PERSONAL</span></li>
+<li>
+<a href="home.html" class="collapsible-header"><i class="fa fa-home" style="margin-right:10px;"></i><span class="hide-menu"> Home </span></a>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-briefcase" style="margin-right:10px;"></i><span class="hide-menu"> Account </span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="my-accounts.html"><i class="fa fa-briefcase" style="margin-right:10px;"></i><span class="hide-menu">My Account (s) </span></a></li>
+<li><a href="transaction-history.html"><i class="fa fa-book" style="margin-right:10px;"></i><span class="hide-menu">Transaction History</span></a></li>
+<li><a href="register-new-account.html"><i class="fa fa-user-plus" style="margin-right:10px;"></i><span class="hide-menu">Register New Account</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-list-alt" style="margin-right:10px;"></i><span class="hide-menu">Withdrawal / Transfer</span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="fund-transfer.html"><i class="fa fa-arrow-circle-right" style="margin-right:10px;"></i><span class="hide-menu">Transfer Fund</span></a></li>
+<li><a href="send-echeque.html"><i class="fa fa-bank" style="margin-right:10px;"></i><span class="hide-menu">Send eCheque</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-envelope-open" style="margin-right:10px;"></i><span class="hide-menu"> Message</span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="inbox-email.html"><i class="fa fa-envelope" style="margin-right:10px;"></i><span class="hide-menu" id="myInoxMsg">Inbox</span></a></li>
+<li><a href="sent-mails.html"><i class="fa fa-support" style="margin-right:10px;"></i><span class="hide-menu">My Support Tickets</span></a></li>
+<li><a href="inbox-compose.html"><i class="fa fa-edit" style="margin-right:10px;"></i><span class="hide-menu">Contact Support</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="cheque-deposit.html" class="collapsible-header"><i class="fa fa-bank" style="margin-right:10px;"></i><span class="hide-menu">Cheque Deposit </span></a>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-credit-card" style="margin-right:10px;"></i><span class="hide-menu"> Cards </span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="mycards.html"><i class="fa fa-credit-card" style="margin-right:10px;"></i><span class="hide-menu">My Cards</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript: void(0);" class="collapsible-header has-arrow"><i class="fa fa-user" style="margin-right:10px;"></i><span class="hide-menu"> Profile </span></a>
+<div class="collapsible-body">
+<ul>
+<li><a href="password-reset.html"><i class="fa fa-key" style="margin-right:10px;"></i><span class="hide-menu">Password Reset</span></a></li>
+<li><a href="profile-info.html"><i class="fa fa-user-circle" style="margin-right:10px;"></i><span class="hide-menu">Profile Info</span></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a href="javascript:void(0);" class="collapsible-header" onclick="logOutFunc();"><i class="fa fa-power-off" style="margin-right:10px;"></i><span class="hide-menu"> Log Out </span></a>
+</li>
+<li>
+</li>
+</ul>
+</li>
+</ul>
+</aside>
+
+
+
+
+
+
+<div class="page-wrapper">
+
+
+
+<div class="page-titles">
+<div class="d-flex align-items-center">
+    <span id="userNameHead">
+        <h5 class="font-medium m-b-0" id="userLoggedName">Atlas Zeus</h5>
+        <div class="row">
+        <h6 style="font-size:12px;">Login ID: <span id="userLoggedID">37600609187</span></h6>
+        <input type="hidden" value="160299892.jpeg" id="userHeaderPixV" name="userHeaderPixV">
+        </div>
+    </span>
+    <div class=" col-lg-6 col-md-12">
+        <span id="date_time" style="display:block; color:#f00; font-size:12px; font-weight:bold; text-align:center"></span>
+    </div>
+<div class="custom-breadcrumb ml-auto">
+<a href="home.html" class="breadcrumb">Home</a>
+<a href="javascript:void(0)" class="breadcrumb">Cheque Deposit</a>
+<div style="padding-top:10px;">
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+    <div>
+    <div class="panel panel-default">
+    <div class="panel-body">
+    <div class="tab-wrapper tab-primary">
+    <ul class="nav nav-tabs" style="border-bottom:none;">
+    <li class="active"><a href="#home1" data-toggle="tab" aria-expanded="true">CHEQUE DEPOSIT</a></li>
+    <li class=""><a href="#myInvestPort" data-toggle="tab" aria-expanded="false">MY CHEQUE DEPOSITS</a></li>
+    </ul>
+    <div class="tab-content" style="padding:10px 0px;">
+    <div class="tab-pane active" id="home1">
+    <div class="table-responsive">
+    <div class="panel-body">
+    <div class="card-content">
+    <form style="margin-bottom:20px;" action="severSrcipts/upload_cheque_process.php" onsubmit="return false" method="post" id="chequeDepositForm" name="chequeDepositForm" enctype="multipart/form-data">
+    <input type="hidden" name="chequeDep" id="chequeDep" value="1">
+    <div id="selectedAcctInfo">
+    <div class="row">
+    <label style="color:#5e35b1; font-weight:bold; padding-left:10px;">Select An Account</label>
+    <div class="input-field col s12">
+    <select id="cheque_deposit_account_number" name="cheque_deposit_account_number" class="browser-default" style="font-size:12px; font-weight:bold; color:#000;" onchange="getTransferInfoTwoFunc(this.value)">
+    <option value="">--Select An Account--</option>
+    <option value="0464691347" selected="">0464691347 (Business Account) / USD 496,468.80</option>
+    <option value="3442712639">3442712639 (Savings Account) / GBP 2,380,602.65</option>
+    <option value="7665606978">7665606978 (Offshore Account) / EUR 23,028.00</option>
+    </select>
+    </div>
+    </div>
+    <div class="row">
+    <label for="cheque_deposit_amount" class="" style="padding-left:10px;">Amount</label>
+    <div class="input-field col s12">
+    <input type="hidden" name="cheque_deposit_user_login_id" id="cheque_deposit_user_login_id" value="37600609187">
+    <input type="hidden" name="cheque_deposit_currency" id="cheque_deposit_currency" value="USD">
+    <i class="prefix" style="font-size:14px; font-style:normal; margin-right:5px; margin-bottom:-40px; padding-bottom:0px;">USD</i>
+    <input id="cheque_deposit_amount" name="cheque_deposit_amount" type="text" placeholder="1,500.00" onfocus="if (this.placeholder == '1,500.00') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = '1,500.00';}">
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-12 col-md-12" style="margin-bottom:15px;">
+    <label for="cheque_deposit_issuer_name" class="active">Name of Cheque Issuer *</label>
+    <input value="" id="cheque_deposit_issuer_name" name="cheque_deposit_issuer_name" type="text" placeholder="Name of Cheque Issuer" onfocus="if (this.placeholder == 'Name of Cheque Issuer') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Name of Cheque Issuer';}">
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6 col-md-12" style="margin-bottom:15px;">
+    <label for="cheque_deposit_issuer_bank" class="active">Issuer Bank Name *</label>
+    <input value="" id="cheque_deposit_issuer_bank" name="cheque_deposit_issuer_bank" type="text" placeholder="Issuer Bank Name" onfocus="if (this.placeholder == 'Issuer Bank Name') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Issuer Bank Name';}">
+    </div>
+    <div class="col-lg-6 col-md-12" style="margin-bottom:15px;">
+    <label for="cheque_deposit_issued_date" class="active">Cheque Issued Date*</label>
+    <input id="cheque_deposit_issued_date" name="cheque_deposit_issued_date" type="text" placeholder="Cheque Issued Date" onfocus="if (this.placeholder == 'Cheque Issued Date') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Cheque Issued Date';}">
+    </div>
+    </div>
+    <div class="row">
+    <label style="padding-left:10px;">Country Where Issuing Bank is located</label>
+    <div class="input-field col s12">
+    <select id="cheque_deposit_issuer_bank_country_id" name="cheque_deposit_issuer_bank_country_id" class="browser-default">
+    <option value="" selected="">--Select Country--</option>
+    <option value="1">Afghanistan</option>
+    <option value="2">Aland Islands</option>
+    <option value="3">Albania</option>
+    <option value="4">Algeria</option>
+    <option value="5">American Samoa</option>
+    <option value="6">Andorra</option>
+    <option value="7">Angola</option>
+    <option value="8">Anguilla</option>
+    <option value="9">Antarctica</option>
+    <option value="10">Antigua &amp; Barbuda</option>
+    <option value="11">Argentina</option>
+    <option value="12">Armenia</option>
+    <option value="13">Aruba</option>
+    <option value="14">Ascension Island</option>
+    <option value="15">Australia</option>
+    <option value="16">Austria</option>
+    <option value="17">Azerbaijan</option>
+    <option value="18">Bahamas</option>
+    <option value="19">Bahrain</option>
+    <option value="20">Bangladesh</option>
+    <option value="21">Barbados</option>
+    <option value="22">Belarus</option>
+    <option value="23">Belize</option>
+    <option value="24">Benin</option>
+    <option value="25">Bermuda</option>
+    <option value="26">Bhutan</option>
+    <option value="27">Bolivia</option>
+    <option value="28">Bosnia &amp; Herzegovina</option>
+    <option value="29">Botswana</option>
+    <option value="30">Brazil</option>
+    <option value="31">British Indian Ocean Territory</option>
+    <option value="32">British Virgin Islands</option>
+    <option value="33">Brunei</option>
+    <option value="34">Bulgaria</option>
+    <option value="35">Burkina Faso</option>
+    <option value="36">Burundi</option>
+    <option value="37">Cambodia</option>
+    <option value="38">Cameroon</option>
+    <option value="39">Canada</option>
+    <option value="40">Canary Islands</option>
+    <option value="41">Cape Verde</option>
+    <option value="42">Caribbean Netherlands</option>
+    <option value="43">Cayman Islands</option>
+    <option value="44">Central African Republic</option>
+    <option value="45">Ceuta &amp; Melilla</option>
+    <option value="46">Chad</option>
+    <option value="47">Chile</option>
+    <option value="48">China</option>
+    <option value="49">Christmas Island</option>
+    <option value="50">Cocos (Keeling) Islands</option>
+    <option value="51">Colombia</option>
+    <option value="52">Comoros</option>
+    <option value="53">Congo - Brazzaville</option>
+    <option value="54">Congo - Kinshasa</option>
+    <option value="55">Cook Islands</option>
+    <option value="56">Costa Rica</option>
+    <option value="57">Cote d'Ivoire</option>
+    <option value="58">Croatia</option>
+    <option value="59">Cuba</option>
+    <option value="60">Curacao</option>
+    <option value="61">Cyprus</option>
+    <option value="62">Czech Republic</option>
+    <option value="63">Denmark</option>
+    <option value="64">Diego Garcia</option>
+    <option value="65">Djibouti</option>
+    <option value="66">Dominica</option>
+    <option value="67">Dominican Republic</option>
+    <option value="224">East Timor</option>
+    <option value="68">Ecuador</option>
+    <option value="69">Egypt</option>
+    <option value="70">El Salvador</option>
+    <option value="71">Equatorial Guinea</option>
+    <option value="72">Eritrea</option>
+    <option value="73">Estonia</option>
+    <option value="74">Ethiopia</option>
+    <option value="75">Falkland Islands</option>
+    <option value="76">Faroe Islands</option>
+    <option value="77">Fiji</option>
+    <option value="78">Finland</option>
+    <option value="79">France</option>
+    <option value="80">French Guiana</option>
+    <option value="81">French Polynesia</option>
+    <option value="82">French Southern Territories</option>
+    <option value="83">Gabon</option>
+    <option value="84">Gambia</option>
+    <option value="85">Georgia</option>
+    <option value="86">Germany</option>
+    <option value="87">Ghana</option>
+    <option value="88">Gibraltar</option>
+    <option value="89">Greece</option>
+    <option value="90">Greenland</option>
+    <option value="91">Grenada</option>
+    <option value="92">Guadeloupe</option>
+    <option value="93">Guam</option>
+    <option value="94">Guatemala</option>
+    <option value="95">Guernsey</option>
+    <option value="96">Guinea</option>
+    <option value="97">Guinea-Bissau</option>
+    <option value="98">Guyana</option>
+    <option value="99">Haiti</option>
+    <option value="100">Honduras</option>
+    <option value="101">Hong Kong</option>
+    <option value="102">Hungary</option>
+    <option value="103">Iceland</option>
+    <option value="104">India</option>
+    <option value="105">Indonesia</option>
+    <option value="106">Iran</option>
+    <option value="107">Iraq</option>
+    <option value="108">Ireland</option>
+    <option value="109">Isle of Man</option>
+    <option value="110">Israel</option>
+    <option value="111">Italy</option>
+    <option value="112">Jamaica</option>
+    <option value="113">Japan</option>
+    <option value="114">Jersey</option>
+    <option value="115">Jordan</option>
+    <option value="116">Kazakhstan</option>
+    <option value="117">Kenya</option>
+    <option value="118">Kiribati</option>
+    <option value="119">Kosovo</option>
+    <option value="120">Kuwait</option>
+    <option value="121">Kyrgyzstan</option>
+    <option value="122">Laos</option>
+    <option value="123">Latvia</option>
+    <option value="124">Lebanon</option>
+    <option value="125">Lesotho</option>
+    <option value="126">Liberia</option>
+    <option value="127">Libya</option>
+    <option value="128">Liechtenstein</option>
+    <option value="129">Lithuania</option>
+    <option value="130">Luxembourg</option>
+    <option value="131">Macau SAR China</option>
+    <option value="132">Macedonia</option>
+    <option value="133">Madagascar</option>
+    <option value="134">Malawi</option>
+    <option value="135">Malaysia</option>
+    <option value="136">Maldives</option>
+    <option value="137">Mali</option>
+    <option value="138">Malta</option>
+    <option value="139">Marshall Islands</option>
+    <option value="140">Martinique</option>
+    <option value="141">Mauritania</option>
+    <option value="142">Mauritius</option>
+    <option value="143">Mayotte</option>
+    <option value="144">Mexico</option>
+    <option value="145">Micronesia</option>
+    <option value="146">Moldova</option>
+    <option value="147">Monaco</option>
+    <option value="148">Mongolia</option>
+    <option value="149">Montenegro</option>
+    <option value="150">Montserrat</option>
+    <option value="151">Morocco</option>
+    <option value="152">Mozambique</option>
+    <option value="153">Myanmar</option>
+    <option value="154">Namibia</option>
+    <option value="155">Nauru</option>
+    <option value="156">Nepal</option>
+    <option value="157">Netherlands</option>
+    <option value="158">New Caledonia</option>
+    <option value="159">New Zealand</option>
+    <option value="160">Nicaragua</option>
+    <option value="161">Niger</option>
+    <option value="162">Nigeria</option>
+    <option value="163">Niue</option>
+    <option value="164">Norfolk Island</option>
+    <option value="165">North Korea</option>
+    <option value="166">Northern Mariana Islands</option>
+    <option value="167">Norway</option>
+    <option value="168">Oman</option>
+    <option value="169">Pakistan</option>
+    <option value="170">Palau</option>
+    <option value="171">Palestine</option>
+    <option value="172">Panama</option>
+    <option value="173">Papua New Guinea</option>
+    <option value="174">Paraguay</option>
+    <option value="175">Peru</option>
+    <option value="176">Philippines</option>
+    <option value="177">Pitcairn Islands</option>
+    <option value="178">Poland</option>
+    <option value="179">Portugal</option>
+    <option value="180">Puerto Rico</option>
+    <option value="181">Qatar</option>
+    <option value="182">Reunion</option>
+    <option value="183">Romania</option>
+    <option value="184">Russia</option>
+    <option value="185">Rwanda</option>
+    <option value="186">Samoa</option>
+    <option value="187">San Marino</option>
+    <option value="188">Sao Tome &amp; Principe</option>
+    <option value="189">Saudi Arabia</option>
+    <option value="190">Senegal</option>
+    <option value="191">Serbia</option>
+    <option value="192">Seychelles</option>
+    <option value="193">Sierra Leone</option>
+    <option value="194">Singapore</option>
+    <option value="195">Sint Maarten</option>
+    <option value="196">Slovakia</option>
+    <option value="197">Slovenia</option>
+    <option value="198">Solomon Islands</option>
+    <option value="199">Somalia</option>
+    <option value="200">South Africa</option>
+    <option value="201">South Georgia &amp; South Sandwich Islands</option>
+    <option value="202">South Korea</option>
+    <option value="203">South Sudan</option>
+    <option value="204">Spain</option>
+    <option value="205">Sri Lanka</option>
+    <option value="206">St. Barthelemy</option>
+    <option value="207">St. Helena</option>
+    <option value="208">St. Kitts &amp; Nevis</option>
+    <option value="209">St. Lucia</option>
+    <option value="210">St. Martin</option>
+    <option value="211">St. Pierre &amp; Miquelon</option>
+    <option value="212">St. Vincent &amp; Grenadines</option>
+    <option value="213">Sudan</option>
+    <option value="214">Suriname</option>
+    <option value="215">Svalbard &amp; Jan Mayen</option>
+    <option value="216">Swaziland</option>
+    <option value="217">Sweden</option>
+    <option value="218">Switzerland</option>
+    <option value="219">Syria</option>
+    <option value="220">Taiwan</option>
+    <option value="221">Tajikistan</option>
+    <option value="222">Tanzania</option>
+    <option value="223">Thailand</option>
+    <option value="225">Togo</option>
+    <option value="226">Tokelau</option>
+    <option value="227">Tonga</option>
+    <option value="228">Trinidad &amp; Tobago</option>
+    <option value="229">Tristan da Cunha</option>
+    <option value="230">Tunisia</option>
+    <option value="231">Turkey</option>
+    <option value="232">Turkmenistan</option>
+    <option value="233">Turks &amp; Caicos Islands</option>
+    <option value="234">Tuvalu</option>
+    <option value="235">U.S. Virgin Islands</option>
+    <option value="236">Uganda</option>
+    <option value="237">Ukraine</option>
+    <option value="238">United Arab Emirates</option>
+    <option value="239">United Kingdom</option>
+    <option value="251">United States</option>
+    <option value="240">Uruguay</option>
+    <option value="241">Uzbekistan</option>
+    <option value="242">Vanuatu</option>
+    <option value="243">Vatican City</option>
+    <option value="244">Venezuela</option>
+    <option value="245">Vietnam</option>
+    <option value="246">Wallis &amp; Futuna</option>
+    <option value="247">Western Sahara</option>
+    <option value="248">Yemen</option>
+    <option value="249">Zambia</option>
+    <option value="250">Zimbabwe</option>
+    
+    
+    </select>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-6 col-md-12" style="margin-bottom:15px;">
+    <label for="cheque_deposit_front_view" class="active">Cheque Front View*</label>
+    <input class="form-control" value="" id="cheque_deposit_front_view" name="cheque_deposit_front_view" type="file">
+    </div>
+    <div class="col-lg-6 col-md-12" style="margin-bottom:15px;">
+    <label for="cheque_deposit_back_view" class="active">Cheque Back View*</label>
+    <input id="cheque_deposit_back_view" class="form-control" name="cheque_deposit_back_view" type="file">
+    </div>
+    </div>
+    <div class="row">
+    <div class="input-field col s12">
+    <button class="btn cyan waves-effect waves-light" type="submit" name="action">Submit Cheque Deposit</button>
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="tab-pane" id="myInvestPort">
+    <div class="table-responsive" id="echequeHistory" style="padding:10px;"><h4 style="font-size:14px;"> No cheque deposits found!</h4>
+    </div>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <footer class="center-align m-b-30 m-l-15 m-r-15">All Rights Reserved &reg; <script type="text/javascript"> var d = new Date(); document.write(d.getFullYear()); </script> <br> <a>Fairway Credit Union Bank</a>.</footer>
+</div>
+
+
+
+
+
+
+<div class="chat-windows "></div>
+
+
+
+</div>
+
+
+
+<script data-cfasync="false" src="js/email-decode.min.js">
+</script><script src="js/jquery.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/perfect-scrollbar.jquery.min.js"></script>
+
+
+
+<script src="js/app.js"></script>
+<script src="js/app.init.js"></script>
+<script src="js/app-style-switcher.js"></script>
+
+
+
+<script src="js/custom.min.js"></script>
+
+
+
+<script src="js/jquery-jvectormap.min.js"></script>
+<script src="js/jquery-jvectormap-world-mill-en.js"></script>
+
+<script src="js/d3.min.js"></script>
+<script src="js/c3.min.js"></script>
+<script src="js/dashboard2.js"></script>
+<script src="js/sparkline.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/jquery.bpopups2.min.js"></script>
+<script type="text/javascript" src="js/date_time.js"></script>
+</body>
+</html>
